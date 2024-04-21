@@ -1,0 +1,49 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 0 ]
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"15 D:\Embedded\Course#4_Deepblue_E.S\Labs\Lab_2.0_7-Segment_display\7-Segment_display.X\main.c
+[v _Port_Init Port_Init `(v  1 e 1 0 ]
+"20
+[v _main main `(v  1 e 1 0 ]
+"216 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"1375
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"20 D:\Embedded\Course#4_Deepblue_E.S\Labs\Lab_2.0_7-Segment_display\7-Segment_display.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"22
+[v main@segments_code segments_code `[10]uc  1 a 10 0 ]
+"23
+[v main@i i `ul  1 a 4 10 ]
+"21
+[v main@F1008 F1008 `[10]uc  1 s 10 F1008 ]
+"30
+} 0
+"5 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\llmod.c
+[v ___llmod __llmod `(ul  1 e 4 0 ]
+{
+"10
+[v ___llmod@counter counter `uc  1 a 1 9 ]
+"5
+[v ___llmod@divisor divisor `ul  1 p 4 0 ]
+[v ___llmod@dividend dividend `ul  1 p 4 4 ]
+"25
+} 0
+"15 D:\Embedded\Course#4_Deepblue_E.S\Labs\Lab_2.0_7-Segment_display\7-Segment_display.X\main.c
+[v _Port_Init Port_Init `(v  1 e 1 0 ]
+{
+"18
+} 0
