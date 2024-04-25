@@ -2,6 +2,8 @@
 Embedded projects using pic16f877a microcontroller.\
 Coded in MPLAB X IDE.\
 Simulated in Proteus 8 Professional
+![medium-PIC16F877A-PDIP-40](https://github.com/fady0118/PIC_Labs/assets/121246084/42e68fce-8ce4-482e-8879-d901ca14ea78)
+
 ## Labs
 ### Lab_1.0_GPIO_blinking_led
 
