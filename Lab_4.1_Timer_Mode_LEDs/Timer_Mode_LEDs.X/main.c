@@ -16,10 +16,6 @@
 void Port_Init(void){
     TRISB&=~0xFF;     // pins PB0-6 as output (7-segment)
     PORTB&=~0xFF;     // clear PB0-6
-    /*
-     * TRISC|=0x02;      // PC1 as input (button)
-    PORTC&=~0x02;     // clear PC2
-     */
 }
 void Timer1_init(void){
 TMR1=0x00;
