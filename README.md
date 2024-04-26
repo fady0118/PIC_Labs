@@ -77,6 +77,29 @@ Simulated in Proteus 8 Professional
 #### Configuration
 - PB0 -> output to the LED
 
+### Lab_4.1_Timer_Mode_LEDs
+
+#### Purpose 
+- use the timer in counter mode
+#### Components   
+- 4 LEDs
+- button, capacitor, Schmitt trigger
+#### Configuration
+- PB0-3 -> output to the LEDs
+- PC1 -> input from the button (external clock)
+
+### Lab_4.2_Timer_Mode_7-segment
+
+#### Purpose 
+- This is just an alternative to Lab_4.1 with 7-segment display instead of the LEDs
+#### Components   
+- 7-segment display
+- button, capacitor, Schmitt trigger
+#### Configuration
+- PB0-6 -> output to the 7-segment display
+- PC1 -> input from the button (external clock)
+
+
 ### Lab_5.0_Ultrasonic_Sensor_Distance
 
 #### Purpose 
