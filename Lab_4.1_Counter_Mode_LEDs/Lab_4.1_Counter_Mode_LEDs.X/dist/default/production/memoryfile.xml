@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production\Timer_Mode_LEDs.X.production.hex">
+  <executable name="dist/default/production\Lab_4.1_Counter_Mode_LEDs.X.production.hex">
     <memory name="program">
       <units>words</units>
       <length>8192</length>

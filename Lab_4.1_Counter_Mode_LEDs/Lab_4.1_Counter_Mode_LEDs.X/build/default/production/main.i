@@ -1927,10 +1927,6 @@ extern __bank0 __bit __timeout;
 void Port_Init(void){
     TRISB&=~0xFF;
     PORTB&=~0xFF;
-
-
-
-
 }
 void Timer1_init(void){
 TMR1=0x00;

@@ -1,4 +1,4 @@
-/*
+/* Counter mode
  * File:   main.c
  * Author: fady
  *
@@ -14,7 +14,7 @@
 // PB0-6 as output (7-segment)
 // PC2 as input (button)
 void Port_Init(void){
-    TRISB&=~0xFF;     // pins PB0-6 as output (7-segment)
+    TRISB&=~0xFF;     // pins PB0-6 as output (LEDs)
     PORTB&=~0xFF;     // clear PB0-6
 }
 void Timer1_init(void){

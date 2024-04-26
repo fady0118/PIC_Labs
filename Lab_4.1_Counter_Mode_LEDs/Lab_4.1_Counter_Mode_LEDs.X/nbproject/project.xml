@@ -3,8 +3,8 @@
     <type>com.microchip.mplab.nbide.embedded.makeproject</type>
     <configuration>
         <data xmlns="http://www.netbeans.org/ns/make-project/1">
-            <name>Timer_Mode_LEDs</name>
-            <creation-uuid>e45fcf15-0899-4110-8ed1-e9fdd5b5c623</creation-uuid>
+            <name>Lab_4.1_Counter_Mode_LEDs</name>
+            <creation-uuid>08105689-4d2f-4c8c-a786-845ed4fb2faa</creation-uuid>
             <make-project-type>0</make-project-type>
             <sourceEncoding>ISO-8859-1</sourceEncoding>
             <make-dep-projects/>

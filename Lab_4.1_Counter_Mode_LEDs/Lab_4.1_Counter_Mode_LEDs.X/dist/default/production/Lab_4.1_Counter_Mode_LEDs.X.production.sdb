@@ -11,11 +11,11 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"16 D:\Embedded\Course#4_Deepblue_E.S\Labs\PIC_Labs\Lab_4.1_Timer_Mode_LEDs\Timer_Mode_LEDs.X\main.c
+"16 D:\Embedded\Course#4_Deepblue_E.S\Labs\PIC_Labs\Lab_4.1_Counter_Mode_LEDs\Lab_4.1_Counter_Mode_LEDs.X\main.c
 [v _Port_Init Port_Init `(v  1 e 1 0 ]
-"24
+"20
 [v _Timer1_init Timer1_init `(v  1 e 1 0 ]
-"36
+"32
 [v _main main `(v  1 e 1 0 ]
 "216 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
@@ -35,18 +35,18 @@
 [v _TMR1CS TMR1CS `VEb  1 e 0 @129 ]
 "2897
 [v _TMR1ON TMR1ON `VEb  1 e 0 @128 ]
-"36 D:\Embedded\Course#4_Deepblue_E.S\Labs\PIC_Labs\Lab_4.1_Timer_Mode_LEDs\Timer_Mode_LEDs.X\main.c
+"32 D:\Embedded\Course#4_Deepblue_E.S\Labs\PIC_Labs\Lab_4.1_Counter_Mode_LEDs\Lab_4.1_Counter_Mode_LEDs.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"43
+"39
 } 0
-"24
+"20
 [v _Timer1_init Timer1_init `(v  1 e 1 0 ]
 {
-"33
+"29
 } 0
 "16
 [v _Port_Init Port_Init `(v  1 e 1 0 ]
 {
-"23
+"19
 } 0

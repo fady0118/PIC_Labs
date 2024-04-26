@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.46 build 20240104201356 
-                                                                                               Thu Apr 25 23:49:50 2024
+                                                                                               Fri Apr 26 16:51:18 2024
 
 Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1 
      1                           	processor	16F877A
@@ -226,7 +226,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    212 ;;
    213 ;; *************** function _main *****************
    214 ;; Defined at:
-   215 ;;		line 36 in file "main.c"
+   215 ;;		line 32 in file "main.c"
    216 ;; Parameters:    Size  Location     Type
    217 ;;		None
    218 ;; Auto vars:     Size  Location     Type
@@ -262,14 +262,14 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    248                           ; Regs used in _main: [wreg+status,2+status,0+pclath+cstack]
    249                           
    250                           
-   251                           ;main.c: 37:     Port_Init();
+   251                           ;main.c: 33:     Port_Init();
    252     07EA  120A  118A  27D8  120A  118A  	fcall	_Port_Init
    253                           
-   254                           ;main.c: 38:     Timer1_init();
+   254                           ;main.c: 34:     Timer1_init();
    255     07EF  120A  118A  27DF  120A  118A  	fcall	_Timer1_init
    256     07F4                     l594:
    257                           
-   258                           ;main.c: 40:         PORTB=TMR1;
+   258                           ;main.c: 36:         PORTB=TMR1;
    259     07F4  1283               	bcf	3,5	;RP0=0, select bank0
    260     07F5  1303               	bcf	3,6	;RP1=0, select bank0
    261     07F6  080E               	movf	14,w	;volatile
@@ -282,7 +282,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    268     07DF                     __ptext1:	
    269 ;; *************** function _Timer1_init *****************
    270 ;; Defined at:
-   271 ;;		line 24 in file "main.c"
+   271 ;;		line 20 in file "main.c"
    272 ;; Parameters:    Size  Location     Type
    273 ;;		None
    274 ;; Auto vars:     Size  Location     Type
@@ -317,34 +317,34 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    303                           ; Regs used in _Timer1_init: [status,2]
    304                           
    305                           
-   306                           ;main.c: 25: TMR1=0x00;
+   306                           ;main.c: 21: TMR1=0x00;
    307     07DF  1283               	bcf	3,5	;RP0=0, select bank0
    308     07E0  1303               	bcf	3,6	;RP1=0, select bank0
    309     07E1  018E               	clrf	14	;volatile
    310     07E2  018F               	clrf	15	;volatile
    311     07E3                     l580:
    312                           
-   313                           ;main.c: 26: TMR1CS=1;
+   313                           ;main.c: 22: TMR1CS=1;
    314     07E3  1490               	bsf	16,1	;volatile
    315     07E4                     l582:
    316                           
-   317                           ;main.c: 27: T1OSCEN=1;
+   317                           ;main.c: 23: T1OSCEN=1;
    318     07E4  1590               	bsf	16,3	;volatile
    319     07E5                     l584:
    320                           
-   321                           ;main.c: 29: T1CKPS0=0;
+   321                           ;main.c: 25: T1CKPS0=0;
    322     07E5  1210               	bcf	16,4	;volatile
    323     07E6                     l586:
    324                           
-   325                           ;main.c: 30: T1CKPS1=0;
+   325                           ;main.c: 26: T1CKPS1=0;
    326     07E6  1290               	bcf	16,5	;volatile
    327     07E7                     l588:
    328                           
-   329                           ;main.c: 31: T1SYNC=0;
+   329                           ;main.c: 27: T1SYNC=0;
    330     07E7  1110               	bcf	16,2	;volatile
    331     07E8                     l590:
    332                           
-   333                           ;main.c: 32: TMR1ON=1;
+   333                           ;main.c: 28: TMR1ON=1;
    334     07E8  1410               	bsf	16,0	;volatile
    335     07E9                     l24:
    336     07E9  0008               	return
@@ -519,7 +519,7 @@ DATA                 0      0       0      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.46 build 20240104201356 
-Symbol Table                                                                                   Thu Apr 25 23:49:50 2024
+Symbol Table                                                                                   Fri Apr 26 16:51:18 2024
 
                      l21 07DE                       l24 07E9                      l580 07E3  
                     l590 07E8                      l582 07E4                      l576 07D8  

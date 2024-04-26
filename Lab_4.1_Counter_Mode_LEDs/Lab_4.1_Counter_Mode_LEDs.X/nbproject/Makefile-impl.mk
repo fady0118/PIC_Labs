@@ -24,7 +24,7 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 
 
 # Project Name
-PROJECTNAME=Timer_Mode_LEDs.X
+PROJECTNAME=Lab_4.1_Counter_Mode_LEDs.X
 
 # Active Configuration
 DEFAULTCONF=default
