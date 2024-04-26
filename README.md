@@ -111,3 +111,14 @@ Simulated in Proteus 8 Professional
 - PB0 -> output to HC_SR04 ultrasonic sensor (trigger)
 - PB1 -> input from HC_SR04 ultrasonic sensor (echo)
 - PC2-5 -> output to the LEDs
+
+### Lab_6.0_IRQ_Lab
+
+#### Purpose 
+-  Create a basic (LED toggle) application with IRQ hardware pins.
+#### Components   
+- LED
+- Button
+#### Configuration
+- PB0 -> IRQ hardware pin
+- PB2 -> output (LED)
