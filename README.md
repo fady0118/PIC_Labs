@@ -122,3 +122,56 @@ Simulated in Proteus 8 Professional
 #### Configuration
 - PB0 -> IRQ hardware pin
 - PB2 -> output (LED)
+
+### Lab_7.0_CCP_capture_mode
+
+#### Purpose 
+-  use the CCP module in Capture mode.
+#### Components   
+- 8 LEDs (4 for Timer which is in counter mode) & (4 for CCP capture)
+- 2 Button (1 for counter) & (1 for capture)
+- Schmitt trigger for button debouncing
+#### Configuration
+- PB0-3 as output (LEDs) for TMR1
+- PD0-3 as output (LEDs) for CPPR1
+- RC1 input Counter button
+- RC2 input for CCP capture
+
+### Lab_7.1_CCP_compare_mode
+
+#### Purpose 
+- Use the CCP module in compare mode.
+- Use it to generate periodic interrupts by using timer1 hardware as resource.
+- Generate an interrupt every 0.5 sec that toggles the LED.
+#### Components   
+- LED
+#### Configuration
+- PB0 as output (LED)
+
+### Lab_7.2.1_CCP_PWM_LED_Dimmer
+
+#### Purpose 
+- Use CCP in PWM mode to control the brightness of an LED by continuously changing the duty cycle 
+#### Components   
+- LED
+#### Configuration
+- CCP1/RC2 output (LED)
+
+### Lab_7.2.2_CCP_PWM_DC_Motor
+
+#### Purpose 
+- Use CCP in PWM mode to control the direction & speed of a DC motor
+- The PIC16F877A has only RB0 as IRQ INT (edge-triggered) and RB4-7 as IOC (interrupt-on-change)
+- I originally wanted to generate 6 interrupts 1 for direction and 5 for speeds (0 25 50 75 100)
+- Unfortunately as stated the PIC16F877A can generate a total of 5 interrupts
+- So it's either reduce the speed control levels to 4 or use (polling)
+- since it's better to use interrupts we'll resort to reducing the speed levels controls to 4 (0 33 67 100)
+#### Components   
+- DC Motor
+- L293D motor driver
+- 5 buttons (1 for reversing the direction & 4 for speed controls)
+#### Configuration
+- RD0-1 as output for motor direction
+- RC2 CCP/PWM output pin (duty cycle)
+- RB0 IRQ input (switch) for motor direction control
+- RB4-7 as IOC (interrupt-on-change) input (switches) for motor speed control
