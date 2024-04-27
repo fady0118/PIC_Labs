@@ -1,0 +1,84 @@
+[p GLOBOPT AUTOSTATIC IEEE_DBL IEEE_FLT PIC14 PICREGULAR PICMID ]
+[d version 1.1 ]
+[d edition pro ]
+[d chip 16F877A ]
+[d frameptr 0 ]
+"10 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\sprcadd.c
+[v ___fladd __fladd `(d  1 e 4 0 ]
+"4 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\Umul8_16.c
+[v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
+"6 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\pic\__eeprom.c
+[v ___eecpymem __eecpymem `(v  1 e 1 0 ]
+"39
+[v ___memcpyee __memcpyee `(v  1 e 1 0 ]
+"20 D:\Embedded\Course#4_Deepblue_E.S\Labs\PIC_Labs\Lab_7.0_CCP_capture_mode\CCP_capture_mode.X\main.c
+[v _Port_Init Port_Init `(v  1 e 1 0 ]
+"28
+[v _Timer1_init Timer1_init `(v  1 e 1 0 ]
+"40
+[v _CCP_capture CCP_capture `(v  1 e 1 0 ]
+"49
+[v _main main `(v  1 e 1 0 ]
+"58
+[v _ISR ISR `II(v  1 e 1 0 ]
+"216 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h
+[v _PORTB PORTB `VEuc  1 e 1 @6 ]
+"340
+[v _PORTD PORTD `VEuc  1 e 1 @8 ]
+"634
+[v _TMR1 TMR1 `VEus  1 e 2 @14 ]
+"885
+[v _CCPR1 CCPR1 `VEus  1 e 2 @21 ]
+"906
+[v _CCP1CON CCP1CON `VEuc  1 e 1 @23 ]
+"1375
+[v _TRISB TRISB `VEuc  1 e 1 @134 ]
+"1437
+[v _TRISC TRISC `VEuc  1 e 1 @135 ]
+"1499
+[v _TRISD TRISD `VEuc  1 e 1 @136 ]
+"2438
+[v _CCP1IE CCP1IE `VEb  1 e 0 @1122 ]
+"2441
+[v _CCP1IF CCP1IF `VEb  1 e 0 @98 ]
+"2573
+[v _GIE GIE `VEb  1 e 0 @95 ]
+"2633
+[v _PEIE PEIE `VEb  1 e 0 @94 ]
+"2861
+[v _T1CKPS0 T1CKPS0 `VEb  1 e 0 @132 ]
+"2864
+[v _T1CKPS1 T1CKPS1 `VEb  1 e 0 @133 ]
+"2870
+[v _T1OSCEN T1OSCEN `VEb  1 e 0 @131 ]
+"2873
+[v _T1SYNC T1SYNC `VEb  1 e 0 @130 ]
+"2888
+[v _TMR1CS TMR1CS `VEb  1 e 0 @129 ]
+"2897
+[v _TMR1ON TMR1ON `VEb  1 e 0 @128 ]
+"49 D:\Embedded\Course#4_Deepblue_E.S\Labs\PIC_Labs\Lab_7.0_CCP_capture_mode\CCP_capture_mode.X\main.c
+[v _main main `(v  1 e 1 0 ]
+{
+"57
+} 0
+"28
+[v _Timer1_init Timer1_init `(v  1 e 1 0 ]
+{
+"38
+} 0
+"20
+[v _Port_Init Port_Init `(v  1 e 1 0 ]
+{
+"25
+} 0
+"40
+[v _CCP_capture CCP_capture `(v  1 e 1 0 ]
+{
+"47
+} 0
+"58
+[v _ISR ISR `II(v  1 e 1 0 ]
+{
+"64
+} 0
