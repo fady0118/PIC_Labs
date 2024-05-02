@@ -175,3 +175,14 @@ Simulated in Proteus 8 Professional
 - RC2 CCP/PWM output pin (duty cycle)
 - RB0 IRQ input (switch) for motor direction control
 - RB4-7 as IOC (interrupt-on-change) input (switches) for motor speed control
+
+### Lab_8.0_EEPROM
+
+#### Purpose 
+- Use the internal EEPROM Memory to write/read data.
+#### Components   
+- 4 LEDs
+- 4 Buttons
+#### Configuration
+-  RB0-3 as input for buttons
+-  RC0-3 as output LEDs
