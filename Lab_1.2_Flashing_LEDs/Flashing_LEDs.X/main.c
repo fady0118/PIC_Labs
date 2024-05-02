@@ -1,6 +1,6 @@
 /* Flashing_LEDs
  * File:   main.c
- * Author: fady
+ * Author: Fady Abd Elshahid
  *
  * Created on April 21, 2024, 5:53 PM
  */

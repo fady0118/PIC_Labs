@@ -1,6 +1,6 @@
 /* Lab_5.0_Ultrasonic_Sensor_Distance
  * File:   main.c
- * Author: fady
+ * Author: Fady Abd Elshahid
  *
  * Created on April 25, 2024, 12:53 PM
  */
@@ -30,19 +30,13 @@ T1CON|=0x08;  // Oscillator is enabled
 T1CON&=~0x30; // 1:1 prescale value
 
 }
-//-------Enable_Interrupts--------
-void Enable_Interrupts(void){
-TMR1IE = 1;  // Timer1 Interrupt Enable Bit
-TMR1IF = 0;  // Clear The Interrupt Flag Bit
-PEIE = 1;    // Peripherals Interrupts Enable Bit
-GIE = 1;     // Global Interrupts Enable Bit
-}
+
 void main(void) {
 Port_Init();
 Timer1_Init();
 unsigned char distance;
 while(1){
-    distance = get_dist(); // distance resolution is 5cm
+    distance = get_dist(); // distance resolution is 1cm
 
     if(distance<=5){PORTC=0x04;}         // flash LED_1     (x<=5cm)       .
     else if(distance<=10){PORTC=0x0C;}   // flash LEDs_1-2  (5cm<x<=10cm)  ..
@@ -57,7 +51,7 @@ double get_dist(void){
     double dist;
     TMR1=0; // reset timer
     
-    //trigger the senseor
+    //trigger the sensor
     PORTB|=0x01;    // set PB0
     __delay_us(10); // wait 10us
     PORTB&=~0x01;    // clear PB0

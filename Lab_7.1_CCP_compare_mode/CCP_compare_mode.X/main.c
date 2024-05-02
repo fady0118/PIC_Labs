@@ -2,7 +2,7 @@
  * This code toggles PB0 every 0.5sec by using  
  * CCP in compare mode
  * File:   main.c
- * Author: fady
+ * Author: Fady Abd Elshahid
  *
  * Created on April 26, 2024, 6:48 PM
  */

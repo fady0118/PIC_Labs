@@ -14,7 +14,7 @@
  *  speed levels controls to 4 (0 33 67 100)
  * 
  * File:   main.c
- * Author: fady
+ * Author: Fady Abd Elshahid
  *
  * Created on April 27, 2024, 8:49 PM
  */
@@ -37,7 +37,7 @@ void PWM_duty_cycle(unsigned short int);
 // initializes portA and configures I/O pins
 // RD0-1 as output for motor direction
 // RC2 CCP/PWM output pin
-// RB0 IRQ input (switche) for motor direction control
+// RB0 IRQ input (switch) for motor direction control
 // RB4-7 as IOC (interrupt-on-change) input (switches) for motor speed control
 void Port_Init(void){
    TRISB|=0x01;     // pin RB0 as input (IRQ)
@@ -53,7 +53,7 @@ void Port_Init(void){
 void Timer2_Init(void){
 T2CON&=~0x03;  // 1 prescale value    
 }
-//--------CCP_compare_mode_config---------
+//--------CCP_PWM_mode_config---------
 void CCP_PWM(void){
 PR2=199;         // PR2 controlling the PWM freq 5khz
 TRISC&=~0x04;    // RC2/CCP1 PWM output pin

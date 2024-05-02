@@ -1,6 +1,6 @@
 /* Lab_3.0_Unipolar_Stepper_Motor
  * File:   main.c
- * Author: fady
+ * Author: Fady Abd Elshahid
  *
  * Created on April 22, 2024, 5:31 PM
  */

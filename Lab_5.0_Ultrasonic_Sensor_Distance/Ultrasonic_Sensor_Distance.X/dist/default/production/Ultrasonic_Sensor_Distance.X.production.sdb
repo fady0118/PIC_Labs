@@ -21,9 +21,9 @@
 [v _Port_Init Port_Init `(v  1 e 1 0 ]
 "27
 [v _Timer1_Init Timer1_Init `(v  1 e 1 0 ]
-"40
+"34
 [v _main main `(v  1 e 1 0 ]
-"56
+"50
 [v _get_dist get_dist `(d  1 e 4 0 ]
 "216 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
@@ -37,27 +37,19 @@
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
 "1437
 [v _TRISC TRISC `VEuc  1 e 1 @135 ]
-"2573
-[v _GIE GIE `VEb  1 e 0 @95 ]
-"2633
-[v _PEIE PEIE `VEb  1 e 0 @94 ]
-"2891
-[v _TMR1IE TMR1IE `VEb  1 e 0 @1120 ]
-"2894
-[v _TMR1IF TMR1IF `VEb  1 e 0 @96 ]
-"40 D:\Embedded\Course#4_Deepblue_E.S\Labs\PIC_Labs\Lab_5.0_Ultrasonic_Sensor_Distance\Ultrasonic_Sensor_Distance.X\main.c
+"34 D:\Embedded\Course#4_Deepblue_E.S\Labs\PIC_Labs\Lab_5.0_Ultrasonic_Sensor_Distance\Ultrasonic_Sensor_Distance.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"43
+"37
 [v main@distance distance `uc  1 a 1 47 ]
-"54
+"48
 } 0
-"56
+"50
 [v _get_dist get_dist `(d  1 e 4 0 ]
 {
-"57
+"51
 [v get_dist@dist dist `d  1 a 4 31 ]
-"75
+"69
 } 0
 "10 C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\xxtofl.c
 [v ___xxtofl __xxtofl `(d  1 e 4 0 ]

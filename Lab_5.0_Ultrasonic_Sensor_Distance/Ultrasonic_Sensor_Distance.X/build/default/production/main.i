@@ -1942,12 +1942,6 @@ T1CON&=~0x30;
 
 }
 
-void Enable_Interrupts(void){
-TMR1IE = 1;
-TMR1IF = 0;
-PEIE = 1;
-GIE = 1;
-}
 void main(void) {
 Port_Init();
 Timer1_Init();

@@ -7,10 +7,10 @@ Linker command line:
   -cn \
   -h+dist/default/production\Ultrasonic_Sensor_Distance.X.production.sym \
   --cmf=dist/default/production\Ultrasonic_Sensor_Distance.X.production.cmf \
-  -z -Q16F877A -oC:\Users\fady0\AppData\Local\Temp\xcAsf2k.\driver_tmp_3.o \
+  -z -Q16F877A -oC:\Users\fady0\AppData\Local\Temp\xcAsa30.\driver_tmp_3.o \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/production/Ultrasonic_Sensor_Distance.X.production.map \
-  --md=C:\Users\fady0\AppData\Local\Temp\xcAsf2k.\driver_tmp_0.dat -E1 \
+  --md=C:\Users\fady0\AppData\Local\Temp\xcAsa30.\driver_tmp_0.dat -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ACODE=00h-07FFhx4 -ASTRCODE=00h-01FFFh \
   -ASTRING=00h-0FFhx32 -ACONST=00h-0FFhx32 -AENTRY=00h-0FFhx32 \
   -ACOMMON=070h-07Fh -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh \
@@ -23,7 +23,7 @@ Linker command line:
   -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry,sivt,init,end_init -ppowerup=CODE -pcinit=CODE \
   -pfunctab=ENTRY -k \
-  C:\Users\fady0\AppData\Local\Temp\xcAsf2k.\driver_tmp_12.o \
+  C:\Users\fady0\AppData\Local\Temp\xcAsa30.\driver_tmp_12.o \
   dist/default/production\Ultrasonic_Sensor_Distance.X.production.o 
 
 Object code version is 3.11
@@ -33,7 +33,7 @@ Machine type is 16F877A
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\fady0\AppData\Local\Temp\xcAsf2k.\driver_tmp_12.o
+C:\Users\fady0\AppData\Local\Temp\xcAsa30.\driver_tmp_12.o
                 end_init                              0        0        3        0       0
                 config                             2007     2007        1        0       4
 dist/default/production\Ultrasonic_Sensor_Distance.X.production.o
@@ -156,15 +156,11 @@ UNUSED ADDRESS RANGES
 ?___fltol                cstackBANK0  0043
 ?___xxtofl               cstackCOMMON 0070
 ?_get_dist               cstackBANK0  003A
-_GIE                     (abs)        005F
-_PEIE                    (abs)        005E
 _PORTB                   (abs)        0006
 _PORTC                   (abs)        0007
 _Port_Init               text6        042E
 _T1CON                   (abs)        0010
 _TMR1                    (abs)        000E
-_TMR1IE                  (abs)        0460
-_TMR1IF                  (abs)        0060
 _TRISB                   (abs)        0086
 _TRISC                   (abs)        0087
 _Timer1_Init             text5        0422

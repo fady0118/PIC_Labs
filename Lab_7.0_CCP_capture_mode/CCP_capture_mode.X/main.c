@@ -1,6 +1,6 @@
 /* CCP_capture_mode
  * File:   main.c
- * Author: fady
+ * Author: Fady Abd Elshahid
  *
  * Created on April 26, 2024, 4:00 PM
  */

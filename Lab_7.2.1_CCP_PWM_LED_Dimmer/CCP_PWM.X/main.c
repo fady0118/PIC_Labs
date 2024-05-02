@@ -1,7 +1,7 @@
 /* CCP_PWM
  * PWM - LED Dimmer
  * File:   main.c
- * Author: fady
+ * Author: Fady Abd Elshahid
  *
  * Created on April 27, 2024, 5:35 PM
  */

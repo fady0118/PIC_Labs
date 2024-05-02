@@ -1,6 +1,6 @@
 /* Lab_6.0_IRQ_Lab
  * File:   main.c
- * Author: fady
+ * Author: Fady Abd Elshahid
  *
  * Created on April 26, 2024, 1:48 PM
  */

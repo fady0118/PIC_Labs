@@ -1,6 +1,6 @@
 /*
  * File:   main.c
- * Author: fady
+ * Author: Fady Abd Elshahid
  *
  * Created on April 23, 2024, 8:13 PM
  */

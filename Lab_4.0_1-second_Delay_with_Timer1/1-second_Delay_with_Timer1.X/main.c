@@ -1,6 +1,6 @@
 /* Lab_4.0_1-second_Delay_with_Timer1
  * File:   main.c
- * Author: fady
+ * Author: Fady Abd Elshahid
  *
  * Created on April 23, 2024, 3:28 PM
  */

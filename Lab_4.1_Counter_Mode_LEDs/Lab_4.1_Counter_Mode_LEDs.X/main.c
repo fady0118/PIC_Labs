@@ -1,6 +1,6 @@
 /* Counter mode
  * File:   main.c
- * Author: fady
+ * Author: Fady Abd Elshahid
  *
  * Created on April 25, 2024, 11:36 PM
  */

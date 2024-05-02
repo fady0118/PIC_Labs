@@ -1,6 +1,6 @@
 /* Lab_4.1_Counter_Mode
  * File:   main.c
- * Author: fady
+ * Author: Fady Abd Elshahid
  *
  * Created on April 25, 2024, 7:40 PM
  */
