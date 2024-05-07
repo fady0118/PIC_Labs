@@ -186,3 +186,17 @@ Simulated in Proteus 8 Professional
 #### Configuration
 -  RB0-3 as input for buttons
 -  RC0-3 as output LEDs
+
+### Lab_9.0_UART_Communication
+
+#### Purpose 
+- Create a serial communication interface between 2 microcontrollers using UART Protocol.
+#### Components   
+- 8 LEDs
+- 3 Buttons
+#### Configuration
+-  Transmitter
+    -  RB0-2 as input for buttons
+    -  RD0-3 as output LEDs
+-  Transmitter
+    -  RB0-3 as output LEDs
