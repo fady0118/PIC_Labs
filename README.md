@@ -198,5 +198,23 @@ Simulated in Proteus 8 Professional
 -  Transmitter
     -  RB0-2 as input for buttons
     -  RD0-3 as output LEDs
--  Transmitter
+    -  RC6 as UART transmitter
+-  Reciever
     -  RB0-3 as output LEDs
+    -  RC7 UART reciever
+      
+### Lab_9.1_UART_LCD_strings
+
+#### Purpose 
+- Create a serial communication interface between 2 microcontrollers using UART Protocol and use it to send string messages and display it using an 16*2 LCD
+#### Components   
+- LCD
+- 3 Buttons
+#### Configuration
+-  Transmitter
+    -  RB0 & RB2 as input for buttons
+    -  RC6 as UART transmitter
+-  Reciever
+    -  RB0-5 as output LCD
+    -  RC0 as input for a button
+    -  RC7 UART reciever
