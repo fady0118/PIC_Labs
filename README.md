@@ -218,3 +218,26 @@ Simulated in Proteus 8 Professional
     -  RB0-5 as output LCD
     -  RC0 as input for a button
     -  RC7 UART reciever
+
+### Lab_9.2_UART_HC-05_Bluetooth_Controller
+
+#### Purpose 
+- This project uses the HC-05 Bluetooth module with PIC microcontrollers. And develop the necessary firmware in order to receive data from a Smartphone over the Bluetooth to control embedded systems, RC robots, LEDs or whatever.\
+- for this to work you'll need to 
+    - open bluetooth settings on your pc
+    - go to COM Ports
+    - add incoming serial port (COM5 or anything but it must match with the HC-05 configuration)
+    - install serial bluetooth terminal form playstore on an android phone
+    - connect the phone to the PC using bluetooth
+    - Send "1" to turn on the blue LED
+    - Send "2" to turn off the blue LED
+    - Send "3" to toggle the yellow LED
+#### Components   
+- HC-05 Bluetooth Module
+- 2 LEDs
+#### Configuration
+-  Transmitter(HC-05)
+    -  TXD as UART transmitter
+-  Reciever
+    -  RB0-1 as output LEDs
+    -  RC7 UART reciever
