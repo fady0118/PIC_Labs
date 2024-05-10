@@ -227,8 +227,9 @@ Simulated in Proteus 8 Professional
     - open bluetooth settings on your pc
     - go to COM Ports
     - add incoming serial port (COM5 or anything but it must match with the HC-05 configuration)
-    - install serial bluetooth terminal form playstore on an android phone
-    - connect the phone to the PC using bluetooth
+    - install "serial bluetooth terminal" app form playstore on an android phone
+    - open it and select the pc from devices tab
+    - connect the phone to the PC using bluetooth 
     - Send "1" to turn on the blue LED
     - Send "2" to turn off the blue LED
     - Send "3" to toggle the yellow LED
