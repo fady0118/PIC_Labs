@@ -222,7 +222,7 @@ Simulated in Proteus 8 Professional
 ### Lab_9.2_UART_HC-05_Bluetooth_Controller
 
 #### Purpose 
-- This project uses the HC-05 Bluetooth module with PIC microcontrollers. And develop the necessary firmware in order to receive data from a Smartphone over the Bluetooth to control embedded systems, RC robots, LEDs or whatever.\
+- This project uses the HC-05 Bluetooth module with PIC microcontrollers. And develop the necessary firmware in order to receive data from a Smartphone over the Bluetooth to control LEDs
 - for this to work you'll need to 
     - open bluetooth settings on your pc
     - go to COM Ports
@@ -237,8 +237,35 @@ Simulated in Proteus 8 Professional
 - HC-05 Bluetooth Module
 - 2 LEDs
 #### Configuration
--  Transmitter(HC-05)
+-  Transmitter (HC-05)
     -  TXD as UART transmitter
--  Reciever
+-  Reciever (PIC16F877A)
     -  RB0-1 as output LEDs
     -  RC7 UART reciever
+
+### Lab_9.3_UART_HC-05_Bluetooth_DC_MOTOR_Controller
+
+#### Purpose 
+- This project uses the HC-05 Bluetooth module with PIC microcontrollers. And develop the necessary firmware in order to receive data from a Smartphone over the Bluetooth to control DC motors
+- for this to work you'll need to 
+    - open bluetooth settings on your pc
+    - go to COM Ports
+    - add incoming serial port (COM5 or anything but it must match with the HC-05 configuration)
+    - install "serial bluetooth terminal" app form playstore on an android phone
+    - open it and select the pc from devices tab
+    - connect the phone to the PC using bluetooth 
+    - Send "1" to reverse the motor
+    - Send "2" to turn off the motor
+    - Send "3" to set the motor at 33% power
+    - Send "4" to set the motor at 67% power
+    - Send "5" to set the motor at 100% power
+#### Components   
+- HC-05 Bluetooth Module
+- DC Motor
+- L293D motor driver
+#### Configuration
+-  Transmitter (HC-05)
+    -  TXD as UART transmitter
+-  Reciever (PIC16F877A)
+    - RD0-1 as output for motor direction
+    - RC2 CCP/PWM output pin (duty cycle)
