@@ -44,7 +44,7 @@ void Port_Init(void){
    TRISB|=0xF0;     // RB4-7 as input (IOC)
 
    TRISD&=~0x03;    // RD0-1 as output for direction
-   PORTD=0x02;      // Set RD0 & Clear RD1
+   PORTD=0x01;      // Set RD0 & Clear RD1
    
 }
 
