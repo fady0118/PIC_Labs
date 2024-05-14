@@ -1955,12 +1955,15 @@ port_init();
 while(1){
 if(RB0){
 data++;
+  _delay((unsigned long)((350)*(4000000/4000.0)));
 }
 if(RB1){
 data--;
+  _delay((unsigned long)((350)*(4000000/4000.0)));
 }
 if(RB2){
 Write_data(data);
+  _delay((unsigned long)((350)*(4000000/4000.0)));
 }
 PORTD=data;
 }
@@ -1991,10 +1994,6 @@ TRISC3=0;
 TRISC4=1;
 TRISC5=0;
 
-
-SSPIE=1;
-PEIE=1;
-GIE=1;
 }
 
 

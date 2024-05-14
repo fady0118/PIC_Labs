@@ -1,17 +1,16 @@
-_BF 4A0 0 ABS 0
-__S0 5D 0 ABS 0
+__S0 58 0 ABS 0
 __S1 73 0 ABS 0
 __S3 0 0 ABS 0
 _CKE 4A6 0 ABS 0
 _GIE 5F 0 ABS 0
 _CKP A4 0 ABS 0
 _SMP 4A7 0 ABS 0
-_ISR 2C 0 CODE 0
+_ISR 3E 0 CODE 0
 __Hintentry C 0 CODE 0
 __Lintentry 4 0 CODE 0
 __pintentry 4 0 CODE 0
 _PEIE 5E 0 ABS 0
-_main 41 0 CODE 0
+_main 2C 0 CODE 0
 ___sp 0 0 STACK 2
 btemp 7E 0 ABS 0
 start C 0 CODE 0
@@ -36,7 +35,7 @@ __Lconfig 0 0 CONFIG 4
 __Hram 0 0 ABS 0
 __Lram 0 0 ABS 0
 ___int_stack_hi 0 0 STACK 2
-__end_of_ISR 41 0 CODE 0
+__end_of_ISR 4E 0 CODE 0
 __Hfunctab 0 0 ENTRY 0
 __Lfunctab 0 0 ENTRY 0
 _TRISC3 43B 0 ABS 0
@@ -70,7 +69,7 @@ __Lheap 0 0 HEAP 7
 saved_w 7E 0 ABS 0
 __Hinit C 0 CODE 0
 __Linit C 0 CODE 0
-__end_of_main 53 0 CODE 0
+__end_of_main 3E 0 CODE 0
 __Hsivt C 0 CODE 0
 __Htext 0 0 ABS 0
 __Lsivt C 0 CODE 0
@@ -80,7 +79,7 @@ end_of_initialization 10 0 CODE 0
 ___stacklo 0 0 ABS 0
 __Hstrings 0 0 ABS 0
 __Lstrings 0 0 ABS 0
-_port_init 53 0 CODE 0
+_port_init 4E 0 CODE 0
 __Hbank0 0 0 ABS 0
 __Lbank0 0 0 ABS 0
 __Hbank1 0 0 ABS 0
@@ -92,10 +91,10 @@ __Lbank3 0 0 ABS 0
 ___latbits 2 0 ABS 0
 __Hpowerup 0 0 CODE 0
 __Lpowerup 0 0 CODE 0
-__ptext1 53 0 CODE 0
+__ptext1 4E 0 CODE 0
 __ptext2 14 0 CODE 0
 __end_of_SPI_Slave_init 2C 0 CODE 0
-__ptext3 2C 0 CODE 0
+__ptext3 3E 0 CODE 0
 ___stack_hi 0 0 STACK 2
 __Hclrtext 0 0 ABS 0
 __Lclrtext 0 0 ABS 0
@@ -104,7 +103,7 @@ __H__absolute__ 0 0 ABS 0
 __L__absolute__ 0 0 ABS 0
 __Hstack 0 0 STACK 2
 __Lstack 0 0 STACK 2
-__Hspace_0 5D 0 ABS 0
+__Hspace_0 58 0 ABS 0
 __Lspace_0 0 0 ABS 0
 __Hspace_1 73 0 ABS 0
 __Lspace_1 0 0 ABS 0
@@ -117,7 +116,7 @@ __Lspace_3 0 0 ABS 0
 __Hspace_4 400F 0 ABS 0
 __Lspace_4 0 0 ABS 0
 ___stack_lo 0 0 STACK 2
-__end_of_port_init 5D 0 CODE 0
+__end_of_port_init 58 0 CODE 0
 __HbssCOMMON 0 0 ABS 0
 __LbssCOMMON 0 0 ABS 0
 __pbssCOMMON 72 0 COMMON 1
@@ -138,30 +137,30 @@ start_initialization F 0 CODE 0
 ___int_stack_lo 0 0 STACK 2
 __Hmaintext 0 0 ABS 0
 __Lmaintext 0 0 ABS 0
-__pmaintext 41 0 CODE 0
+__pmaintext 2C 0 CODE 0
 __initialization F 0 CODE 0
 %segments
 reset_vec 0 5 CODE 0 0
-intentry 8 B9 CODE 8 0
+intentry 8 AF CODE 8 0
 cstackCOMMON 70 72 COMMON 70 1
 %locals
 dist/default/production\SPI_Slave.X.production.o
-C:\Users\fady0\AppData\Local\Temp\xcAs8n8.\driver_tmp_1.s
-402 F 0 CODE 0
-405 F 0 CODE 0
-416 F 0 CODE 0
+C:\Users\fady0\AppData\Local\Temp\xcAsgnk.\driver_tmp_1.s
+400 F 0 CODE 0
+403 F 0 CODE 0
+414 F 0 CODE 0
+420 10 0 CODE 0
 422 10 0 CODE 0
-424 10 0 CODE 0
-425 11 0 CODE 0
+423 11 0 CODE 0
 main.c
-26 41 0 CODE 0
-27 41 0 CODE 0
-28 46 0 CODE 0
-30 4B 0 CODE 0
-20 53 0 CODE 0
-21 53 0 CODE 0
-22 59 0 CODE 0
-23 5C 0 CODE 0
+26 2C 0 CODE 0
+27 2C 0 CODE 0
+28 31 0 CODE 0
+30 36 0 CODE 0
+20 4E 0 CODE 0
+21 4E 0 CODE 0
+22 54 0 CODE 0
+23 57 0 CODE 0
 35 14 0 CODE 0
 37 14 0 CODE 0
 38 17 0 CODE 0
@@ -182,11 +181,10 @@ main.c
 65 28 0 CODE 0
 66 29 0 CODE 0
 67 2A 0 CODE 0
-68 2B 0 CODE 0
-70 2C 0 CODE 0
-71 2C 0 CODE 0
-72 32 0 CODE 0
-73 34 0 CODE 0
-74 37 0 CODE 0
-76 3A 0 CODE 0
-70 4 0 CODE 0
+69 2B 0 CODE 0
+71 3E 0 CODE 0
+72 3E 0 CODE 0
+73 44 0 CODE 0
+74 46 0 CODE 0
+76 47 0 CODE 0
+71 4 0 CODE 0

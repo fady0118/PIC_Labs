@@ -18,7 +18,11 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2678 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h: 2678: extern volatile __bit RB0 __attribute__((address(0x30)));
 [v _RB0 `Vb ~T0 @X0 0 e@48 ]
-"2681
+[v F164 `(v ~T0 @X0 1 tf1`ul ]
+"20 C:\Program Files\Microchip\xc8\v2.46\pic\include\builtins.h
+[v __delay `JF164 ~T0 @X0 0 e ]
+[p i __delay ]
+"2681 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h: 2681: extern volatile __bit RB1 __attribute__((address(0x31)));
 [v _RB1 `Vb ~T0 @X0 0 e@49 ]
 "2684
@@ -60,15 +64,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2978
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h: 2978: extern volatile __bit TRISC5 __attribute__((address(0x43D)));
 [v _TRISC5 `Vb ~T0 @X0 0 e@1085 ]
-"2825
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h: 2825: extern volatile __bit SSPIE __attribute__((address(0x463)));
-[v _SSPIE `Vb ~T0 @X0 0 e@1123 ]
-"2633
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h: 2633: extern volatile __bit PEIE __attribute__((address(0x5E)));
-[v _PEIE `Vb ~T0 @X0 0 e@94 ]
-"2573
-[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h: 2573: extern volatile __bit GIE __attribute__((address(0x5F)));
-[v _GIE `Vb ~T0 @X0 0 e@95 ]
 "808
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h: 808: extern volatile unsigned char SSPBUF __attribute__((address(0x013)));
 [v _SSPBUF `Vuc ~T0 @X0 0 e@19 ]
@@ -321,110 +316,110 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 41: data++;
 [e ++ _data -> -> 1 `i `uc ]
 "42
-[; ;main.c: 42: }
+[; ;main.c: 42:   _delay((unsigned long)((350)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 350 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"43
+[; ;main.c: 43: }
 }
 [e :U 104 ]
-"43
-[; ;main.c: 43: if(RB1){
+"44
+[; ;main.c: 44: if(RB1){
 [e $ ! _RB1 105  ]
 {
-"44
-[; ;main.c: 44: data--;
-[e -- _data -> -> 1 `i `uc ]
 "45
-[; ;main.c: 45: }
+[; ;main.c: 45: data--;
+[e -- _data -> -> 1 `i `uc ]
+"46
+[; ;main.c: 46:   _delay((unsigned long)((350)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 350 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"47
+[; ;main.c: 47: }
 }
 [e :U 105 ]
-"46
-[; ;main.c: 46: if(RB2){
+"48
+[; ;main.c: 48: if(RB2){
 [e $ ! _RB2 106  ]
 {
-"47
-[; ;main.c: 47: Write_data(data);
+"49
+[; ;main.c: 49: Write_data(data);
 [e ( _Write_data (1 _data ]
-"48
-[; ;main.c: 48: }
+"50
+[; ;main.c: 50:   _delay((unsigned long)((350)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 350 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"51
+[; ;main.c: 51: }
 }
 [e :U 106 ]
-"49
-[; ;main.c: 49: PORTD=data;
+"52
+[; ;main.c: 52: PORTD=data;
 [e = _PORTD _data ]
-"50
-[; ;main.c: 50: }
+"53
+[; ;main.c: 53: }
 }
 [e :U 101 ]
 [e $U 102  ]
 [e :U 103 ]
-"51
-[; ;main.c: 51:     return;
+"54
+[; ;main.c: 54:     return;
 [e $UE 100  ]
-"52
-[; ;main.c: 52: }
+"55
+[; ;main.c: 55: }
 [e :UE 100 ]
 }
-"56
-[; ;main.c: 56: void SPI_Master_init(void){
+"59
+[; ;main.c: 59: void SPI_Master_init(void){
 [v _SPI_Master_init `(v ~T0 @X0 1 ef ]
 {
 [e :U _SPI_Master_init ]
 [f ]
-"58
-[; ;main.c: 58: SSPM3=0;
-[e = _SSPM3 -> -> 0 `i `b ]
-"59
-[; ;main.c: 59: SSPM2=0;
-[e = _SSPM2 -> -> 0 `i `b ]
-"60
-[; ;main.c: 60: SSPM1=0;
-[e = _SSPM1 -> -> 0 `i `b ]
 "61
-[; ;main.c: 61: SSPM0=0;
-[e = _SSPM0 -> -> 0 `i `b ]
+[; ;main.c: 61: SSPM3=0;
+[e = _SSPM3 -> -> 0 `i `b ]
+"62
+[; ;main.c: 62: SSPM2=0;
+[e = _SSPM2 -> -> 0 `i `b ]
+"63
+[; ;main.c: 63: SSPM1=0;
+[e = _SSPM1 -> -> 0 `i `b ]
 "64
-[; ;main.c: 64: SSPEN=1;
-[e = _SSPEN -> -> 1 `i `b ]
+[; ;main.c: 64: SSPM0=0;
+[e = _SSPM0 -> -> 0 `i `b ]
 "67
-[; ;main.c: 67: CKP=0;
+[; ;main.c: 67: SSPEN=1;
+[e = _SSPEN -> -> 1 `i `b ]
+"70
+[; ;main.c: 70: CKP=0;
 [e = _CKP -> -> 0 `i `b ]
-"68
-[; ;main.c: 68: CKE=0;
-[e = _CKE -> -> 0 `i `b ]
 "71
-[; ;main.c: 71: SMP=0;
-[e = _SMP -> -> 0 `i `b ]
+[; ;main.c: 71: CKE=0;
+[e = _CKE -> -> 0 `i `b ]
 "74
-[; ;main.c: 74: TRISC3=0;
+[; ;main.c: 74: SMP=0;
+[e = _SMP -> -> 0 `i `b ]
+"77
+[; ;main.c: 77: TRISC3=0;
 [e = _TRISC3 -> -> 0 `i `b ]
-"75
-[; ;main.c: 75: TRISC4=1;
+"78
+[; ;main.c: 78: TRISC4=1;
 [e = _TRISC4 -> -> 1 `i `b ]
-"76
-[; ;main.c: 76: TRISC5=0;
-[e = _TRISC5 -> -> 0 `i `b ]
 "79
-[; ;main.c: 79: SSPIE=1;
-[e = _SSPIE -> -> 1 `i `b ]
-"80
-[; ;main.c: 80: PEIE=1;
-[e = _PEIE -> -> 1 `i `b ]
+[; ;main.c: 79: TRISC5=0;
+[e = _TRISC5 -> -> 0 `i `b ]
 "81
-[; ;main.c: 81: GIE=1;
-[e = _GIE -> -> 1 `i `b ]
-"82
-[; ;main.c: 82: }
+[; ;main.c: 81: }
 [e :UE 107 ]
 }
-"85
-[; ;main.c: 85: void Write_data(uint8_t data){
+"84
+[; ;main.c: 84: void Write_data(uint8_t data){
 [v _Write_data `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _Write_data ]
 [v _data `uc ~T0 @X0 1 r1 ]
 [f ]
-"86
-[; ;main.c: 86: SSPBUF=data;
+"85
+[; ;main.c: 85: SSPBUF=data;
 [e = _SSPBUF _data ]
-"87
-[; ;main.c: 87: }
+"86
+[; ;main.c: 86: }
 [e :UE 108 ]
 }

@@ -39,12 +39,15 @@ port_init();
 while(1){
 if(UP){
 data++;
+  __delay_ms(350);
 }
 if(DOWN){
 data--;
+  __delay_ms(350);
 }
 if(SEND){
 Write_data(data); // SPI transmission initiation
+  __delay_ms(350);
 }
 PORTD=data;	// display data to be transmitted
 }
@@ -75,10 +78,6 @@ TRISC3=0;	// SCK/RC3 output
 TRISC4=1;	// SDI/RC4 input
 TRISC5=0;	// SDO/RC5 output
 
-// Enable SPI reception interrupts 
-SSPIE=1;	// enable SPI interrupts
-PEIE=1;		// enable peripheral interrupts
-GIE=1;		// enable general interrupts
 }
 
 //----------Transmit_serial_data_SPI-------------

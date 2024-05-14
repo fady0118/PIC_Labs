@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes'?>
 <WORKSPACE>
  <FRAME activewindow="0">
-  <PLACEMENT>2c00000002000000030000000083ffff0083ffffffffffffffffffff8300000009000000d3040000cf020000</PLACEMENT>
+  <PLACEMENT>2c0000000200000003000000ffffffffffffffffffffffffffffffff8300000009000000d3040000cf020000</PLACEMENT>
   <WINDOW type="default" module="ISIS"/>
  </FRAME>
  <MODULE name="VSMDEBUG">
@@ -31,7 +31,7 @@
      <ITEM name="nItems">0</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="380" x="108" flags="00000008" y="169" h="182" pid="3" iid="2">
+   <POPUP w="52" x="108" flags="00000008" y="169" h="13" pid="3" iid="2">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="8" x="128" flags="0000000a" y="189" h="32" pid="4" iid="2">
@@ -64,7 +64,7 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="114" x="188" flags="00000008" y="249" h="127" pid="7" iid="2">
+   <POPUP w="14" x="188" flags="00000008" y="249" h="8" pid="7" iid="2">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="8" x="208" flags="00000002" y="269" h="8" pid="8" iid="2">
@@ -80,7 +80,7 @@
    <POPUP w="610" x="0" flags="00000000" y="81" h="466" pid="0" iid="6">
     <PROPERTIES/>
    </POPUP>
-   <POPUP w="380" x="68" flags="00000008" y="129" h="182" pid="3" iid="1">
+   <POPUP w="52" x="68" flags="00000008" y="129" h="13" pid="3" iid="1">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="8" x="88" flags="0000000a" y="149" h="32" pid="4" iid="1">
@@ -113,7 +113,7 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="114" x="148" flags="00000008" y="209" h="127" pid="7" iid="1">
+   <POPUP w="14" x="148" flags="00000008" y="209" h="8" pid="7" iid="1">
     <PROPERTIES/>
    </POPUP>
    <POPUP w="8" x="168" flags="00000002" y="229" h="8" pid="8" iid="1">
@@ -126,10 +126,12 @@
      <ITEM name="TopLineAddress">00000000</ITEM>
     </PROPERTIES>
    </POPUP>
-   <POPUP w="450" x="526" flags="00000022" y="161" h="250" pid="0" iid="25">
+   <POPUP w="450" x="45" flags="00008023" y="136" h="461" pid="0" iid="25">
     <PROPERTIES>
      <ITEM name="AutoEcho">1</ITEM>
+     <ITEM name="HSplitter1Pos">99</ITEM>
      <ITEM name="HexMode">1</ITEM>
+     <ITEM name="VSplitter1Pos">138</ITEM>
     </PROPERTIES>
    </POPUP>
   </PWI>

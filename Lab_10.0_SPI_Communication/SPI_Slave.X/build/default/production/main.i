@@ -1989,12 +1989,12 @@ TRISC5=0;
 SSPIE=1;
 PEIE=1;
 GIE=1;
+
 }
 
 void __attribute__((picinterrupt(("")))) ISR(void){
     if(SSPIF){
     Data_Buffer=SSPBUF;
-    BF=0;
     SSPIF=0;
     }
 }

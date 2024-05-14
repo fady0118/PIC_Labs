@@ -65,12 +65,12 @@ TRISC5=0;	// SDO/RC5 output
 SSPIE=1;	// enable SPI interrupts
 PEIE=1;		// enable peripheral interrupts
 GIE=1;		// enable general interrupts
+
 }
 
 void __interrupt() ISR(void){
     if(SSPIF){
     Data_Buffer=SSPBUF;     // Read Buffer
-    BF=0;       // clear Buffer full bit
     SSPIF=0;    // clear interrupt flag
     }
 }

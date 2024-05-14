@@ -11,13 +11,13 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"20 D:\Embedded\Course#4_Deepblue_E.S\Labs\PIC_Labs\Lab_10_SPI_Communication\SPI_Slave.X\main.c
+"20 D:\Embedded\Course#4_Deepblue_E.S\Labs\PIC_Labs\Lab_10.0_SPI_Communication\SPI_Slave.X\main.c
 [v _port_init port_init `(v  1 e 1 0 ]
 "26
 [v _main main `(v  1 e 1 0 ]
 "35
 [v _SPI_Slave_init SPI_Slave_init `(v  1 e 1 0 ]
-"70
+"71
 [v _ISR ISR `II(v  1 e 1 0 ]
 "216 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h
 [v _PORTB PORTB `VEuc  1 e 1 @6 ]
@@ -25,8 +25,6 @@
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "1375
 [v _TRISB TRISB `VEuc  1 e 1 @134 ]
-"2417
-[v _BF BF `VEb  1 e 0 @1184 ]
 "2498
 [v _CKE CKE `VEb  1 e 0 @1190 ]
 "2501
@@ -67,7 +65,7 @@
 [v _TRISC4 TRISC4 `VEb  1 e 0 @1084 ]
 "2978
 [v _TRISC5 TRISC5 `VEb  1 e 0 @1085 ]
-"14 D:\Embedded\Course#4_Deepblue_E.S\Labs\PIC_Labs\Lab_10_SPI_Communication\SPI_Slave.X\main.c
+"14 D:\Embedded\Course#4_Deepblue_E.S\Labs\PIC_Labs\Lab_10.0_SPI_Communication\SPI_Slave.X\main.c
 [v _Data_Buffer Data_Buffer `uc  1 e 1 0 ]
 "26
 [v _main main `(v  1 e 1 0 ]
@@ -82,9 +80,9 @@
 "35
 [v _SPI_Slave_init SPI_Slave_init `(v  1 e 1 0 ]
 {
-"68
+"69
 } 0
-"70
+"71
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
 "76
