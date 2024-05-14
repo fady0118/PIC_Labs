@@ -26,6 +26,7 @@ void UART_Write(uint8_t);
 //----------Port_Init--------------
 // initializes portA and configures I/O pins
 // RB0, RB1 & RB2 Are Input Pins (Push Buttons)
+// RD0-3 are output pins (LEDs)
 void Port_Init(void){
    TRISB|=0x07;     // pin RB0-2 as input (buttons)
    PORTB&=~0x07;    // initial state low 

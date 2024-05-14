@@ -269,3 +269,25 @@ Simulated in Proteus 8 Professional
 -  Reciever (PIC16F877A)
     - RD0-1 as output for motor direction
     - RC2 CCP/PWM output pin (duty cycle)
+
+### Lab_10_SPI_Communication
+
+#### Purpose 
+- Create a serial communication interface between 2 microcontrollers using SPI Protocol.
+#### Components   
+- 8 LEDs
+- 3 Buttons
+#### Configuration
+-  Master
+    -  RB0-2 as input for buttons
+    -  RD0-3 as output LEDs
+    -  SCK/RC3 output (clock)
+    -  SDI/RC4 input (data)
+    -  SDO/RC5 output (data)
+-  Slave
+    -  RB0-3 as output LEDs
+    -  SCK/RC3 input(clock)
+    -  SDI/RC4 input (data)
+    -  SDO/RC5 output (data)
+    -  RA5/SS line input (slave select attached to ground since when the SS pin is low, transmission and
+reception are enabled)
