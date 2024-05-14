@@ -18,7 +18,7 @@ uint8_t UART_Read(void);
 void UART_Read_String(uint8_t *Output, uint16_t length);
 
 void main(void) {
-    UART_RX_Init(); // Initialize The UART in Master Mode @ 9600bps
+    UART_RX_Init(); // Initialize The UART in Slave Mode @ 9600bps
     LCD_Init();
     LCD_Clear();
     
