@@ -1935,6 +1935,7 @@ void UART_Write(uint8_t);
 
 
 
+
 void Port_Init(void){
    TRISB|=0x07;
    PORTB&=~0x07;
@@ -1949,15 +1950,15 @@ void main(void) {
     while(1){
         if(RB0){
         Data++;
-        _delay((unsigned long)((250)*(4000000/4000.0)));
+        _delay((unsigned long)((350)*(4000000/4000.0)));
         }
         if(RB1){
         Data--;
-        _delay((unsigned long)((250)*(4000000/4000.0)));
+        _delay((unsigned long)((350)*(4000000/4000.0)));
         }
         if(RB2){
         UART_Write(Data);
-        _delay((unsigned long)((250)*(4000000/4000.0)));
+        _delay((unsigned long)((350)*(4000000/4000.0)));
         }
         PORTD = Data;
     }

@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.46 build 20240104201356 
-                                                                                               Wed May 08 00:04:39 2024
+                                                                                               Tue May 14 20:38:56 2024
 
 Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1 
      1                           	processor	16F877A
@@ -250,7 +250,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    236 ;;
    237 ;; *************** function _main *****************
    238 ;; Defined at:
-   239 ;;		line 36 in file "main.c"
+   239 ;;		line 37 in file "main.c"
    240 ;; Parameters:    Size  Location     Type
    241 ;;		None
    242 ;; Auto vars:     Size  Location     Type
@@ -287,19 +287,19 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    273                           ; Regs used in _main: [wreg+status,2+status,0+btemp+1+pclath+cstack]
    274                           
    275                           
-   276                           ;main.c: 37:     Port_Init();
+   276                           ;main.c: 38:     Port_Init();
    277     07A4  120A  118A  278E  120A  118A  	fcall	_Port_Init
    278     07A9                     l629:
    279                           
-   280                           ;main.c: 38:     UART_TX_Init();
+   280                           ;main.c: 39:     UART_TX_Init();
    281     07A9  120A  118A  277F  120A  118A  	fcall	_UART_TX_Init
    282     07AE                     l631:
    283                           
-   284                           ;main.c: 39:     uint8_t Data = 0;
+   284                           ;main.c: 40:     uint8_t Data = 0;
    285     07AE  01F4               	clrf	main@Data
    286     07AF                     l633:
    287                           
-   288                           ;main.c: 41:         if(RB0){
+   288                           ;main.c: 42:         if(RB0){
    289     07AF  1283               	bcf	3,5	;RP0=0, select bank0
    290     07B0  1303               	bcf	3,6	;RP1=0, select bank0
    291     07B1  1C06               	btfss	6,0	;volatile
@@ -310,19 +310,19 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    296     07B5                     u20:
    297     07B5                     l635:
    298                           
-   299                           ;main.c: 42:         Data++;
+   299                           ;main.c: 43:         Data++;
    300     07B5  3001               	movlw	1
    301     07B6  00FF               	movwf	btemp+1
    302     07B7  087F               	movf	btemp+1,w
    303     07B8  07F4               	addwf	main@Data,f
    304     07B9                     l637:
    305                           
-   306                           ;main.c: 43:         _delay((unsigned long)((250)*(4000000/4000.0)));
+   306                           ;main.c: 44:         _delay((unsigned long)((350)*(4000000/4000.0)));
    307     07B9  3002               	movlw	2
    308     07BA  00F3               	movwf	??_main+2
-   309     07BB  3045               	movlw	69
+   309     07BB  30C7               	movlw	199
    310     07BC  00F2               	movwf	??_main+1
-   311     07BD  30A9               	movlw	169
+   311     07BD  3088               	movlw	136
    312     07BE  00F1               	movwf	??_main
    313     07BF                     u57:
    314     07BF  0BF1               	decfsz	??_main,f
@@ -331,10 +331,10 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    317     07C2  2FBF               	goto	u57
    318     07C3  0BF3               	decfsz	??_main+2,f
    319     07C4  2FBF               	goto	u57
-   320     07C5  2FC6               	nop2
+   320     07C5  0000               	nop
    321     07C6                     l639:
    322                           
-   323                           ;main.c: 45:         if(RB1){
+   323                           ;main.c: 46:         if(RB1){
    324     07C6  1283               	bcf	3,5	;RP0=0, select bank0
    325     07C7  1303               	bcf	3,6	;RP1=0, select bank0
    326     07C8  1C86               	btfss	6,1	;volatile
@@ -345,17 +345,17 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    331     07CC                     u30:
    332     07CC                     l641:
    333                           
-   334                           ;main.c: 46:         Data--;
+   334                           ;main.c: 47:         Data--;
    335     07CC  3001               	movlw	1
    336     07CD  02F4               	subwf	main@Data,f
    337     07CE                     l643:
    338                           
-   339                           ;main.c: 47:         _delay((unsigned long)((250)*(4000000/4000.0)));
+   339                           ;main.c: 48:         _delay((unsigned long)((350)*(4000000/4000.0)));
    340     07CE  3002               	movlw	2
    341     07CF  00F3               	movwf	??_main+2
-   342     07D0  3045               	movlw	69
+   342     07D0  30C7               	movlw	199
    343     07D1  00F2               	movwf	??_main+1
-   344     07D2  30A9               	movlw	169
+   344     07D2  3088               	movlw	136
    345     07D3  00F1               	movwf	??_main
    346     07D4                     u67:
    347     07D4  0BF1               	decfsz	??_main,f
@@ -364,10 +364,10 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    350     07D7  2FD4               	goto	u67
    351     07D8  0BF3               	decfsz	??_main+2,f
    352     07D9  2FD4               	goto	u67
-   353     07DA  2FDB               	nop2
+   353     07DA  0000               	nop
    354     07DB                     l645:
    355                           
-   356                           ;main.c: 49:         if(RB2){
+   356                           ;main.c: 50:         if(RB2){
    357     07DB  1283               	bcf	3,5	;RP0=0, select bank0
    358     07DC  1303               	bcf	3,6	;RP1=0, select bank0
    359     07DD  1D06               	btfss	6,2	;volatile
@@ -378,17 +378,17 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    364     07E1                     u40:
    365     07E1                     l647:
    366                           
-   367                           ;main.c: 50:         UART_Write(Data);
+   367                           ;main.c: 51:         UART_Write(Data);
    368     07E1  0874               	movf	main@Data,w
    369     07E2  120A  118A  2773  120A  118A  	fcall	_UART_Write
    370     07E7                     l649:
    371                           
-   372                           ;main.c: 51:         _delay((unsigned long)((250)*(4000000/4000.0)));
+   372                           ;main.c: 52:         _delay((unsigned long)((350)*(4000000/4000.0)));
    373     07E7  3002               	movlw	2
    374     07E8  00F3               	movwf	??_main+2
-   375     07E9  3045               	movlw	69
+   375     07E9  30C7               	movlw	199
    376     07EA  00F2               	movwf	??_main+1
-   377     07EB  30A9               	movlw	169
+   377     07EB  3088               	movlw	136
    378     07EC  00F1               	movwf	??_main
    379     07ED                     u77:
    380     07ED  0BF1               	decfsz	??_main,f
@@ -397,10 +397,10 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    383     07F0  2FED               	goto	u77
    384     07F1  0BF3               	decfsz	??_main+2,f
    385     07F2  2FED               	goto	u77
-   386     07F3  2FF4               	nop2
+   386     07F3  0000               	nop
    387     07F4                     l651:
    388                           
-   389                           ;main.c: 53:         PORTD = Data;
+   389                           ;main.c: 54:         PORTD = Data;
    390     07F4  0874               	movf	main@Data,w
    391     07F5  1283               	bcf	3,5	;RP0=0, select bank0
    392     07F6  1303               	bcf	3,6	;RP1=0, select bank0
@@ -413,7 +413,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    399     0773                     __ptext1:	
    400 ;; *************** function _UART_Write *****************
    401 ;; Defined at:
-   402 ;;		line 73 in file "main.c"
+   402 ;;		line 74 in file "main.c"
    403 ;; Parameters:    Size  Location     Type
    404 ;;  data            1    wreg     unsigned char 
    405 ;; Auto vars:     Size  Location     Type
@@ -450,7 +450,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    436     0773  00F0               	movwf	UART_Write@data
    437     0774                     l623:
    438     0774                     l58:	
-   439                           ;main.c: 73: void UART_Write(uint8_t data);main.c: 74: {;main.c: 75:   while(!TRMT);
+   439                           ;main.c: 74: void UART_Write(uint8_t data);main.c: 75: {;main.c: 76:   while(!TRMT);
    440                           
    441     0774  1683               	bsf	3,5	;RP0=1, select bank1
    442     0775  1303               	bcf	3,6	;RP1=0, select bank1
@@ -462,7 +462,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    448     077A                     u10:
    449     077A                     l625:
    450                           
-   451                           ;main.c: 76:   TXREG = data;
+   451                           ;main.c: 77:   TXREG = data;
    452     077A  0870               	movf	UART_Write@data,w
    453     077B  1283               	bcf	3,5	;RP0=0, select bank0
    454     077C  1303               	bcf	3,6	;RP1=0, select bank0
@@ -475,7 +475,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    461     077F                     __ptext2:	
    462 ;; *************** function _UART_TX_Init *****************
    463 ;; Defined at:
-   464 ;;		line 58 in file "main.c"
+   464 ;;		line 59 in file "main.c"
    465 ;; Parameters:    Size  Location     Type
    466 ;;		None
    467 ;; Auto vars:     Size  Location     Type
@@ -510,38 +510,38 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    496                           ; Regs used in _UART_TX_Init: [wreg]
    497                           
    498                           
-   499                           ;main.c: 60:     BRGH = 1;
+   499                           ;main.c: 61:     BRGH = 1;
    500     077F  1683               	bsf	3,5	;RP0=1, select bank1
    501     0780  1303               	bcf	3,6	;RP1=0, select bank1
    502     0781  1518               	bsf	24,2	;volatile
    503     0782                     l611:
    504                           
-   505                           ;main.c: 61:     SPBRG = 25;
+   505                           ;main.c: 62:     SPBRG = 25;
    506     0782  3019               	movlw	25
    507     0783  0099               	movwf	25	;volatile
    508     0784                     l613:
    509                           
-   510                           ;main.c: 64:     SYNC = 0;
+   510                           ;main.c: 65:     SYNC = 0;
    511     0784  1218               	bcf	24,4	;volatile
    512     0785                     l615:
    513                           
-   514                           ;main.c: 65:     SPEN = 1;
+   514                           ;main.c: 66:     SPEN = 1;
    515     0785  1283               	bcf	3,5	;RP0=0, select bank0
    516     0786  1303               	bcf	3,6	;RP1=0, select bank0
    517     0787  1798               	bsf	24,7	;volatile
    518     0788                     l617:
    519                           
-   520                           ;main.c: 68:     TRISC6 = 1;
+   520                           ;main.c: 69:     TRISC6 = 1;
    521     0788  1683               	bsf	3,5	;RP0=1, select bank1
    522     0789  1303               	bcf	3,6	;RP1=0, select bank1
    523     078A  1707               	bsf	7,6	;volatile
    524     078B                     l619:
    525                           
-   526                           ;main.c: 69:     TRISC7 = 1;
+   526                           ;main.c: 70:     TRISC7 = 1;
    527     078B  1787               	bsf	7,7	;volatile
    528     078C                     l621:
    529                           
-   530                           ;main.c: 70:     TXEN = 1;
+   530                           ;main.c: 71:     TXEN = 1;
    531     078C  1698               	bsf	24,5	;volatile
    532     078D                     l55:
    533     078D  0008               	return
@@ -551,7 +551,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    537     078E                     __ptext3:	
    538 ;; *************** function _Port_Init *****************
    539 ;; Defined at:
-   540 ;;		line 29 in file "main.c"
+   540 ;;		line 30 in file "main.c"
    541 ;; Parameters:    Size  Location     Type
    542 ;;		None
    543 ;; Auto vars:     Size  Location     Type
@@ -586,7 +586,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    572                           ; Regs used in _Port_Init: [wreg+status,2+status,0+btemp+1]
    573                           
    574                           
-   575                           ;main.c: 30:    TRISB|=0x07;
+   575                           ;main.c: 31:    TRISB|=0x07;
    576     078E  3007               	movlw	7
    577     078F  00FF               	movwf	btemp+1
    578     0790  087F               	movf	btemp+1,w
@@ -594,7 +594,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    580     0792  1303               	bcf	3,6	;RP1=0, select bank1
    581     0793  0486               	iorwf	6,f	;volatile
    582                           
-   583                           ;main.c: 31:    PORTB&=~0x07;
+   583                           ;main.c: 32:    PORTB&=~0x07;
    584     0794  30F8               	movlw	248
    585     0795  00FF               	movwf	btemp+1
    586     0796  087F               	movf	btemp+1,w
@@ -602,7 +602,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    588     0798  1303               	bcf	3,6	;RP1=0, select bank0
    589     0799  0586               	andwf	6,f	;volatile
    590                           
-   591                           ;main.c: 32:    TRISD&=~0x0F;
+   591                           ;main.c: 33:    TRISD&=~0x0F;
    592     079A  30F0               	movlw	240
    593     079B  00FF               	movwf	btemp+1
    594     079C  087F               	movf	btemp+1,w
@@ -611,7 +611,7 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    597     079F  0588               	andwf	8,f	;volatile
    598     07A0                     l607:
    599                           
-   600                           ;main.c: 33:    PORTD = 0x00;
+   600                           ;main.c: 34:    PORTD = 0x00;
    601     07A0  1283               	bcf	3,5	;RP0=0, select bank0
    602     07A1  1303               	bcf	3,6	;RP1=0, select bank0
    603     07A2  0188               	clrf	8	;volatile
@@ -742,7 +742,7 @@ DATA                 0      0       0      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.46 build 20240104201356 
-Symbol Table                                                                                   Wed May 08 00:04:39 2024
+Symbol Table                                                                                   Tue May 14 20:38:56 2024
 
                      l41 07A3                       l61 077E                       l55 078D  
                      l58 0774                       u10 077A                       u11 0779  

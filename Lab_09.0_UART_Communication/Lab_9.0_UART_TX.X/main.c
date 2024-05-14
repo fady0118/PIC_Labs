@@ -41,15 +41,15 @@ void main(void) {
     while(1){
         if(RB0){   // Increment button pushed
         Data++;
-        __delay_ms(250);
+        __delay_ms(350);
         }
         if(RB1){   // Decrement button pushed
         Data--;
-        __delay_ms(250);    
+        __delay_ms(350);    
         }
         if(RB2){   // Send the current data frame
         UART_Write(Data);
-        __delay_ms(250);    
+        __delay_ms(350);    
         }
         PORTD = Data; // Display The Current Data Value at PORTD
     }
