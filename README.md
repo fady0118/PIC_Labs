@@ -291,3 +291,37 @@ Simulated in Proteus 8 Professional
     -  SDO/RC5 output (data)
     -  RA5/SS line input (slave select attached to ground since when the SS pin is low, transmission and
 reception are enabled)
+
+### Lab_10.1_SPI_HC-05_Bluetooth_Controller
+
+#### Purpose 
+- This project uses the HC-05 Bluetooth module with PIC microcontrollers. And develop the necessary firmware in order to receive data from a Smartphone over the Bluetooth to control LEDs
+- The Recieved data is then transmitted to the Slave device using SPI protocol
+- for this to work you'll need to 
+    - open bluetooth settings on your pc
+    - go to COM Ports
+    - add incoming serial port (COM5 or anything but it must match with the HC-05 configuration)
+    - install "serial bluetooth terminal" app form playstore on an android phone
+    - open it and select the pc from devices tab
+    - connect the phone to the PC using bluetooth 
+    - Send "1" to Increment data
+    - Send "2" to Decrement data
+    - Send "3" to Send data through SPI transmission
+#### Components   
+- HC-05 Bluetooth Module
+- 8 LEDs
+#### Configuration
+-  Master
+    -  SCK/RC3 output (clock)
+    -  SDI/RC4 input (data)
+    -  SDO/RC5 output (data)
+    -  RD0-3 as output LEDs
+    -  RC7 UART reciever
+    -  (HC-05) TXD as UART transmitter
+-  Slave
+    -  RB0-3 as output LEDs
+    -  SCK/RC3 input(clock)
+    -  SDI/RC4 input (data)
+    -  SDO/RC5 output (data)
+    -  RA5/SS line input (slave select attached to ground since when the SS pin is low, transmission and
+reception are enabled)
