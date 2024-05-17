@@ -297,7 +297,7 @@ reception are enabled)
 #### Purpose 
 - This project uses the HC-05 Bluetooth module with PIC microcontrollers. And develop the necessary firmware in order to receive data from a Smartphone over the Bluetooth to control LEDs
 - The Recieved data is then transmitted to the Slave device using SPI protocol
-- for this to work you'll need to 
+- for this to work you'll need to
     - open bluetooth settings on your pc
     - go to COM Ports
     - add incoming serial port (COM5 or anything but it must match with the HC-05 configuration)
