@@ -325,3 +325,15 @@ reception are enabled)
     -  SDO/RC5 output (data)
     -  RA5/SS line input (slave select attached to ground since when the SS pin is low, transmission and
 reception are enabled)
+
+### Lab_11.0_ADC_LED_Dimmer
+
+#### Purpose 
+-  Configure The ADC Module and read analog signals.
+-  Combine the analog readings from a potentiometer with PWM to control LED brightness.
+#### Components   
+- LED
+- Battery, potentiometer 
+#### Configuration
+- RA0/AN0 as the analog channel input
+- RC2/CCP1 as PWM output pin (duty cycle)

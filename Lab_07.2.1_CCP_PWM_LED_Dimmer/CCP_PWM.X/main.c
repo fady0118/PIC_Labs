@@ -20,7 +20,7 @@ T2CON&=~0x03;  // 1 prescale value
 T2CON|=0x04;      // Enable Timer2
 }
 
-//--------CCP_compare_mode_config---------
+//--------CCP_PWM_mode_config---------
 void CCP_PWM(void){
 CCP1CON|=0x0C;  // PWM mode   
 TRISC&=~0x04;   // CCP1/RC2 output
@@ -29,8 +29,8 @@ PWM_duty_cycle(0);
 }
 
 void main(void) {
-Timer2_Init();
 CCP_PWM();
+Timer2_Init();
 unsigned short int DC; // duty cycle variable 100% is 800
 while(1){
     DC=0;
