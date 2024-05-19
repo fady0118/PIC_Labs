@@ -223,7 +223,8 @@ Simulated in Proteus 8 Professional
 
 #### Purpose 
 - This project uses the HC-05 Bluetooth module with PIC microcontrollers. And develop the necessary firmware in order to receive data from a Smartphone over the Bluetooth to control LEDs
-- for this to work you'll need to 
+- for this to work you'll need to
+    - add the HC-05 library to proteus [https://www.theengineeringprojects.com/2018/10/sound-sensor-library-for-proteus.html]
     - open bluetooth settings on your pc
     - go to COM Ports
     - add incoming serial port (COM5 or anything but it must match with the HC-05 configuration)
