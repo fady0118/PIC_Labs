@@ -34,11 +34,11 @@ void main(void) {
         // Temperature is the A/D digital value * 0.488°C
     Temperature = result*0.488;
     // Convert The Temperature From Float To String
-    sprintf(Temp_String, "Temperature is -> %.3fc \r\n", Temperature);
+    sprintf(Temp_String, "%.3fc\r\n", Temperature);
     // Print Out The Temperature
     LCD_Set_Cursor(1,1);
     LCD_Write_String(" Temperature Is ");
-    LCD_Set_Cursor(2,1);
+    LCD_Set_Cursor(2,5);
     LCD_Write_String(Temp_String);
     __delay_ms(10);
     }

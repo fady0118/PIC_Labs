@@ -1,30 +1,30 @@
 ### HEXMate logfile and output summary ###
 
 ### Command-line arguments ###
- C:\Users\fady0\AppData\Local\Temp\xcAs188.\driver_tmp_3.o
+ C:\Users\fady0\AppData\Local\Temp\xcAse8s.\driver_tmp_3.o
  -Odist/default/production\LM35_Temperature_Sensor_Interfacing_LCD.X.production.hex
  -logfile=dist/default/production\LM35_Temperature_Sensor_Interfacing_LCD.X.production.hxl
  -addressing=2
 
 ### Memory Usage ###
  Input file ranges:
-  0h - 5h		(C:\Users\fady0\AppData\Local\Temp\xcAs188.\driver_tmp_3.o)
-  8h - FFDh		(C:\Users\fady0\AppData\Local\Temp\xcAs188.\driver_tmp_3.o)
-  1002h - 2087h		(C:\Users\fady0\AppData\Local\Temp\xcAs188.\driver_tmp_3.o)
-  208Ah - 2FFFh		(C:\Users\fady0\AppData\Local\Temp\xcAs188.\driver_tmp_3.o)
-  3D3Ch - 3FFFh		(C:\Users\fady0\AppData\Local\Temp\xcAs188.\driver_tmp_3.o)
-  400Eh - 400Fh		(C:\Users\fady0\AppData\Local\Temp\xcAs188.\driver_tmp_3.o)
+  0h - 5h		(C:\Users\fady0\AppData\Local\Temp\xcAse8s.\driver_tmp_3.o)
+  8h - FFDh		(C:\Users\fady0\AppData\Local\Temp\xcAse8s.\driver_tmp_3.o)
+  1002h - 2061h		(C:\Users\fady0\AppData\Local\Temp\xcAse8s.\driver_tmp_3.o)
+  2064h - 2FFFh		(C:\Users\fady0\AppData\Local\Temp\xcAse8s.\driver_tmp_3.o)
+  3D62h - 3FFFh		(C:\Users\fady0\AppData\Local\Temp\xcAse8s.\driver_tmp_3.o)
+  400Eh - 400Fh		(C:\Users\fady0\AppData\Local\Temp\xcAse8s.\driver_tmp_3.o)
  Unused ranges:
   6h - 7h
   FFEh - 1001h
-  2088h - 2089h
-  3000h - 3D3Bh
+  2062h - 2063h
+  3000h - 3D61h
   4000h - 400Dh
 
 ### Hex Memory Map ###
  Legend:
   -- = Unused memory
-  H1 = Input file             (C:\Users\fady0\AppData\Local\Temp\xcAs188.\driver_tmp_3.o)
+  H1 = Input file             (C:\Users\fady0\AppData\Local\Temp\xcAse8s.\driver_tmp_3.o)
 ----------------------------------------------------------
          | 00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
 ----------------------------------------------------------
@@ -546,9 +546,9 @@
 00002030 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002040 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002050 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00002060 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00002060 | H1 H1 -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002070 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00002080 | H1 H1 H1 H1 H1 H1 H1 H1 -- -- H1 H1 H1 H1 H1 H1
+00002080 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002090 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000020A0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 000020B0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
@@ -797,10 +797,7 @@
 00002FE0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00002FF0 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 ----------------------------------------------------------
-00003D30 | -- -- -- -- -- -- -- -- -- -- -- -- H1 H1 H1 H1
-00003D40 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00003D50 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
-00003D60 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
+00003D60 | -- -- H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00003D70 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00003D80 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1
 00003D90 | H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1 H1

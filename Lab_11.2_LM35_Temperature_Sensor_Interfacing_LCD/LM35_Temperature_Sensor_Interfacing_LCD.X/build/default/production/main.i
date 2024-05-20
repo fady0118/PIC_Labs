@@ -2111,11 +2111,11 @@ void main(void) {
 
     Temperature = result*0.488;
 
-    sprintf(Temp_String, "Temperature is -> %.3fc \r\n", Temperature);
+    sprintf(Temp_String, "%.3fc\r\n", Temperature);
 
     LCD_Set_Cursor(1,1);
     LCD_Write_String(" Temperature Is ");
-    LCD_Set_Cursor(2,1);
+    LCD_Set_Cursor(2,5);
     LCD_Write_String(Temp_String);
     _delay((unsigned long)((10)*(4000000/4000.0)));
     }
