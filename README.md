@@ -350,3 +350,15 @@ reception are enabled)
 #### Configuration
 - RA3/AN3 as the analog channel input
 - RC6/TX as the UART transmitter
+
+### Lab_11.2_LM35_Temperature_Sensor_Interfacing_LCD
+
+#### Purpose 
+-  Configure The ADC Module and read analog signals. 
+-  Interface The LM35 Temperature Sensor and print out the result to the 16*2 LCD Monitor.
+#### Components   
+- LM35
+- LCD
+#### Configuration
+- RA3/AN3 as the analog channel input
+- RB0-5 as output LCD
