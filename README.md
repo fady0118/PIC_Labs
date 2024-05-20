@@ -338,3 +338,15 @@ reception are enabled)
 #### Configuration
 - RA0/AN0 as the analog channel input
 - RC2/CCP1 as PWM output pin (duty cycle)
+
+### Lab_11.1_LM35_Temperature_Sensor_Interfacing
+
+#### Purpose 
+-  Configure The ADC Module and read analog signals. 
+-  Interface The LM35 Temperature Sensor and print out the result to the serial monitor on your computer.
+#### Components   
+- LM35
+- Virtual Terminal (UART Reciever)
+#### Configuration
+- RA3/AN3 as the analog channel input
+- RC6/TX as the UART transmitter

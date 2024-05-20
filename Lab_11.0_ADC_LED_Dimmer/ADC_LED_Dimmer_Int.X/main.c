@@ -20,7 +20,7 @@
 #include <stdint.h>
 #include "Config.h"
 #define _XTAL_FREQ 4000000
-//Global
+//Global_variable
 uint16_t result;
 //----------prototype-------------
 void PWM_duty_cycle(unsigned short int);
