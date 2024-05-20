@@ -362,3 +362,14 @@ reception are enabled)
 #### Configuration
 - RA3/AN3 as the analog channel input
 - RB0-5 as output LCD
+
+### Lab_12.0_DAC_R-2R ladder
+
+#### Purpose 
+-  Configure The ADC Module and read analog signals.
+-  Transfer the digital output of the 10-bit ADC to the input of an 8-bit DAC to reconstruct the analog signal again
+#### Components   
+- Battery, potentiometer 
+#### Configuration
+- RA3/AN3 as the analog channel input
+- PORTB as the ADC digital output 
