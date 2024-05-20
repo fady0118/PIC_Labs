@@ -45,7 +45,7 @@ void ADC_Init(void){
     PEIE=1;
     GIE=1;
 }
-
+//------------Main_Routine--------------
 void main(void) {
 CCP_PWM();
 ADC_Init();
@@ -69,7 +69,7 @@ void PWM_duty_cycle(uint16_t DC){
 // Input: Analog channel number
 // Output: The Right-Justified 10-Bit ADC Result
 void ADC_Read(uint8_t AN){
-if(AN>=0 || AN<=7){        // Check Channel Number Validity
+if(AN>=0 && AN<=7){      // Check Channel Number Validity
 ADCON0&=~0x38;           // clear the channel select
 ADCON0|=AN<<3;           // Select The Required Channel (AN)
 __delay_us(30);          // Wait The Acquisition Time
