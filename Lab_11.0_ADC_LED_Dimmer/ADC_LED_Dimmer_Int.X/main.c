@@ -68,6 +68,8 @@ void PWM_duty_cycle(uint16_t DC){
 //-----------AD_conversion-------------
 // Input: Analog channel number
 // Output: The Right-Justified 10-Bit ADC Result
+// To clearify this function has no output but the it sets the interrupts 
+// which loads the output result into the global variable
 void ADC_Read(uint8_t AN){
 if(AN>=0 && AN<=7){      // Check Channel Number Validity
 ADCON0&=~0x38;           // clear the channel select
