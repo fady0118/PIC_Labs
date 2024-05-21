@@ -370,6 +370,18 @@ reception are enabled)
 -  Transfer the digital output of the 10-bit ADC to the input of an 8-bit DAC to reconstruct the analog signal again
 #### Components   
 - Battery, potentiometer 
+- R-2R resistor ladder  
 #### Configuration
 - RA3/AN3 as the analog channel input
+- PORTB as the ADC digital output 
+
+
+### Lab_12.0_DAC_R-2R ladder
+
+#### Purpose 
+-  Create an 8-bit digital  sinewave.
+-  Transfer the digital 8-bit sinewave to the input of an 8-bit DAC to construct analog signal
+#### Components   
+- R-2R resistor ladder  
+#### Configuration
 - PORTB as the ADC digital output 
