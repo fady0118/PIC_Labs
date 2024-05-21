@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.46 build 20240104201356 
-                                                                                               Tue May 21 16:46:34 2024
+                                                                                               Tue May 21 17:43:33 2024
 
 Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1 
      1                           	processor	16F877A
@@ -383,10 +383,10 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    369     0042  178B               	bsf	11,7	;volatile
    370     0043                     l601:
    371                           
-   372                           ;main.c: 37: TMR1=65145;
+   372                           ;main.c: 37: TMR1=65177;
    373     0043  30FE               	movlw	254
    374     0044  008F               	movwf	15	;volatile
-   375     0045  3079               	movlw	121
+   375     0045  3099               	movlw	153
    376     0046  008E               	movwf	14	;volatile
    377     0047                     l29:
    378     0047  0008               	return
@@ -628,7 +628,7 @@ DATA                 0      0       5      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.46 build 20240104201356 
-Symbol Table                                                                                   Tue May 21 16:46:34 2024
+Symbol Table                                                                                   Tue May 21 17:43:33 2024
 
                      l34 0053                       l35 0053                       l29 0047  
                     l601 0043                      l603 0048                      l605 004E  

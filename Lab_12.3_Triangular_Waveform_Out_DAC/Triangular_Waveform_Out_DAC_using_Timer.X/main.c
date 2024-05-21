@@ -1,28 +1,26 @@
-/* Sawtooth_Out_DAC_using_Timer
+/* Triangular_Waveform_Out_DAC_using_Timer
  * File:   main.c
  * Author: fady
  *
- * Created on May 21, 2024, 2:31 PM
+ * Created on May 21, 2024, 4:39 PM
  */
 
-// [This is a modification to the Sawtooth_Out_DAC Lab
-//  but we'll be using Timer delays instead for better accuracy]
-
-
-// This code is dedicated for Generating Sawtooth Waveform With DAC  @ 10Hz
+// This code is dedicated for Generating Triangular Waveform With DAC  @ 10Hz
+// Ns = 256 (ramp-up) + 255 (ramp-down) = 511 sample points
 // Fout=1/(Number of samples * Ts)
-// for F = 10Hz & 256 samples
-// Ts = 390.625 us
+// for F = 10Hz & 511 samples
+// Ts = 196 us
 //---------Preprocessor---------
 #include <xc.h>
 #include <stdint.h>
+#include <stdbool.h>
 #include "Config.h"
 #define _XTAL_FREQ 4000000
 #define DAC_OUT PORTB
 // Global
-uint8_t TMR1_Counter=0;
+bool State=0;       // governs incrementing or decrementing the data var
 uint8_t data=0;     // data variable 
-
+uint8_t counter=0;
 //-----------Timer1_Init-------------
 void Timer1_Init(void){
 TMR1ON=0;
@@ -34,7 +32,7 @@ TMR1IE=1;       // Enable Interrupts
 TMR1IF = 0;     // Clear The Interrupt Flag Bit
 PEIE = 1;       // Peripherals Interrupts Enable Bit
 GIE = 1;        // Global Interrupts Enable Bit
-TMR1=65177;     // pre-loading value 390 us to overflow
+TMR1=65388;     // pre-loading value 390 us to overflow
 }
 
 void main(void) {
@@ -49,17 +47,25 @@ void main(void) {
 
 //------------ISR-------------
 // Calibration
-// while the equations showed that pre-loading the timer with 65145 should give
-// 10Hz frequency, in practice it took around 0.11 sec/cycle
+// while the equations showed that pre-loading the timer with 65340 should give
+// 10Hz frequency, in practice it took around 0.125 sec/cycle
 // this is possibly caused by the time wasted on context switch from
 // main thread to the ISR background thread
 // so we'll make up for it by adjusting the pre-loading value
-// the oscilloscope showed a 7.5~8.75 ms error 
-// Changing the value form 65145 to 65177 showed the desired results
+// the oscilloscope showed a 23.5~25 ms error 
+// Changing the value form 65340 to 65388 showed the desired results
 void __interrupt() ISR(void){
     if(TMR1IF){
         TMR1IF=0;   // clear flag
-        DAC_OUT=data++;     // New sample
-        TMR1=65177; 
+
+        if(State==0){
+            DAC_OUT=data++; // New sample
+        }
+        else {
+            DAC_OUT=data--; // New sample   
+        }
+        if(data==255 || data==0){State^=1;}
+        TMR1=65388; 
+
     }
 }

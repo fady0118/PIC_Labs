@@ -7,7 +7,7 @@
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "main.c" 2
-# 17 "main.c"
+# 14 "main.c"
 # 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 1 3
 # 18 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -1898,8 +1898,11 @@ extern __bank0 unsigned char __resetbits;
 extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\xc.h" 2 3
-# 17 "main.c" 2
+# 14 "main.c" 2
 
+
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\stdbool.h" 1 3
+# 16 "main.c" 2
 
 # 1 "./Config.h" 1
 # 30 "./Config.h"
@@ -1911,14 +1914,14 @@ extern __bank0 __bit __timeout;
 #pragma config CPD = OFF
 #pragma config WRT = OFF
 #pragma config CP = OFF
-# 19 "main.c" 2
+# 17 "main.c" 2
 
 
 
 
-uint8_t TMR1_Counter=0;
+_Bool State=0;
 uint8_t data=0;
-
+uint8_t counter=0;
 
 void Timer1_Init(void){
 TMR1ON=0;
@@ -1930,7 +1933,7 @@ TMR1IE=1;
 TMR1IF = 0;
 PEIE = 1;
 GIE = 1;
-TMR1=65177;
+TMR1=65388;
 }
 
 void main(void) {
@@ -1942,11 +1945,19 @@ void main(void) {
     }
     return;
 }
-# 59 "main.c"
+# 57 "main.c"
 void __attribute__((picinterrupt(("")))) ISR(void){
     if(TMR1IF){
         TMR1IF=0;
-        PORTB=data++;
-        TMR1=65177;
+
+        if(State==0){
+            PORTB=data++;
+        }
+        else {
+            PORTB=data--;
+        }
+        if(data==255 || data==0){State^=1;}
+        TMR1=65388;
+
     }
 }
