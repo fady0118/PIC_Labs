@@ -376,7 +376,7 @@ reception are enabled)
 - PORTB as the ADC digital output 
 
 
-Lab_12.1_DAC_R-2R ladder_Wave_Generation
+### Lab_12.1_DAC_R-2R ladder_Wave_Generation
 
 #### Purpose 
 -  Create an 8-bit digital  sinewave.
