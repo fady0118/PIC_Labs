@@ -385,3 +385,14 @@ reception are enabled)
 - R-2R resistor ladder  
 #### Configuration
 - PORTB as the ADC digital output 
+
+### Lab_12.2_Sawtooth_Out_DAC
+
+#### Purpose 
+-  Create an 8-bit digital  sawtooth signal.
+-  Transfer the digital 8-bit sawtooth to the input of an 8-bit DAC to construct analog signal
+-  Control the frequency (10Hz) using delays once and once using Timer1 module
+#### Components   
+- R-2R resistor ladder  
+#### Configuration
+- PORTB as the ADC digital output 
