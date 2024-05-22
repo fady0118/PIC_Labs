@@ -184,7 +184,7 @@ Simulated in Proteus 8 Professional
 - 4 LEDs
 - 4 Buttons
 #### Configuration
--  RB0-3 as input for buttons
+-  RB0-3 as input C
 -  RC0-3 as output LEDs
 
 ### Lab_9.0_UART_Communication
@@ -419,3 +419,15 @@ reception are enabled)
 - R-2R resistor ladder  
 #### Configuration
 - PORTB as the ADC digital output 
+
+### Lab_12.5_Piano_DDS_DAC
+
+#### Purpose 
+-  Generate Sinewave using look-up table
+-  Implement the DDS [direct digital synthesis] algorithm to control the frequency of the generated sinewave and generate music notes
+#### Components   
+- R-2R resistor ladder 
+- Speaker 
+#### Configuration
+- PORTB as the ADC digital output 
+- PORTA as input for buttons
