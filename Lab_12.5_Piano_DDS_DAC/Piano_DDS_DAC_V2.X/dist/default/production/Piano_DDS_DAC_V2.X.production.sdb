@@ -11,12 +11,10 @@
 [v ___eecpymem __eecpymem `(v  1 e 1 0 ]
 "39
 [v ___memcpyee __memcpyee `(v  1 e 1 0 ]
-"47 D:\Embedded\Course#4_Deepblue_E.S\Labs\PIC_Labs\Lab_12.5_Piano_DDS_DAC\Piano_DDS_DAC_V2.X\main.c
+"45 D:\Embedded\Course#4_Deepblue_E.S\Labs\PIC_Labs\Lab_12.5_Piano_DDS_DAC\Piano_DDS_DAC_V2.X\main.c
 [v _port_init port_init `(v  1 e 1 0 ]
-"67
+"65
 [v _main main `(v  1 e 1 0 ]
-"102
-[v _Piano_In Piano_In `(uc  1 e 1 0 ]
 "166 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h
 [v _PORTA PORTA `VEuc  1 e 1 @5 ]
 "216
@@ -31,24 +29,19 @@
 [v _RC0 RC0 `VEb  1 e 0 @56 ]
 "2963
 [v _TRISC0 TRISC0 `VEb  1 e 0 @1080 ]
-"37 D:\Embedded\Course#4_Deepblue_E.S\Labs\PIC_Labs\Lab_12.5_Piano_DDS_DAC\Piano_DDS_DAC_V2.X\main.c
+"35 D:\Embedded\Course#4_Deepblue_E.S\Labs\PIC_Labs\Lab_12.5_Piano_DDS_DAC\Piano_DDS_DAC_V2.X\main.c
 [v _sineLUT sineLUT `[64]uc  1 e 64 0 ]
-"67
+"65
 [v _main main `(v  1 e 1 0 ]
 {
-"70
+"68
 [v main@PhaseInc PhaseInc `us  1 a 2 4 ]
-"69
+"67
 [v main@PhaseAcc PhaseAcc `us  1 a 2 2 ]
-"100
+"98
 } 0
-"47
+"45
 [v _port_init port_init `(v  1 e 1 0 ]
 {
-"54
-} 0
-"102
-[v _Piano_In Piano_In `(uc  1 e 1 0 ]
-{
-"104
+"52
 } 0

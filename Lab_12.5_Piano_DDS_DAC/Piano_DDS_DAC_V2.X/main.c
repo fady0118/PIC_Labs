@@ -31,8 +31,6 @@
 #define D5 2
 #define E3 4
 #define F6 8
-//----------prototype-------------
-uint8_t Piano_In(void);
 
 uint8_t sineLUT[64] = {0x80,0x8c,0x98,0xa5,0xb0,0xbc,0xc6,0xd0,0xda,0xe2,0xea,
 0xf0,0xf5,0xfa,0xfd,0xfe,0xff,0xfe,0xfd,0xfa,0xf5,0xf0,0xea,0xe2,0xda,0xd0,
@@ -70,7 +68,7 @@ void main(void) {
     uint16_t PhaseInc=0;  // Fout = Fs * PhaseInc / 2^16
     while(1)
     {   
-        switch(Piano_In()){
+        switch(PORTA){
             case C4:
                 PhaseInc=1834;
                 break;
@@ -97,8 +95,4 @@ void main(void) {
         RC0 = ~RC0;
     }
     return;
-}
-
-uint8_t Piano_In(void){
-    return PORTA;
 }

@@ -18,10 +18,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h: 2963: extern volatile __bit TRISC0 __attribute__((address(0x438)));
 [v _TRISC0 `Vb ~T0 @X0 0 e@1080 ]
 [p mainexit ]
-"35 main.c
-[; ;main.c: 35: uint8_t Piano_In(void);
-[v _Piano_In `(uc ~T0 @X0 0 ef ]
-"2708 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h
+"2708
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h: 2708: extern volatile __bit RC0 __attribute__((address(0x38)));
 [v _RC0 `Vb ~T0 @X0 0 e@56 ]
 "54 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h
@@ -220,8 +217,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [p x WRT  =  OFF         ]
 "32
 [p x CP  =  OFF          ]
-"37 main.c
-[; ;main.c: 37: uint8_t sineLUT[64] = {0x80,0x8c,0x98,0xa5,0xb0,0xbc,0xc6,0xd0,0xda,0xe2,0xea,
+"35 main.c
+[; ;main.c: 35: uint8_t sineLUT[64] = {0x80,0x8c,0x98,0xa5,0xb0,0xbc,0xc6,0xd0,0xda,0xe2,0xea,
 [v _sineLUT `uc ~T0 @X0 -> 64 `i e ]
 [i _sineLUT
 :U ..
@@ -291,151 +288,137 @@ Version 4.0 HI-TECH Software Intermediate Code
 -> -> 115 `i `uc
 ..
 ]
-"47
-[; ;main.c: 47: void port_init(void){
+"45
+[; ;main.c: 45: void port_init(void){
 [v _port_init `(v ~T0 @X0 1 ef ]
 {
 [e :U _port_init ]
 [f ]
-"48
-[; ;main.c: 48: TRISB=0x00;
+"46
+[; ;main.c: 46: TRISB=0x00;
 [e = _TRISB -> -> 0 `i `uc ]
-"49
-[; ;main.c: 49: PORTB=0;
+"47
+[; ;main.c: 47: PORTB=0;
 [e = _PORTB -> -> 0 `i `uc ]
-"50
-[; ;main.c: 50: ADCON1|=0x06;
+"48
+[; ;main.c: 48: ADCON1|=0x06;
 [e =| _ADCON1 -> -> 6 `i `Vuc ]
-"51
-[; ;main.c: 51: TRISA=0xFF;
+"49
+[; ;main.c: 49: TRISA=0xFF;
 [e = _TRISA -> -> 255 `i `uc ]
-"52
-[; ;main.c: 52: PORTA=0;
+"50
+[; ;main.c: 50: PORTA=0;
 [e = _PORTA -> -> 0 `i `uc ]
-"53
-[; ;main.c: 53: TRISC0=0;
+"51
+[; ;main.c: 51: TRISC0=0;
 [e = _TRISC0 -> -> 0 `i `b ]
-"54
-[; ;main.c: 54: }
+"52
+[; ;main.c: 52: }
 [e :UE 99 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"67
-[; ;main.c: 67: void main(void) {
+"65
+[; ;main.c: 65: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"68
-[; ;main.c: 68:     port_init();
+"66
+[; ;main.c: 66:     port_init();
 [e ( _port_init ..  ]
-"69
-[; ;main.c: 69:     uint16_t PhaseAcc=0;
+"67
+[; ;main.c: 67:     uint16_t PhaseAcc=0;
 [v _PhaseAcc `us ~T0 @X0 1 a ]
 [e = _PhaseAcc -> -> 0 `i `us ]
-"70
-[; ;main.c: 70:     uint16_t PhaseInc=0;
+"68
+[; ;main.c: 68:     uint16_t PhaseInc=0;
 [v _PhaseInc `us ~T0 @X0 1 a ]
 [e = _PhaseInc -> -> 0 `i `us ]
-"71
-[; ;main.c: 71:     while(1)
+"69
+[; ;main.c: 69:     while(1)
 [e :U 102 ]
-"72
-[; ;main.c: 72:     {
+"70
+[; ;main.c: 70:     {
 {
-"73
-[; ;main.c: 73:         switch(Piano_In()){
+"71
+[; ;main.c: 71:         switch(PORTA){
 [e $U 105  ]
 {
-"74
-[; ;main.c: 74:             case 1:
+"72
+[; ;main.c: 72:             case 1:
 [e :U 106 ]
-"75
-[; ;main.c: 75:                 PhaseInc=1834;
+"73
+[; ;main.c: 73:                 PhaseInc=1834;
 [e = _PhaseInc -> -> 1834 `i `us ]
+"74
+[; ;main.c: 74:                 break;
+[e $U 104  ]
 "76
-[; ;main.c: 76:                 break;
-[e $U 104  ]
-"78
-[; ;main.c: 78:             case 2:
+[; ;main.c: 76:             case 2:
 [e :U 107 ]
-"79
-[; ;main.c: 79:                 PhaseInc=4119;
+"77
+[; ;main.c: 77:                 PhaseInc=4119;
 [e = _PhaseInc -> -> 4119 `i `us ]
+"78
+[; ;main.c: 78:                 break;
+[e $U 104  ]
 "80
-[; ;main.c: 80:                 break;
-[e $U 104  ]
-"82
-[; ;main.c: 82:             case 4:
+[; ;main.c: 80:             case 4:
 [e :U 108 ]
-"83
-[; ;main.c: 83:                 PhaseInc=1156;
+"81
+[; ;main.c: 81:                 PhaseInc=1156;
 [e = _PhaseInc -> -> 1156 `i `us ]
+"82
+[; ;main.c: 82:                 break;
+[e $U 104  ]
 "84
-[; ;main.c: 84:                 break;
-[e $U 104  ]
-"86
-[; ;main.c: 86:             case 8:
+[; ;main.c: 84:             case 8:
 [e :U 109 ]
-"87
-[; ;main.c: 87:                 PhaseInc=9796;
+"85
+[; ;main.c: 85:                 PhaseInc=9796;
 [e = _PhaseInc -> -> 9796 `i `us ]
-"88
-[; ;main.c: 88:                 break;
+"86
+[; ;main.c: 86:                 break;
 [e $U 104  ]
-"89
-[; ;main.c: 89:             default:
+"87
+[; ;main.c: 87:             default:
 [e :U 110 ]
-"90
-[; ;main.c: 90:                 PhaseInc=0;
+"88
+[; ;main.c: 88:                 PhaseInc=0;
 [e = _PhaseInc -> -> 0 `i `us ]
-"91
-[; ;main.c: 91:                 break;
+"89
+[; ;main.c: 89:                 break;
 [e $U 104  ]
-"92
-[; ;main.c: 92:         }
+"90
+[; ;main.c: 90:         }
 }
 [e $U 104  ]
 [e :U 105 ]
-[e [\ ( _Piano_In ..  , $ -> 1 `i 106
+[e [\ _PORTA , $ -> 1 `i 106
  , $ -> 2 `i 107
  , $ -> 4 `i 108
  , $ -> 8 `i 109
  110 ]
 [e :U 104 ]
-"95
-[; ;main.c: 95:         PhaseAcc += PhaseInc;
+"93
+[; ;main.c: 93:         PhaseAcc += PhaseInc;
 [e =+ _PhaseAcc -> _PhaseInc `us ]
-"96
-[; ;main.c: 96:         PORTB = sineLUT[PhaseAcc>>10];
+"94
+[; ;main.c: 94:         PORTB = sineLUT[PhaseAcc>>10];
 [e = _PORTB *U + &U _sineLUT * -> >> -> _PhaseAcc `ui -> 10 `i `ux -> -> # *U &U _sineLUT `ui `ux ]
-"97
-[; ;main.c: 97:         RC0 = ~RC0;
+"95
+[; ;main.c: 95:         RC0 = ~RC0;
 [e = _RC0 -> ~ -> _RC0 `ui `b ]
-"98
-[; ;main.c: 98:     }
+"96
+[; ;main.c: 96:     }
 }
 [e :U 101 ]
 [e $U 102  ]
 [e :U 103 ]
-"99
-[; ;main.c: 99:     return;
+"97
+[; ;main.c: 97:     return;
 [e $UE 100  ]
-"100
-[; ;main.c: 100: }
+"98
+[; ;main.c: 98: }
 [e :UE 100 ]
-}
-"102
-[; ;main.c: 102: uint8_t Piano_In(void){
-[v _Piano_In `(uc ~T0 @X0 1 ef ]
-{
-[e :U _Piano_In ]
-[f ]
-"103
-[; ;main.c: 103:     return PORTA;
-[e ) _PORTA ]
-[e $UE 111  ]
-"104
-[; ;main.c: 104: }
-[e :UE 111 ]
 }
