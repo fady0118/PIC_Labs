@@ -42,32 +42,6 @@ void LCD_DATA(unsigned char Data) {
 }
 
 void LCD_Init(void) {
-//    // Configure the I/O pins as outputs
-//    LCD_DATA_PORT_D = 0x00;
-//    LCD_RS_D = 0;
-//    LCD_EN_D = 0;
-//    // Wait for the LCD to power up
-//    __delay_ms(15);
-//    
-//    // Initialization sequence for 4-bit mode as Described In The Datasheet
-//    LCD_Command(0x03);
-//    __delay_ms(5);
-//    LCD_Command(0x03);
-//    __delay_us(150);
-//    LCD_Command(0x03);
-//    LCD_Command(0x02); // Set to 4-bit mode
-//    
-//    // Function Set: 4-bit mode, 2 lines, 5x8 dots
-//    LCD_Command(0x28);
-//    // Display ON, Cursor OFF, Blink OFF
-//    LCD_Command(0x0C);
-//    // Entry Mode: Increment cursor, No display shift
-//    LCD_Command(0x06);
-//    // Clear LCD
-//    LCD_Command(0x01);
-//    // Return home
-//    LCD_Command(0x02);
-    
     
     // IO Pin Configurations
   LCD_DATA_PORT_D = 0x00;

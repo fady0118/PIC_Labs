@@ -13,19 +13,20 @@
 #include <xc.h>
 #define _XTAL_FREQ 4000000
 // Macros [pin configuration]
-#define HELLO RB0
+#define STRING RB0
 #define SEND RB2
 
 //----------prototype-------------
 void SPI_Master_init(void);
 void Write_data(uint8_t);
 void SPI_Write_String(char *);
+void Shift_String_Right_Add_Length(char *);
 //----------Port_Init--------------
 // initializes portA and configures I/O pins
-// RB0, RB1 & RB2 Are Input Pins (Push Buttons)
+// RB0 & RB2 Are Input Pins (Push Buttons)
 void Port_Init(void){
-   TRISB|=0x07;     // pin RB0-2 as input (buttons)
-   PORTB&=~0x07;    // initial state low 
+   TRISB|=0x05;     // pin RB0&2 as input (buttons)
+   PORTB&=~0x05;    // initial state low 
 }
 
 
@@ -34,12 +35,16 @@ void main(void) {
 SPI_Master_init();
 Port_Init();
 
-char *buffer; // Pointer Variable
- // Dynamically allocate memory using malloc()
-    buffer = (char*)malloc(10 * sizeof(char));
+char buffer[20]; 
+
 while(1){
-if(HELLO){
-buffer="123456789";
+if(STRING){
+// define the string to transmit
+    // first character is the length
+    // the rest are the data
+    strcpy(buffer,"1234578");
+    // shift string right and add its length at the beginning
+    Shift_String_Right_Add_Length(buffer);
   __delay_ms(350);
 }
 
@@ -77,15 +82,25 @@ TRISC5=0;	// SDO/RC5 output
 
 }
 
-//----------Transmit_serial_data_SPI-------------
+//----------Write_data----------
 void Write_data(uint8_t data){
-SSPBUF=data;	// write data to the buffer
+SSPBUF=data;    // write data to the buffer
 }
-//----------String_Transmission--------------
-void SPI_Write_String(char *text)
-{
-  uint8_t i;
-  for(i=0;text[i]!='\0';i++){
-    Write_data(text[i]);}
+//----------SPI_Write_String----------
+void SPI_Write_String(char *Text){
+    uint8_t i;
+    for(i=0;Text[i]!='\0';i++){
+    Write_data(Text[i]);
      __delay_ms(100);
+    }
+}
+//----------Shift_String_Left----------
+void Shift_String_Right_Add_Length(char* str){
+    int32_t i;
+    char len = strlen(str); // Get the length of the string
+    // Shift string to the right by one position
+    for (int i = len; i >= 0; --i) {
+        str[i + 1] = str[i];
+    }
+str[0]=len+0x30; // first element is the string length (converted to ASCII)
 }

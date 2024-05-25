@@ -9,12 +9,15 @@ Version 4.0 HI-TECH Software Intermediate Code
 "20 main.c
 [; ;main.c: 20: void SPI_Master_init(void);
 [v _SPI_Master_init `(v ~T0 @X0 0 ef ]
-"58 C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\stdlib.h
-[; ;C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\stdlib.h: 58: void *malloc (size_t);
-[v _malloc `(*v ~T0 @X0 0 ef1`ui ]
 "2678 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h: 2678: extern volatile __bit RB0 __attribute__((address(0x30)));
 [v _RB0 `Vb ~T0 @X0 0 e@48 ]
+"33 C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\string.h: 33: char *strcpy (char *restrict, const char *restrict);
+[v _strcpy `(*uc ~T0 @X0 0 ef2`*uc`*Cuc ]
+"23 main.c
+[; ;main.c: 23: void Shift_String_Right_Add_Length(char *);
+[v _Shift_String_Right_Add_Length `(v ~T0 @X0 0 ef1`*uc ]
 [v F652 `(v ~T0 @X0 1 tf1`ul ]
 "20 C:\Program Files\Microchip\xc8\v2.46\pic\include\builtins.h
 [v __delay `JF652 ~T0 @X0 0 e ]
@@ -61,6 +64,9 @@ Version 4.0 HI-TECH Software Intermediate Code
 "808
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h: 808: extern volatile unsigned char SSPBUF __attribute__((address(0x013)));
 [v _SSPBUF `Vuc ~T0 @X0 0 e@19 ]
+"54 C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\string.h
+[; ;C:\Program Files\Microchip\xc8\v2.46\pic\include\c99\string.h: 54: size_t strlen (const char *);
+[v _strlen `(ui ~T0 @X0 0 ef1`*Cuc ]
 "25 ./Config.h
 [p x FOSC  =  XT         ]
 "26
@@ -257,41 +263,38 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2363
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"26 main.c
-[; ;main.c: 26: void Port_Init(void){
+"27 main.c
+[; ;main.c: 27: void Port_Init(void){
 [v _Port_Init `(v ~T0 @X0 1 ef ]
 {
 [e :U _Port_Init ]
 [f ]
-"27
-[; ;main.c: 27:    TRISB|=0x07;
-[e =| _TRISB -> -> 7 `i `Vuc ]
 "28
-[; ;main.c: 28:    PORTB&=~0x07;
-[e =& _PORTB -> ~ -> 7 `i `Vuc ]
+[; ;main.c: 28:    TRISB|=0x05;
+[e =| _TRISB -> -> 5 `i `Vuc ]
 "29
-[; ;main.c: 29: }
+[; ;main.c: 29:    PORTB&=~0x05;
+[e =& _PORTB -> ~ -> 5 `i `Vuc ]
+"30
+[; ;main.c: 30: }
 [e :UE 102 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"33
-[; ;main.c: 33: void main(void) {
+"34
+[; ;main.c: 34: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"34
-[; ;main.c: 34: SPI_Master_init();
-[e ( _SPI_Master_init ..  ]
 "35
-[; ;main.c: 35: Port_Init();
+[; ;main.c: 35: SPI_Master_init();
+[e ( _SPI_Master_init ..  ]
+"36
+[; ;main.c: 36: Port_Init();
 [e ( _Port_Init ..  ]
-"37
-[; ;main.c: 37: char *buffer;
-[v _buffer `*uc ~T0 @X0 1 a ]
-"39
-[; ;main.c: 39:     buffer = (char*)malloc(10 * sizeof(char));
-[e = _buffer -> ( _malloc (1 * -> -> 10 `i `ui -> # `uc `ui `*uc ]
+"38
+[; ;main.c: 38: char buffer[20];
+[v _buffer `uc ~T0 @X0 -> 20 `i a ]
 "40
 [; ;main.c: 40: while(1){
 [e :U 105 ]
@@ -300,137 +303,176 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 41: if(RB0){
 [e $ ! _RB0 107  ]
 {
-"42
-[; ;main.c: 42: buffer="123456789";
-[e = _buffer :s 1C ]
-"43
-[; ;main.c: 43:   _delay((unsigned long)((350)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 350 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"44
-[; ;main.c: 44: }
-}
-[e :U 107 ]
-"46
-[; ;main.c: 46: if(RB2){
-[e $ ! _RB2 108  ]
-{
+"45
+[; ;main.c: 45:     strcpy(buffer,"1234578");
+[e ( _strcpy (2 , &U _buffer :s 1C ]
 "47
-[; ;main.c: 47: SPI_Write_String(buffer);
-[e ( _SPI_Write_String (1 _buffer ]
+[; ;main.c: 47:     Shift_String_Right_Add_Length(buffer);
+[e ( _Shift_String_Right_Add_Length (1 &U _buffer ]
 "48
 [; ;main.c: 48:   _delay((unsigned long)((350)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 350 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "49
 [; ;main.c: 49: }
 }
-[e :U 108 ]
+[e :U 107 ]
 "51
-[; ;main.c: 51: }
+[; ;main.c: 51: if(RB2){
+[e $ ! _RB2 108  ]
+{
+"52
+[; ;main.c: 52: SPI_Write_String(buffer);
+[e ( _SPI_Write_String (1 &U _buffer ]
+"53
+[; ;main.c: 53:   _delay((unsigned long)((350)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 350 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"54
+[; ;main.c: 54: }
+}
+[e :U 108 ]
+"56
+[; ;main.c: 56: }
 }
 [e :U 104 ]
 [e $U 105  ]
 [e :U 106 ]
-"52
-[; ;main.c: 52:     return;
+"57
+[; ;main.c: 57:     return;
 [e $UE 103  ]
-"53
-[; ;main.c: 53: }
+"58
+[; ;main.c: 58: }
 [e :UE 103 ]
 }
-"56
-[; ;main.c: 56: void SPI_Master_init(void){
+"61
+[; ;main.c: 61: void SPI_Master_init(void){
 [v _SPI_Master_init `(v ~T0 @X0 1 ef ]
 {
 [e :U _SPI_Master_init ]
 [f ]
-"58
-[; ;main.c: 58: SSPM3=0;
+"63
+[; ;main.c: 63: SSPM3=0;
 [e = _SSPM3 -> -> 0 `i `b ]
-"59
-[; ;main.c: 59: SSPM2=0;
-[e = _SSPM2 -> -> 0 `i `b ]
-"60
-[; ;main.c: 60: SSPM1=0;
-[e = _SSPM1 -> -> 0 `i `b ]
-"61
-[; ;main.c: 61: SSPM0=0;
-[e = _SSPM0 -> -> 0 `i `b ]
 "64
-[; ;main.c: 64: SSPEN=1;
+[; ;main.c: 64: SSPM2=0;
+[e = _SSPM2 -> -> 0 `i `b ]
+"65
+[; ;main.c: 65: SSPM1=0;
+[e = _SSPM1 -> -> 0 `i `b ]
+"66
+[; ;main.c: 66: SSPM0=0;
+[e = _SSPM0 -> -> 0 `i `b ]
+"69
+[; ;main.c: 69: SSPEN=1;
 [e = _SSPEN -> -> 1 `i `b ]
-"67
-[; ;main.c: 67: CKP=0;
+"72
+[; ;main.c: 72: CKP=0;
 [e = _CKP -> -> 0 `i `b ]
-"68
-[; ;main.c: 68: CKE=0;
+"73
+[; ;main.c: 73: CKE=0;
 [e = _CKE -> -> 0 `i `b ]
-"71
-[; ;main.c: 71: SMP=0;
-[e = _SMP -> -> 0 `i `b ]
-"74
-[; ;main.c: 74: TRISC3=0;
-[e = _TRISC3 -> -> 0 `i `b ]
-"75
-[; ;main.c: 75: TRISC4=1;
-[e = _TRISC4 -> -> 1 `i `b ]
 "76
-[; ;main.c: 76: TRISC5=0;
+[; ;main.c: 76: SMP=0;
+[e = _SMP -> -> 0 `i `b ]
+"79
+[; ;main.c: 79: TRISC3=0;
+[e = _TRISC3 -> -> 0 `i `b ]
+"80
+[; ;main.c: 80: TRISC4=1;
+[e = _TRISC4 -> -> 1 `i `b ]
+"81
+[; ;main.c: 81: TRISC5=0;
 [e = _TRISC5 -> -> 0 `i `b ]
-"78
-[; ;main.c: 78: }
+"83
+[; ;main.c: 83: }
 [e :UE 109 ]
 }
-"81
-[; ;main.c: 81: void Write_data(uint8_t data){
+"86
+[; ;main.c: 86: void Write_data(uint8_t data){
 [v _Write_data `(v ~T0 @X0 1 ef1`uc ]
 {
 [e :U _Write_data ]
 [v _data `uc ~T0 @X0 1 r1 ]
 [f ]
-"82
-[; ;main.c: 82: SSPBUF=data;
+"87
+[; ;main.c: 87: SSPBUF=data;
 [e = _SSPBUF _data ]
-"83
-[; ;main.c: 83: }
+"88
+[; ;main.c: 88: }
 [e :UE 110 ]
 }
-"85
-[; ;main.c: 85: void SPI_Write_String(char *text)
+"90
+[; ;main.c: 90: void SPI_Write_String(char *Text){
 [v _SPI_Write_String `(v ~T0 @X0 1 ef1`*uc ]
-"86
-[; ;main.c: 86: {
 {
 [e :U _SPI_Write_String ]
-"85
-[; ;main.c: 85: void SPI_Write_String(char *text)
-[v _text `*uc ~T0 @X0 1 r1 ]
-"86
-[; ;main.c: 86: {
+[v _Text `*uc ~T0 @X0 1 r1 ]
 [f ]
-"87
-[; ;main.c: 87:   uint8_t i;
+"91
+[; ;main.c: 91:     uint8_t i;
 [v _i `uc ~T0 @X0 1 a ]
-"88
-[; ;main.c: 88:   for(i=0;text[i]!='\0';i++){
+"92
+[; ;main.c: 92:     for(i=0;Text[i]!='\0';i++){
 {
 [e = _i -> -> 0 `i `uc ]
 [e $U 115  ]
 [e :U 112 ]
 {
-"89
-[; ;main.c: 89:     Write_data(text[i]);}
-[e ( _Write_data (1 -> *U + _text * -> _i `ux -> -> # *U _text `ui `ux `uc ]
+"93
+[; ;main.c: 93:     Write_data(Text[i]);
+[e ( _Write_data (1 -> *U + _Text * -> _i `ux -> -> # *U _Text `ui `ux `uc ]
+"94
+[; ;main.c: 94:      _delay((unsigned long)((100)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"95
+[; ;main.c: 95:     }
 }
 [e ++ _i -> -> 1 `i `uc ]
 [e :U 115 ]
-[e $ != -> *U + _text * -> _i `ux -> -> # *U _text `ui `ux `ui -> 0 `ui 112  ]
+[e $ != -> *U + _Text * -> _i `ux -> -> # *U _Text `ui `ux `ui -> 0 `ui 112  ]
 [e :U 113 ]
 }
-"90
-[; ;main.c: 90:      _delay((unsigned long)((100)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"91
-[; ;main.c: 91: }
+"96
+[; ;main.c: 96: }
 [e :UE 111 ]
 }
-[a 1C 49 50 51 52 53 54 55 56 57 0 ]
+"98
+[; ;main.c: 98: void Shift_String_Right_Add_Length(char* str){
+[v _Shift_String_Right_Add_Length `(v ~T0 @X0 1 ef1`*uc ]
+{
+[e :U _Shift_String_Right_Add_Length ]
+[v _str `*uc ~T0 @X0 1 r1 ]
+[f ]
+"99
+[; ;main.c: 99:     int32_t i;
+[v _i `l ~T0 @X0 1 a ]
+"100
+[; ;main.c: 100:     char len = strlen(str);
+[v _len `uc ~T0 @X0 1 a ]
+[e = _len -> ( _strlen (1 -> _str `*Cuc `uc ]
+"102
+[; ;main.c: 102:     for (int i = len; i >= 0; --i) {
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> _len `i ]
+[e $ >= _i -> 0 `i 117  ]
+[e $U 118  ]
+[e :U 117 ]
+{
+"103
+[; ;main.c: 103:         str[i + 1] = str[i];
+[e = *U + _str * -> + _i -> 1 `i `x -> -> # *U _str `i `x *U + _str * -> _i `x -> -> # *U _str `i `x ]
+"104
+[; ;main.c: 104:     }
+}
+[e =- _i -> 1 `i ]
+[e $ >= _i -> 0 `i 117  ]
+[e :U 118 ]
+}
+"105
+[; ;main.c: 105: str[0]=len+0x30;
+[e = *U + _str * -> -> 0 `i `x -> -> # *U _str `i `x -> + -> _len `i -> 48 `i `uc ]
+"106
+[; ;main.c: 106: }
+[e :UE 116 ]
+}
+[a 1C 49 50 51 52 53 55 56 0 ]

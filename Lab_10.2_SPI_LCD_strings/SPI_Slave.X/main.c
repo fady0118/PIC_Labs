@@ -7,96 +7,93 @@
 
 
 //------------Preprocessor--------------
-#include <stdint.h>
-#include <stdbool.h>
-#include "Config.h"
 #include <xc.h>
+#include <stdint.h>
+#include "Config.h"
 #include "LCD.h"
-#define LEN 9
+// Macros
+#define CLEAR_LCD RC0
 // Global
 char string[20];
-bool LCD_Flag=0;
-volatile uint8_t i=0;
+uint8_t i=0;
+uint8_t LCD_Flag=0;
+uint8_t LEN;
 //----------prototype-------------
-void SPI_Slave_init(void);
-void SPI_Read_String(uint8_t *Output, uint16_t length);
-uint8_t SPI_Read(void);
-//--------port_initialization----------
-// initializes portB and configures I/O pins
-// RC0 are intput pins (LCD clear button)
-void port_init(void){
-TRISC&=~0x01;	// RC0 as input
-PORTC=0;		// initial state is low
-}
-
-//---------Main_Routine----------
+void SPI_Slave_Init(void);
+void Shift_String_Left(char*);
+//------------Main_Routine--------------
 void main(void) {
-    SPI_Slave_init();
-    port_init();
+    SPI_Slave_Init();
     LCD_Init();
     LCD_Clear();
- 
+    LCD_Set_Cursor(1,1);
     while(1){
-    if(RC0==1){
-    LCD_Clear();
-    LCD_Set_Cursor(1,1);
-    }
-    if(LCD_Flag == 1){
-    LCD_Set_Cursor(1,1);
-    LCD_Write_String(string);
-    LCD_Flag=0;
-    }
+        if(CLEAR_LCD){
+        LCD_Clear();    // clear LCD
+        LCD_Set_Cursor(1,1);
+        }
+        
+        if(LCD_Flag==1){
+        Shift_String_Left(string);
+        LCD_Set_Cursor(1,1);
+        LCD_Write_String(string);
+        LCD_Flag=0;     // clear flag    
+        }
     }
     return;
 }
-//----------SPI_Slave_mode_initialization----------
-void SPI_Slave_init(void){
-// SPI Slave mode, clock = SCK pin, SS line enabled 
-SSPM0=0;
-SSPM1=0;
-SSPM2=1;
-SSPM3=0;
-
-// Enable SPI synchronous serial port 
-SSPEN=1;
-
-// Configure the serial clock polarity and phase [same as Master]
-CKP=0;	// Idle state for clock is a low level
-CKE=0;	// Transmit occurs on transition from Idle to active clock state
-
-// Clear SMP bit
-SMP=0;  // SMP must be cleared in slave mode
-
-// IO pins configuration
-// set SS line (RA5/AN4) as Digital I/O [ADCON1 REGISTER]
-PCFG0=0;
-PCFG1=0;
-PCFG2=1;
-PCFG3=0;
-TRISA5=1;   // SS/RA5  input
-
-TRISC3=1;	// SCK/RC3 input
-TRISC4=1;	// SDI/RC4 input
-TRISC5=0;	// SDO/RC5 output
-
-// Enable SPI reception interrupts 
-SSPIE=1;	// enable SPI interrupts
-PEIE=1;		// enable peripheral interrupts
-GIE=1;		// enable general interrupts
-
+//-----------Functions_Implementations------------
+//---------SPI_Slave_Init-----------
+void SPI_Slave_Init(void){
+// SPI Slave mode, clock = SCK pin. SS pin control enabled SSPM3:SSPM0 -> 0100
+    SSPM0=0;
+    SSPM1=0;
+    SSPM2=1;
+    SSPM3=0;
+// Enable Synchronous Serial Port 
+    SSPEN=1;
+    CKP=0;      // Idle state for clock is a low level
+    CKE=0;      // Transmit occurs on Leading edge
+// SMP must be cleared when SPI is used in Slave mode (Datasheet)    
+    SMP=0;     
+// I/O configuration
+    TRISC3=1;
+    TRISC4=1;
+    TRISC5=0;
+    // set SS line (RA5/AN4) as Digital I/O [ADCON1 REGISTER]
+    PCFG0=0;
+    PCFG1=0;
+    PCFG2=1;
+    PCFG3=0;
+    TRISA5=1;   // SS/RA5  input
+    // Enable SPI Interrupts
+    SSPIE=1;
+    PEIE=1;
+    GIE=1;
 }
-//----------ISR------------
+
+
+//------------ISR----------------
 void __interrupt() ISR(void){
     if(SSPIF){
     SSPIF=0;    // clear interrupt flag
-    if (BF){
         string[i]=SSPBUF;
         i++;
-        if(i>=LEN){
-            LCD_Flag=1;
+        LEN=string[0]-0x30;  // first element is the string length (converted form ASCII)
+        if(i>LEN){
+            string[i]='\0'; // Terminate the flag
+            LCD_Flag=1;     // Set LCD flag
             i=0;
         }
+    }
+}
 
-    }
-    }
+void Shift_String_Left(char* str){
+        int i;
+        for(i=0;str[i+1]!='\0';i++){
+            // shift each character one position to the left
+            str[i]=str[i+1];
+        }
+        str[i]='\0';    // Null-terminate the string
+
 }

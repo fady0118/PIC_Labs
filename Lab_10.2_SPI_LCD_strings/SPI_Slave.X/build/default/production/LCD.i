@@ -1955,7 +1955,8 @@ void LCD_DATA(unsigned char Data) {
 }
 
 void LCD_Init(void) {
-# 73 "LCD.c"
+
+
   TRISB = 0x00;
   TRISB5 = 0;
   TRISB4 = 0;

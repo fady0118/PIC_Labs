@@ -2155,12 +2155,13 @@ extern __bank0 __bit __timeout;
 void SPI_Master_init(void);
 void Write_data(uint8_t);
 void SPI_Write_String(char *);
+void Shift_String_Right_Add_Length(char *);
 
 
 
 void Port_Init(void){
-   TRISB|=0x07;
-   PORTB&=~0x07;
+   TRISB|=0x05;
+   PORTB&=~0x05;
 }
 
 
@@ -2169,12 +2170,16 @@ void main(void) {
 SPI_Master_init();
 Port_Init();
 
-char *buffer;
+char buffer[20];
 
-    buffer = (char*)malloc(10 * sizeof(char));
 while(1){
 if(RB0){
-buffer="123456789";
+
+
+
+    strcpy(buffer,"1234578");
+
+    Shift_String_Right_Add_Length(buffer);
   _delay((unsigned long)((350)*(4000000/4000.0)));
 }
 
@@ -2217,10 +2222,20 @@ void Write_data(uint8_t data){
 SSPBUF=data;
 }
 
-void SPI_Write_String(char *text)
-{
-  uint8_t i;
-  for(i=0;text[i]!='\0';i++){
-    Write_data(text[i]);}
+void SPI_Write_String(char *Text){
+    uint8_t i;
+    for(i=0;Text[i]!='\0';i++){
+    Write_data(Text[i]);
      _delay((unsigned long)((100)*(4000000/4000.0)));
+    }
+}
+
+void Shift_String_Right_Add_Length(char* str){
+    int32_t i;
+    char len = strlen(str);
+
+    for (int i = len; i >= 0; --i) {
+        str[i + 1] = str[i];
+    }
+str[0]=len+0x30;
 }
