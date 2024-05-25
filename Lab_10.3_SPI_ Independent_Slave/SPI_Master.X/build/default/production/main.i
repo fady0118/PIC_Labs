@@ -1901,6 +1901,65 @@ extern __bank0 __bit __timeout;
 # 10 "main.c" 2
 
 
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\string.h" 1 3
+# 25 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\string.h" 3
+# 1 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 1 3
+# 421 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\bits/alltypes.h" 3
+typedef struct __locale_struct * locale_t;
+# 26 "C:\\Program Files\\Microchip\\xc8\\v2.46\\pic\\include\\c99\\string.h" 2 3
+
+void *memcpy (void *restrict, const void *restrict, size_t);
+void *memmove (void *, const void *, size_t);
+void *memset (void *, int, size_t);
+int memcmp (const void *, const void *, size_t);
+void *memchr (const void *, int, size_t);
+
+char *strcpy (char *restrict, const char *restrict);
+char *strncpy (char *restrict, const char *restrict, size_t);
+
+char *strcat (char *restrict, const char *restrict);
+char *strncat (char *restrict, const char *restrict, size_t);
+
+int strcmp (const char *, const char *);
+int strncmp (const char *, const char *, size_t);
+
+int strcoll (const char *, const char *);
+size_t strxfrm (char *restrict, const char *restrict, size_t);
+
+char *strchr (const char *, int);
+char *strrchr (const char *, int);
+
+size_t strcspn (const char *, const char *);
+size_t strspn (const char *, const char *);
+char *strpbrk (const char *, const char *);
+char *strstr (const char *, const char *);
+char *strtok (char *restrict, const char *restrict);
+
+size_t strlen (const char *);
+
+char *strerror (int);
+
+
+
+
+char *strtok_r (char *restrict, const char *restrict, char **restrict);
+int strerror_r (int, char *, size_t);
+char *stpcpy(char *restrict, const char *restrict);
+char *stpncpy(char *restrict, const char *restrict, size_t);
+size_t strnlen (const char *, size_t);
+char *strdup (const char *);
+char *strndup (const char *, size_t);
+char *strsignal(int);
+char *strerror_l (int, locale_t);
+int strcoll_l (const char *, const char *, locale_t);
+size_t strxfrm_l (char *restrict, const char *restrict, size_t, locale_t);
+
+
+
+
+void *memccpy (void *restrict, const void *restrict, int, size_t);
+# 12 "main.c" 2
+
 # 1 "./Config.h" 1
 # 29 "./Config.h"
 #pragma config FOSC = XT
@@ -1911,7 +1970,12 @@ extern __bank0 __bit __timeout;
 #pragma config CPD = OFF
 #pragma config WRT = OFF
 #pragma config CP = OFF
-# 12 "main.c" 2
+# 13 "main.c" 2
+
+
+
+
+
 
 
 
@@ -1919,30 +1983,38 @@ void Port_Init(void);
 void SPI_Master_Init(void);
 void Write_data(uint8_t);
 void SPI_Write_String(char *);
-
-
-
-
+void Shift_String_Right_Add_Length(char *);
 
 void main(void) {
     Port_Init();
     SPI_Master_Init();
-    char *buffer;
-
-    buffer = (char*)malloc(10 * sizeof(char));
+    char buffer[20];
 
     while(1){
     if(RB0){
-    buffer="123456789";
+
+
+
+    strcpy(buffer,"BESTO");
+
+    Shift_String_Right_Add_Length(buffer);
     _delay((unsigned long)((350)*(4000000/4000.0)));
     }
-
     if(RB1){
+
+
+
+    strcpy(buffer,"FRIENDO");
+
+    Shift_String_Right_Add_Length(buffer);
+    _delay((unsigned long)((350)*(4000000/4000.0)));
+    }
+    if(RB2){
     PORTD=0x02;
     SPI_Write_String(buffer);
       _delay((unsigned long)((350)*(4000000/4000.0)));
     }
-    if(RB2){
+    if(RB3){
     PORTD=0x01;
     SPI_Write_String(buffer);
       _delay((unsigned long)((350)*(4000000/4000.0)));
@@ -1956,8 +2028,8 @@ void main(void) {
 
 
 void Port_Init(void){
-   TRISB|=0x07;
-   PORTB&=~0x07;
+   TRISB|=0x0F;
+   PORTB&=~0x0F;
    TRISD&=~0x03;
    PORTD|=0x03;
 }
@@ -1989,4 +2061,14 @@ void SPI_Write_String(char *Text){
     Write_data(Text[i]);
      _delay((unsigned long)((100)*(4000000/4000.0)));
     }
+}
+
+void Shift_String_Right_Add_Length(char* str){
+    int32_t i;
+    char len = strlen(str);
+
+    for (int i = len; i >= 0; --i) {
+        str[i + 1] = str[i];
+    }
+str[0]=len+0x30;
 }

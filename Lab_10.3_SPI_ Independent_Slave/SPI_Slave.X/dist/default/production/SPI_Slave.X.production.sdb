@@ -17,20 +17,22 @@
 [v _LCD_DATA LCD_DATA `(v  1 e 1 0 ]
 "43
 [v _LCD_Init LCD_Init `(v  1 e 1 0 ]
-"93
+"67
 [v _LCD_Clear LCD_Clear `(v  1 e 1 0 ]
-"98
+"72
 [v _LCD_Set_Cursor LCD_Set_Cursor `(v  1 e 1 0 ]
-"118
+"92
 [v _LCD_Write_Char LCD_Write_Char `(v  1 e 1 0 ]
-"136
+"110
 [v _LCD_Write_String LCD_Write_String `(v  1 e 1 0 ]
-"23 D:\Embedded\Course#4_Deepblue_E.S\Labs\PIC_Labs\Lab_10.3_SPI_ Independent_Slave\SPI_Slave.X\main.c
+"24 D:\Embedded\Course#4_Deepblue_E.S\Labs\PIC_Labs\Lab_10.3_SPI_ Independent_Slave\SPI_Slave.X\main.c
 [v _main main `(v  1 e 1 0 ]
-"44
+"46
 [v _SPI_Slave_Init SPI_Slave_Init `(v  1 e 1 0 ]
-"74
+"76
 [v _ISR ISR `II(v  1 e 1 0 ]
+"90
+[v _Shift_String_Left Shift_String_Left `(v  1 e 1 0 ]
 "808 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h
 [v _SSPBUF SSPBUF `VEuc  1 e 1 @19 ]
 "1375
@@ -101,65 +103,77 @@
 [v _LCD_Flag LCD_Flag `uc  1 e 1 0 ]
 "19
 [v _LEN LEN `uc  1 e 1 0 ]
-"23
+"24
 [v _main main `(v  1 e 1 0 ]
 {
-"41
+"43
 } 0
-"44
+"90
+[v _Shift_String_Left Shift_String_Left `(v  1 e 1 0 ]
+{
+[v Shift_String_Left@str str `*.4uc  1 a 1 wreg ]
+"91
+[v Shift_String_Left@i i `i  1 a 2 0 ]
+"90
+[v Shift_String_Left@str str `*.4uc  1 a 1 wreg ]
+"92
+[v Shift_String_Left@str str `*.4uc  1 a 1 2 ]
+"98
+} 0
+"46
 [v _SPI_Slave_Init SPI_Slave_Init `(v  1 e 1 0 ]
 {
-"70
+"72
 } 0
-"136 D:\Embedded\Course#4_Deepblue_E.S\Labs\PIC_Labs\Lab_10.3_SPI_ Independent_Slave\SPI_Slave.X\LCD.c
+"110 D:\Embedded\Course#4_Deepblue_E.S\Labs\PIC_Labs\Lab_10.3_SPI_ Independent_Slave\SPI_Slave.X\LCD.c
 [v _LCD_Write_String LCD_Write_String `(v  1 e 1 0 ]
 {
 [v LCD_Write_String@str str `*.4uc  1 a 1 wreg ]
-"138
+"112
 [v LCD_Write_String@i i `i  1 a 2 4 ]
-"136
+"110
 [v LCD_Write_String@str str `*.4uc  1 a 1 wreg ]
-"139
+"113
 [v LCD_Write_String@str str `*.4uc  1 a 1 3 ]
-"141
+"115
 } 0
-"118
+"92
 [v _LCD_Write_Char LCD_Write_Char `(v  1 e 1 0 ]
 {
 [v LCD_Write_Char@Data Data `uc  1 a 1 wreg ]
-"120
+"94
 [v LCD_Write_Char@High4 High4 `uc  1 a 1 1 ]
 [v LCD_Write_Char@Low4 Low4 `uc  1 a 1 0 ]
-"118
+"92
 [v LCD_Write_Char@Data Data `uc  1 a 1 wreg ]
-"121
+"95
 [v LCD_Write_Char@Data Data `uc  1 a 1 2 ]
-"134
+"108
 } 0
-"98
+"72
 [v _LCD_Set_Cursor LCD_Set_Cursor `(v  1 e 1 0 ]
 {
 [v LCD_Set_Cursor@r r `uc  1 a 1 wreg ]
-"99
-[v LCD_Set_Cursor@Temp Temp `uc  1 a 1 4 ]
-[v LCD_Set_Cursor@High4 High4 `uc  1 a 1 3 ]
-[v LCD_Set_Cursor@Low4 Low4 `uc  1 a 1 2 ]
-"98
+"73
+[v LCD_Set_Cursor@Temp Temp `uc  1 a 1 5 ]
+[v LCD_Set_Cursor@High4 High4 `uc  1 a 1 4 ]
+[v LCD_Set_Cursor@Low4 Low4 `uc  1 a 1 3 ]
+"72
 [v LCD_Set_Cursor@r r `uc  1 a 1 wreg ]
-[v LCD_Set_Cursor@c c `uc  1 p 1 7 ]
-"100
-[v LCD_Set_Cursor@r r `uc  1 a 1 1 ]
-"116
+[v LCD_Set_Cursor@c c `uc  1 p 1 0 ]
+"74
+[v LCD_Set_Cursor@r r `uc  1 a 1 2 ]
+"90
 } 0
 "43
 [v _LCD_Init LCD_Init `(v  1 e 1 0 ]
 {
-"91
+"65
 } 0
-"93
+"67
 [v _LCD_Clear LCD_Clear `(v  1 e 1 0 ]
 {
-"96
+"70
 } 0
 "12
 [v _LCD_Command LCD_Command `(v  1 e 1 0 ]
@@ -179,8 +193,8 @@
 [v LCD_DATA@Data Data `uc  1 a 1 4 ]
 "41
 } 0
-"74 D:\Embedded\Course#4_Deepblue_E.S\Labs\PIC_Labs\Lab_10.3_SPI_ Independent_Slave\SPI_Slave.X\main.c
+"76 D:\Embedded\Course#4_Deepblue_E.S\Labs\PIC_Labs\Lab_10.3_SPI_ Independent_Slave\SPI_Slave.X\main.c
 [v _ISR ISR `II(v  1 e 1 0 ]
 {
-"84
+"88
 } 0

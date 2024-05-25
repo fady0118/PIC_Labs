@@ -361,8 +361,8 @@ reception are enabled)
 - Use this protocol to transmit a string serially and display it on an Alphanumeric LCD 16×2 after recieving it on the slave device
 #### Components   
 - 2 LCDs
-- 5 push buttons 
-- 3 PIC M.Cs Master and two Slaves
+- 6 push buttons 
+- 3 PIC M.Cs (Master and two Slaves)
 #### Configuration
 -  Master
     -  SCK/RC3 output (clock)
@@ -370,9 +370,10 @@ reception are enabled)
     -  SDO/RC5 output (data)
     -  RD0/SS1 output (slave1 select)
     -  RD1/SS2 output (slave2 select)
-    -  RB0 input (Button-String Define)
-    -  RB1 input (Button-Send1)
-    -  RB2 input (Button-Send2)
+    -  RB0 input (Button-String1)
+    -  RB1 input (Button-String2)
+    -  RB2 input (Button-Send1)
+    -  RB3 input (Button-Send2)
 -  Slave
     -  SCK/RC3 input(clock)
     -  SDI/RC4 input (data)

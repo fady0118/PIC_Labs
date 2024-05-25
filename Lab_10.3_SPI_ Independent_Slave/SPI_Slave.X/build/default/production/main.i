@@ -1940,9 +1940,10 @@ void LCD_Write_String(char*);
 char string[20];
 uint8_t i=0;
 uint8_t LCD_Flag=0;
-uint8_t LEN=9;
+uint8_t LEN;
 
 void SPI_Slave_Init(void);
+void Shift_String_Left(char*);
 
 void main(void) {
     SPI_Slave_Init();
@@ -1956,6 +1957,7 @@ void main(void) {
         }
 
         if(LCD_Flag==1){
+        Shift_String_Left(string);
         LCD_Set_Cursor(1,1);
         LCD_Write_String(string);
         LCD_Flag=0;
@@ -1996,13 +1998,25 @@ void SPI_Slave_Init(void){
 
 
 void __attribute__((picinterrupt(("")))) ISR(void){
-     if(SSPIF){
+    if(SSPIF){
     SSPIF=0;
         string[i]=SSPBUF;
         i++;
-        if(i>=LEN){
+        LEN=string[0]-0x30;
+        if(i>LEN){
+            string[i]='\0';
             LCD_Flag=1;
             i=0;
         }
     }
+}
+
+void Shift_String_Left(char* str){
+        int i;
+        for(i=0;str[i+1]!='\0';i++){
+
+            str[i]=str[i+1];
+        }
+        str[i]='\0';
+
 }

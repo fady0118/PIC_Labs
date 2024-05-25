@@ -9,31 +9,45 @@
 //------------Preprocessor--------------
 #include <xc.h>
 #include <stdint.h>
+#include <string.h>
 #include "Config.h"
 #define _XTAL_FREQ 4000000
+// Macros [pin configuration]
+#define STRING_DEFINE1 RB0
+#define STRING_DEFINE2 RB1
+#define SEND1 RB2
+#define SEND2 RB3
 //----------prototype-------------
 void Port_Init(void);
 void SPI_Master_Init(void);
 void Write_data(uint8_t);
 void SPI_Write_String(char *);
-// Macros [pin configuration]
-#define STRING_DEFINE RB0
-#define SEND1 RB1
-#define SEND2 RB2
+void Shift_String_Right_Add_Length(char *);
 //------------Main_Routine--------------
 void main(void) {
     Port_Init();
     SPI_Master_Init();
-    char *buffer; // Pointer Variable
-    // Dynamically allocate memory using malloc()
-    buffer = (char*)malloc(10 * sizeof(char));
-    
+    char buffer[20]; 
+  
     while(1){
-    if(STRING_DEFINE){
-    buffer="123456789";
+    if(STRING_DEFINE1){
+    // define the string to transmit
+    // first character is the length
+    // the rest are the data
+    strcpy(buffer,"BESTO");
+    // shift string right and add its length at the beginning
+    Shift_String_Right_Add_Length(buffer);
     __delay_ms(350);
     }
-
+    if(STRING_DEFINE2){
+    // define the string to transmit
+    // first character is the length
+    // the rest are the data
+    strcpy(buffer,"FRIENDO");
+    // shift string right and add its length at the beginning
+    Shift_String_Right_Add_Length(buffer);
+    __delay_ms(350);
+    }
     if(SEND1){
     PORTD=0x02;     // select slave1 (SS1 LOW)
     SPI_Write_String(buffer); // SPI transmission initiation
@@ -50,11 +64,11 @@ void main(void) {
 //-----------Functions_Implementations------------
 //----------Port_Init--------------
 // initializes portA and configures I/O pins
-// RB0, RB1 & RB2 Are Input Pins (Push Buttons)
+// RB0-3 Are Input Pins (Push Buttons)
 // RD0-1 -> ss lines (Output)
 void Port_Init(void){
-   TRISB|=0x07;     // pin RB0-2 as input (buttons)
-   PORTB&=~0x07;    // initial state low 
+   TRISB|=0x0F;     // pin RB0-3 as input (buttons)
+   PORTB&=~0x0F;    // initial state low 
    TRISD&=~0x03;    // pin RB0-2 as output (ss lines)
    PORTD|=0x03;     // idle state high
 }
@@ -86,4 +100,14 @@ void SPI_Write_String(char *Text){
     Write_data(Text[i]);
      __delay_ms(100);
     }
+}
+//----------Shift_String_Left----------
+void Shift_String_Right_Add_Length(char* str){
+    int32_t i;
+    char len = strlen(str); // Get the length of the string
+    // Shift string to the right by one position
+    for (int i = len; i >= 0; --i) {
+        str[i + 1] = str[i];
+    }
+str[0]=len+0x30; // first element is the string length (converted to ASCII)
 }

@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.46 build 20240104201356 
-                                                                                               Sat May 25 22:06:30 2024
+                                                                                               Sun May 26 01:24:04 2024
 
 Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1 
      1                           	processor	16F877A
@@ -9,191 +9,191 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
      3                           	opt	flic
      4                           	psect	strings,global,class=STRING,delta=2,noexec
      5                           	psect	cinit,global,class=CODE,merge=1,delta=2
-     6                           	psect	bssBANK0,global,class=BANK0,space=1,delta=1,noexec
-     7                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1,noexec
-     8                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1,noexec
-     9                           	psect	maintext,global,class=CODE,split=1,delta=2
-    10                           	psect	text1,local,class=CODE,merge=1,delta=2,group=2
-    11                           	psect	text2,local,class=CODE,merge=1,delta=2,group=2
-    12                           	psect	text3,local,class=CODE,merge=1,delta=2,group=2
-    13                           	psect	text4,local,class=CODE,merge=1,delta=2
-    14                           	psect	text5,local,class=CODE,merge=1,delta=2
-    15                           	psect	text6,local,class=CODE,merge=1,delta=2
-    16                           	psect	text7,local,class=CODE,merge=1,delta=2
-    17                           	psect	config,global,abs,ovrld,class=CONFIG,space=4,delta=2,noexec
-    18                           	dabs	1,0x7E,2
-    19     0000                     
-    20                           ; Generated 12/10/2023 GMT
-    21                           ; 
-    22                           ; Copyright © 2023, Microchip Technology Inc. and its subsidiaries ("Microchip")
-    23                           ; All rights reserved.
-    24                           ; 
-    25                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
+     6                           	psect	cstackCOMMON,global,class=COMMON,space=1,delta=1,noexec
+     7                           	psect	cstackBANK0,global,class=BANK0,space=1,delta=1,noexec
+     8                           	psect	maintext,global,class=CODE,split=1,delta=2
+     9                           	psect	text1,local,class=CODE,merge=1,delta=2,group=2
+    10                           	psect	text2,local,class=CODE,merge=1,delta=2
+    11                           	psect	text3,local,class=CODE,merge=1,delta=2,group=2
+    12                           	psect	text4,local,class=CODE,merge=1,delta=2
+    13                           	psect	text5,local,class=CODE,merge=1,delta=2
+    14                           	psect	text6,local,class=CODE,merge=1,delta=2
+    15                           	psect	text7,local,class=CODE,merge=1,delta=2
+    16                           	psect	config,global,abs,ovrld,class=CONFIG,space=4,delta=2,noexec
+    17                           	dabs	1,0x7E,2
+    18     0000                     
+    19                           ; Generated 12/10/2023 GMT
+    20                           ; 
+    21                           ; Copyright © 2023, Microchip Technology Inc. and its subsidiaries ("Microchip")
+    22                           ; All rights reserved.
+    23                           ; 
+    24                           ; This software is developed by Microchip Technology Inc. and its subsidiaries ("Microch
       +                          ip").
-    26                           ; 
-    27                           ; Redistribution and use in source and binary forms, with or without modification, are
-    28                           ; permitted provided that the following conditions are met:
-    29                           ; 
-    30                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
+    25                           ; 
+    26                           ; Redistribution and use in source and binary forms, with or without modification, are
+    27                           ; permitted provided that the following conditions are met:
+    28                           ; 
+    29                           ;     1. Redistributions of source code must retain the above copyright notice, this lis
       +                          t of
-    31                           ;        conditions and the following disclaimer.
-    32                           ; 
-    33                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
+    30                           ;        conditions and the following disclaimer.
+    31                           ; 
+    32                           ;     2. Redistributions in binary form must reproduce the above copyright notice, this 
       +                          list
-    34                           ;        of conditions and the following disclaimer in the documentation and/or other
-    35                           ;        materials provided with the distribution. Publication is not required when
-    36                           ;        this file is used in an embedded application.
-    37                           ; 
-    38                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
+    33                           ;        of conditions and the following disclaimer in the documentation and/or other
+    34                           ;        materials provided with the distribution. Publication is not required when
+    35                           ;        this file is used in an embedded application.
+    36                           ; 
+    37                           ;     3. Microchip's name may not be used to endorse or promote products derived from th
       +                          is
-    39                           ;        software without specific prior written permission.
-    40                           ; 
-    41                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
-    42                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
+    38                           ;        software without specific prior written permission.
+    39                           ; 
+    40                           ; THIS SOFTWARE IS PROVIDED BY MICROCHIP "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES,
+    41                           ; INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS F
       +                          OR
-    43                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
+    42                           ; PURPOSE ARE DISCLAIMED.  IN NO EVENT SHALL MICROCHIP BE LIABLE FOR ANY DIRECT, INDIREC
       +                          T,
-    44                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
-    45                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
-    46                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
+    43                           ; INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING BUT NOT LIMITED TO
+    44                           ; PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA OR PROFITS; OR BUSINESS
+    45                           ; INTERRUPTION) HOWSOEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, ST
       +                          RICT
-    47                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
+    46                           ; LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE U
       +                          SE OF
-    48                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    47                           ; THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+    48                           ; 
     49                           ; 
-    50                           ; 
-    51                           ; Code-generator required, PIC16F877A Definitions
-    52                           ; 
-    53                           ; SFR Addresses
-    54     0000                     	;# 
-    55     0001                     	;# 
-    56     0002                     	;# 
-    57     0003                     	;# 
-    58     0004                     	;# 
-    59     0005                     	;# 
-    60     0006                     	;# 
-    61     0007                     	;# 
-    62     0008                     	;# 
-    63     0009                     	;# 
-    64     000A                     	;# 
-    65     000B                     	;# 
-    66     000C                     	;# 
-    67     000D                     	;# 
+    50                           ; Code-generator required, PIC16F877A Definitions
+    51                           ; 
+    52                           ; SFR Addresses
+    53     0000                     	;# 
+    54     0001                     	;# 
+    55     0002                     	;# 
+    56     0003                     	;# 
+    57     0004                     	;# 
+    58     0005                     	;# 
+    59     0006                     	;# 
+    60     0007                     	;# 
+    61     0008                     	;# 
+    62     0009                     	;# 
+    63     000A                     	;# 
+    64     000B                     	;# 
+    65     000C                     	;# 
+    66     000D                     	;# 
+    67     000E                     	;# 
     68     000E                     	;# 
-    69     000E                     	;# 
-    70     000F                     	;# 
-    71     0010                     	;# 
-    72     0011                     	;# 
-    73     0012                     	;# 
-    74     0013                     	;# 
-    75     0014                     	;# 
+    69     000F                     	;# 
+    70     0010                     	;# 
+    71     0011                     	;# 
+    72     0012                     	;# 
+    73     0013                     	;# 
+    74     0014                     	;# 
+    75     0015                     	;# 
     76     0015                     	;# 
-    77     0015                     	;# 
-    78     0016                     	;# 
-    79     0017                     	;# 
-    80     0018                     	;# 
-    81     0019                     	;# 
-    82     001A                     	;# 
+    77     0016                     	;# 
+    78     0017                     	;# 
+    79     0018                     	;# 
+    80     0019                     	;# 
+    81     001A                     	;# 
+    82     001B                     	;# 
     83     001B                     	;# 
-    84     001B                     	;# 
-    85     001C                     	;# 
-    86     001D                     	;# 
-    87     001E                     	;# 
-    88     001F                     	;# 
-    89     0081                     	;# 
-    90     0085                     	;# 
-    91     0086                     	;# 
-    92     0087                     	;# 
-    93     0088                     	;# 
-    94     0089                     	;# 
-    95     008C                     	;# 
-    96     008D                     	;# 
-    97     008E                     	;# 
-    98     0091                     	;# 
-    99     0092                     	;# 
-   100     0093                     	;# 
-   101     0094                     	;# 
-   102     0098                     	;# 
-   103     0099                     	;# 
-   104     009C                     	;# 
-   105     009D                     	;# 
-   106     009E                     	;# 
-   107     009F                     	;# 
-   108     010C                     	;# 
-   109     010D                     	;# 
-   110     010E                     	;# 
-   111     010F                     	;# 
-   112     018C                     	;# 
-   113     018D                     	;# 
-   114     0000                     	;# 
-   115     0001                     	;# 
-   116     0002                     	;# 
-   117     0003                     	;# 
-   118     0004                     	;# 
-   119     0005                     	;# 
-   120     0006                     	;# 
-   121     0007                     	;# 
-   122     0008                     	;# 
-   123     0009                     	;# 
-   124     000A                     	;# 
-   125     000B                     	;# 
-   126     000C                     	;# 
-   127     000D                     	;# 
+    84     001C                     	;# 
+    85     001D                     	;# 
+    86     001E                     	;# 
+    87     001F                     	;# 
+    88     0081                     	;# 
+    89     0085                     	;# 
+    90     0086                     	;# 
+    91     0087                     	;# 
+    92     0088                     	;# 
+    93     0089                     	;# 
+    94     008C                     	;# 
+    95     008D                     	;# 
+    96     008E                     	;# 
+    97     0091                     	;# 
+    98     0092                     	;# 
+    99     0093                     	;# 
+   100     0094                     	;# 
+   101     0098                     	;# 
+   102     0099                     	;# 
+   103     009C                     	;# 
+   104     009D                     	;# 
+   105     009E                     	;# 
+   106     009F                     	;# 
+   107     010C                     	;# 
+   108     010D                     	;# 
+   109     010E                     	;# 
+   110     010F                     	;# 
+   111     018C                     	;# 
+   112     018D                     	;# 
+   113     0000                     	;# 
+   114     0001                     	;# 
+   115     0002                     	;# 
+   116     0003                     	;# 
+   117     0004                     	;# 
+   118     0005                     	;# 
+   119     0006                     	;# 
+   120     0007                     	;# 
+   121     0008                     	;# 
+   122     0009                     	;# 
+   123     000A                     	;# 
+   124     000B                     	;# 
+   125     000C                     	;# 
+   126     000D                     	;# 
+   127     000E                     	;# 
    128     000E                     	;# 
-   129     000E                     	;# 
-   130     000F                     	;# 
-   131     0010                     	;# 
-   132     0011                     	;# 
-   133     0012                     	;# 
-   134     0013                     	;# 
-   135     0014                     	;# 
+   129     000F                     	;# 
+   130     0010                     	;# 
+   131     0011                     	;# 
+   132     0012                     	;# 
+   133     0013                     	;# 
+   134     0014                     	;# 
+   135     0015                     	;# 
    136     0015                     	;# 
-   137     0015                     	;# 
-   138     0016                     	;# 
-   139     0017                     	;# 
-   140     0018                     	;# 
-   141     0019                     	;# 
-   142     001A                     	;# 
+   137     0016                     	;# 
+   138     0017                     	;# 
+   139     0018                     	;# 
+   140     0019                     	;# 
+   141     001A                     	;# 
+   142     001B                     	;# 
    143     001B                     	;# 
-   144     001B                     	;# 
-   145     001C                     	;# 
-   146     001D                     	;# 
-   147     001E                     	;# 
-   148     001F                     	;# 
-   149     0081                     	;# 
-   150     0085                     	;# 
-   151     0086                     	;# 
-   152     0087                     	;# 
-   153     0088                     	;# 
-   154     0089                     	;# 
-   155     008C                     	;# 
-   156     008D                     	;# 
-   157     008E                     	;# 
-   158     0091                     	;# 
-   159     0092                     	;# 
-   160     0093                     	;# 
-   161     0094                     	;# 
-   162     0098                     	;# 
-   163     0099                     	;# 
-   164     009C                     	;# 
-   165     009D                     	;# 
-   166     009E                     	;# 
-   167     009F                     	;# 
-   168     010C                     	;# 
-   169     010D                     	;# 
-   170     010E                     	;# 
-   171     010F                     	;# 
-   172     018C                     	;# 
-   173     018D                     	;# 
-   174     0013                     _SSPBUF	set	19
-   175     0006                     _PORTB	set	6
-   176     0008                     _PORTD	set	8
-   177     00A4                     _CKP	set	164
-   178     00A5                     _SSPEN	set	165
-   179     00A0                     _SSPM0	set	160
-   180     00A1                     _SSPM1	set	161
-   181     00A2                     _SSPM2	set	162
-   182     00A3                     _SSPM3	set	163
+   144     001C                     	;# 
+   145     001D                     	;# 
+   146     001E                     	;# 
+   147     001F                     	;# 
+   148     0081                     	;# 
+   149     0085                     	;# 
+   150     0086                     	;# 
+   151     0087                     	;# 
+   152     0088                     	;# 
+   153     0089                     	;# 
+   154     008C                     	;# 
+   155     008D                     	;# 
+   156     008E                     	;# 
+   157     0091                     	;# 
+   158     0092                     	;# 
+   159     0093                     	;# 
+   160     0094                     	;# 
+   161     0098                     	;# 
+   162     0099                     	;# 
+   163     009C                     	;# 
+   164     009D                     	;# 
+   165     009E                     	;# 
+   166     009F                     	;# 
+   167     010C                     	;# 
+   168     010D                     	;# 
+   169     010E                     	;# 
+   170     010F                     	;# 
+   171     018C                     	;# 
+   172     018D                     	;# 
+   173     0013                     _SSPBUF	set	19
+   174     0006                     _PORTB	set	6
+   175     0008                     _PORTD	set	8
+   176     00A4                     _CKP	set	164
+   177     00A5                     _SSPEN	set	165
+   178     00A0                     _SSPM0	set	160
+   179     00A1                     _SSPM1	set	161
+   180     00A2                     _SSPM2	set	162
+   181     00A3                     _SSPM3	set	163
+   182     0033                     _RB3	set	51
    183     0032                     _RB2	set	50
    184     0031                     _RB1	set	49
    185     0030                     _RB0	set	48
@@ -209,1608 +209,994 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    195     0003                     __pstrings:
    196     0003                     stringtab:
    197     0003                     __stringtab:
-   198                           
+   198     0003                     stringcode:	
    199                           ;	String table - string pointers are 1 byte each
-   200     0003  1BFF               	btfsc	btemp+1,7
-   201     0004  280D               	ljmp	stringcode
-   202     0005  1383               	bcf	3,7
-   203     0006  187F               	btfsc	btemp+1,0
-   204     0007  1783               	bsf	3,7
-   205     0008  0800               	movf	0,w
-   206     0009  0A84               	incf	4,f
-   207     000A  1903               	skipnz
-   208     000B  0AFF               	incf	btemp+1,f
-   209     000C  0008               	return
-   210     000D                     stringcode:
-   211     000D                     stringdir:
-   212     000D  3000               	movlw	high stringdir
-   213     000E  008A               	movwf	10
-   214     000F  0804               	movf	4,w
-   215     0010  0A84               	incf	4,f
-   216     0011  0782               	addwf	2,f
-   217     0012                     __stringbase:
-   218     0012  3400               	retlw	0
-   219     0013                     __end_of__stringtab:
-   220     0013                     STR_1:
-   221     0013  3431               	retlw	49	;'1'
-   222     0014  3432               	retlw	50	;'2'
-   223     0015  3433               	retlw	51	;'3'
-   224     0016  3434               	retlw	52	;'4'
-   225     0017  3435               	retlw	53	;'5'
-   226     0018  3436               	retlw	54	;'6'
-   227     0019  3437               	retlw	55	;'7'
-   228     001A  3438               	retlw	56	;'8'
-   229     001B  3439               	retlw	57	;'9'
-   230     001C  3400               	retlw	0
-   231                           
-   232                           	psect	cinit
-   233     07ED                     start_initialization:	
-   234                           ; #config settings
-   235                           
-   236     07ED                     __initialization:
-   237                           
-   238                           ; Clear objects allocated to BANK0
-   239     07ED  1283               	bcf	3,5	;RP0=0, select bank0
-   240     07EE  1303               	bcf	3,6	;RP1=0, select bank0
-   241     07EF  01B3               	clrf	__pbssBANK0& (0+127)
-   242     07F0  01B4               	clrf	(__pbssBANK0+1)& (0+127)
-   243     07F1  01B5               	clrf	(__pbssBANK0+2)& (0+127)
-   244     07F2  01B6               	clrf	(__pbssBANK0+3)& (0+127)
-   245     07F3  01B7               	clrf	(__pbssBANK0+4)& (0+127)
-   246     07F4  01B8               	clrf	(__pbssBANK0+5)& (0+127)
-   247     07F5  01B9               	clrf	(__pbssBANK0+6)& (0+127)
-   248     07F6  01BA               	clrf	(__pbssBANK0+7)& (0+127)
-   249     07F7  01BB               	clrf	(__pbssBANK0+8)& (0+127)
-   250     07F8  01BC               	clrf	(__pbssBANK0+9)& (0+127)
-   251     07F9  01BD               	clrf	(__pbssBANK0+10)& (0+127)
-   252     07FA  01BE               	clrf	(__pbssBANK0+11)& (0+127)
-   253     07FB  01BF               	clrf	(__pbssBANK0+12)& (0+127)
-   254     07FC                     end_of_initialization:	
-   255                           ;End of C runtime variable initialization code
+   200                           
+   201     0003                     stringdir:
+   202     0003  3000               	movlw	high stringdir
+   203     0004  008A               	movwf	10
+   204     0005  0804               	movf	4,w
+   205     0006  0A84               	incf	4,f
+   206     0007  0782               	addwf	2,f
+   207     0008                     __stringbase:
+   208     0008  3400               	retlw	0
+   209     0009                     __end_of__stringtab:
+   210     0009                     STR_2:
+   211     0009  3446               	retlw	70	;'F'
+   212     000A  3452               	retlw	82	;'R'
+   213     000B  3449               	retlw	73	;'I'
+   214     000C  3445               	retlw	69	;'E'
+   215     000D  344E               	retlw	78	;'N'
+   216     000E  3444               	retlw	68	;'D'
+   217     000F  344F               	retlw	79	;'O'
+   218     0010  3400               	retlw	0
+   219     0011                     STR_1:
+   220     0011  3442               	retlw	66	;'B'
+   221     0012  3445               	retlw	69	;'E'
+   222     0013  3453               	retlw	83	;'S'
+   223     0014  3454               	retlw	84	;'T'
+   224     0015  344F               	retlw	79	;'O'
+   225     0016  3400               	retlw	0
+   226                           
+   227                           	psect	cinit
+   228     07FC                     start_initialization:	
+   229                           ; #config settings
+   230                           
+   231     07FC                     __initialization:
+   232     07FC                     end_of_initialization:	
+   233                           ;End of C runtime variable initialization code
+   234                           
+   235     07FC                     __end_of__initialization:
+   236     07FC  0183               	clrf	3
+   237     07FD  120A  118A  2F76   	ljmp	_main	;jump to C main() function
+   238                           
+   239                           	psect	cstackCOMMON
+   240     0070                     __pcstackCOMMON:
+   241     0070                     ?_Port_Init:
+   242     0070                     ??_Port_Init:	
+   243                           ; 1 bytes @ 0x0
+   244                           
+   245     0070                     ?_SPI_Master_Init:	
+   246                           ; 1 bytes @ 0x0
+   247                           
+   248     0070                     ??_SPI_Master_Init:	
+   249                           ; 1 bytes @ 0x0
+   250                           
+   251     0070                     ?_strcpy:	
+   252                           ; 1 bytes @ 0x0
+   253                           
+   254     0070                     ?_Shift_String_Right_Add_Length:	
+   255                           ; 1 bytes @ 0x0
    256                           
-   257     07FC                     __end_of__initialization:
-   258     07FC  0183               	clrf	3
-   259     07FD  120A  118A  2DD9   	ljmp	_main	;jump to C main() function
-   260                           
-   261                           	psect	bssBANK0
-   262     0033                     __pbssBANK0:
-   263     0033                     malloc@lock:
-   264     0033                     	ds	4
-   265     0037                     _brkp:
-   266     0037                     	ds	2
-   267     0039                     malloc@end:
-   268     0039                     	ds	2
-   269     003B                     malloc@cur:
-   270     003B                     	ds	2
-   271     003D                     _errno:
-   272     003D                     	ds	2
-   273     003F                     ___freelist:
-   274     003F                     	ds	1
-   275                           
-   276                           	psect	cstackCOMMON
-   277     0070                     __pcstackCOMMON:
-   278     0070                     ?_Port_Init:
-   279     0070                     ??_Port_Init:	
-   280                           ; 1 bytes @ 0x0
-   281                           
-   282     0070                     ?_SPI_Master_Init:	
-   283                           ; 1 bytes @ 0x0
+   257     0070                     ?_SPI_Write_String:	
+   258                           ; 1 bytes @ 0x0
+   259                           
+   260     0070                     ?_main:	
+   261                           ; 1 bytes @ 0x0
+   262                           
+   263     0070                     ?_Write_data:	
+   264                           ; 1 bytes @ 0x0
+   265                           
+   266     0070                     ??_Write_data:	
+   267                           ; 1 bytes @ 0x0
+   268                           
+   269     0070                     ?_strlen:	
+   270                           ; 1 bytes @ 0x0
+   271                           
+   272     0070                     Write_data@data:	
+   273                           ; 2 bytes @ 0x0
+   274                           
+   275     0070                     strcpy@src:	
+   276                           ; 1 bytes @ 0x0
+   277                           
+   278                           
+   279                           ; 1 bytes @ 0x0
+   280     0070                     	ds	1
+   281     0071                     ??_strcpy:
+   282     0071                     ??_SPI_Write_String:	
+   283                           ; 1 bytes @ 0x1
    284                           
-   285     0070                     ??_SPI_Master_Init:	
-   286                           ; 1 bytes @ 0x0
+   285     0071                     strcpy@d:	
+   286                           ; 1 bytes @ 0x1
    287                           
-   288     0070                     ?___simple_search_fl:	
-   289                           ; 1 bytes @ 0x0
-   290                           
-   291     0070                     ??___expand_heap:	
-   292                           ; 1 bytes @ 0x0
-   293                           
-   294     0070                     ?_main:	
-   295                           ; 1 bytes @ 0x0
-   296                           
-   297     0070                     ?_Write_data:	
-   298                           ; 1 bytes @ 0x0
-   299                           
-   300     0070                     ??_Write_data:	
-   301                           ; 1 bytes @ 0x0
-   302                           
-   303     0070                     ?___expand_heap:	
-   304                           ; 1 bytes @ 0x0
+   288                           
+   289                           ; 1 bytes @ 0x1
+   290     0071                     	ds	1
+   291     0072                     ??_strlen:
+   292     0072                     strcpy@dest:	
+   293                           ; 1 bytes @ 0x2
+   294                           
+   295     0072                     strlen@a:	
+   296                           ; 1 bytes @ 0x2
+   297                           
+   298                           
+   299                           ; 1 bytes @ 0x2
+   300     0072                     	ds	1
+   301     0073                     SPI_Write_String@i:
+   302     0073                     strlen@s:	
+   303                           ; 1 bytes @ 0x3
+   304                           
    305                           
-   306     0070                     Write_data@data:	
-   307                           ; 2 bytes @ 0x0
-   308                           
-   309     0070                     ___expand_heap@pn:	
-   310                           ; 1 bytes @ 0x0
+   306                           ; 1 bytes @ 0x3
+   307     0073                     	ds	1
+   308     0074                     ??_Shift_String_Right_Add_Length:
+   309     0074                     SPI_Write_String@Text:	
+   310                           ; 1 bytes @ 0x4
    311                           
-   312     0070                     ___simple_search_fl@n:	
-   313                           ; 1 bytes @ 0x0
-   314                           
-   315                           
-   316                           ; 2 bytes @ 0x0
-   317     0070                     	ds	1
-   318     0071                     ?_SPI_Write_String:
-   319     0071                     SPI_Write_String@Text:	
-   320                           ; 1 bytes @ 0x1
-   321                           
-   322     0071                     ___expand_heap@n:	
-   323                           ; 2 bytes @ 0x1
+   312                           
+   313                           ; 1 bytes @ 0x4
+   314     0074                     	ds	2
+   315     0076                     Shift_String_Right_Add_Length@len:
+   316                           
+   317                           ; 1 bytes @ 0x6
+   318     0076                     	ds	1
+   319     0077                     Shift_String_Right_Add_Length@i_97:
+   320                           
+   321                           ; 2 bytes @ 0x7
+   322     0077                     	ds	2
+   323     0079                     Shift_String_Right_Add_Length@str:
    324                           
-   325                           
-   326                           ; 2 bytes @ 0x1
-   327     0071                     	ds	1
-   328     0072                     ??___simple_search_fl:
-   329                           
-   330                           ; 1 bytes @ 0x2
-   331     0072                     	ds	1
-   332     0073                     ??_SPI_Write_String:
-   333     0073                     ___expand_heap@new_brkp:	
-   334                           ; 1 bytes @ 0x3
+   325                           ; 1 bytes @ 0x9
+   326     0079                     	ds	1
+   327     007A                     ??_main:
+   328                           
+   329                           ; 1 bytes @ 0xA
+   330     007A                     	ds	3
+   331                           
+   332                           	psect	cstackBANK0
+   333     0020                     __pcstackBANK0:
+   334     0020                     main@buffer:
    335                           
-   336                           
-   337                           ; 2 bytes @ 0x3
-   338     0073                     	ds	2
-   339     0075                     SPI_Write_String@i:
-   340                           
-   341                           ; 1 bytes @ 0x5
-   342     0075                     	ds	1
-   343     0076                     ___simple_search_fl@remaining_size:
-   344                           
-   345                           ; 2 bytes @ 0x6
-   346     0076                     	ds	2
-   347     0078                     ___simple_search_fl@best_last:
-   348                           
-   349                           ; 1 bytes @ 0x8
-   350     0078                     	ds	1
-   351     0079                     ___simple_search_fl@split:
-   352                           
-   353                           ; 1 bytes @ 0x9
-   354     0079                     	ds	1
-   355     007A                     ___simple_search_fl@last:
-   356                           
-   357                           ; 1 bytes @ 0xA
-   358     007A                     	ds	1
-   359     007B                     ___simple_search_fl@next:
-   360                           
-   361                           ; 1 bytes @ 0xB
-   362     007B                     	ds	1
-   363     007C                     ___simple_search_fl@c:
-   364                           
-   365                           ; 1 bytes @ 0xC
-   366     007C                     	ds	1
-   367     007D                     ___simple_search_fl@best:
-   368                           
-   369                           ; 1 bytes @ 0xD
-   370     007D                     	ds	1
-   371                           
-   372                           	psect	cstackBANK0
-   373     0020                     __pcstackBANK0:
-   374     0020                     ?_malloc:
-   375     0020                     malloc@n:	
-   376                           ; 2 bytes @ 0x0
-   377                           
-   378                           
-   379                           ; 2 bytes @ 0x0
-   380     0020                     	ds	2
-   381     0022                     ??_malloc:
-   382                           
-   383                           ; 1 bytes @ 0x2
-   384     0022                     	ds	2
-   385     0024                     malloc@m:
-   386                           
-   387                           ; 2 bytes @ 0x4
-   388     0024                     	ds	2
-   389     0026                     malloc@sz:
-   390                           
-   391                           ; 2 bytes @ 0x6
-   392     0026                     	ds	2
-   393     0028                     malloc@size:
-   394                           
-   395                           ; 2 bytes @ 0x8
-   396     0028                     	ds	2
-   397     002A                     malloc@p:
-   398                           
-   399                           ; 2 bytes @ 0xA
-   400     002A                     	ds	2
-   401     002C                     malloc@new:
-   402                           
-   403                           ; 2 bytes @ 0xC
-   404     002C                     	ds	2
-   405     002E                     ??_main:
-   406                           
-   407                           ; 1 bytes @ 0xE
-   408     002E                     	ds	3
-   409     0031                     main@buffer:
-   410                           
-   411                           ; 2 bytes @ 0x11
-   412     0031                     	ds	2
-   413                           
-   414                           	psect	maintext
-   415     05D9                     __pmaintext:	
-   416 ;;
-   417 ;;Main: autosize = 0, tempsize = 3, incstack = 0, save=0
-   418 ;;
-   419 ;; *************** function _main *****************
-   420 ;; Defined at:
-   421 ;;		line 24 in file "main.c"
-   422 ;; Parameters:    Size  Location     Type
-   423 ;;		None
-   424 ;; Auto vars:     Size  Location     Type
-   425 ;;  buffer          2   17[BANK0 ] PTR unsigned char 
-   426 ;;		 -> __heap_hi(0), NULL(0), STR_1(10), 
-   427 ;; Return value:  Size  Location     Type
-   428 ;;                  1    wreg      void 
-   429 ;; Registers used:
-   430 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
-   431 ;; Tracked objects:
-   432 ;;		On entry : B00/0
-   433 ;;		On exit  : 0/0
-   434 ;;		Unchanged: 0/0
-   435 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   436 ;;      Params:         0       0       0       0       0
-   437 ;;      Locals:         0       2       0       0       0
-   438 ;;      Temps:          0       3       0       0       0
-   439 ;;      Totals:         0       5       0       0       0
-   440 ;;Total ram usage:        5 bytes
-   441 ;; Hardware stack levels required when called: 2
-   442 ;; This function calls:
-   443 ;;		_Port_Init
-   444 ;;		_SPI_Master_Init
-   445 ;;		_SPI_Write_String
-   446 ;;		_malloc
-   447 ;; This function is called by:
-   448 ;;		Startup code after reset
-   449 ;; This function uses a non-reentrant model
-   450 ;;
-   451                           
-   452     05D9                     _main:	
-   453                           ;psect for function _main
-   454                           
-   455     05D9                     l1024:	
-   456                           ;incstack = 0
-   457                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
-   458                           
-   459                           
-   460                           ;main.c: 25:     Port_Init();
-   461     05D9  120A  118A  2537  120A  118A  	fcall	_Port_Init
-   462     05DE                     l1026:
-   463                           
-   464                           ;main.c: 26:     SPI_Master_Init();
-   465     05DE  120A  118A  2527  120A  118A  	fcall	_SPI_Master_Init
-   466     05E3                     l1028:
-   467                           
-   468                           ;main.c: 27:     char *buffer;;main.c: 29:     buffer = (char*)malloc(10 * sizeof(char))
-      +                          ;
-   469     05E3  300A               	movlw	10
-   470     05E4  1283               	bcf	3,5	;RP0=0, select bank0
-   471     05E5  1303               	bcf	3,6	;RP1=0, select bank0
-   472     05E6  00A0               	movwf	malloc@n
-   473     05E7  3000               	movlw	0
-   474     05E8  00A1               	movwf	malloc@n+1
-   475     05E9  120A  118A  2651  120A  118A  	fcall	_malloc
-   476     05EE  1283               	bcf	3,5	;RP0=0, select bank0
-   477     05EF  1303               	bcf	3,6	;RP1=0, select bank0
-   478     05F0  0820               	movf	?_malloc,w
-   479     05F1  00B1               	movwf	main@buffer
-   480     05F2  0821               	movf	?_malloc+1,w
-   481     05F3  00B2               	movwf	main@buffer+1
-   482     05F4                     l1030:
-   483                           
-   484                           ;main.c: 32:     if(RB0){
-   485     05F4  1283               	bcf	3,5	;RP0=0, select bank0
-   486     05F5  1303               	bcf	3,6	;RP1=0, select bank0
-   487     05F6  1C06               	btfss	6,0	;volatile
-   488     05F7  2DF9               	goto	u481
-   489     05F8  2DFA               	goto	u480
-   490     05F9                     u481:
-   491     05F9  2E0D               	goto	l1034
-   492     05FA                     u480:
-   493     05FA                     l1032:
-   494                           
-   495                           ;main.c: 33:     buffer="123456789";
-   496     05FA  3001               	movlw	(low ((STR_1-__stringbase)| (0+32768)))& (0+255)
-   497     05FB  00B1               	movwf	main@buffer
-   498     05FC  3080               	movlw	128
-   499     05FD  00B2               	movwf	main@buffer+1
-   500                           
-   501                           ;main.c: 34:     _delay((unsigned long)((350)*(4000000/4000.0)));
-   502     05FE  3002               	movlw	2
-   503     05FF  1283               	bcf	3,5	;RP0=0, select bank0
-   504     0600  1303               	bcf	3,6	;RP1=0, select bank0
-   505     0601  00B0               	movwf	??_main+2
-   506     0602  30C7               	movlw	199
-   507     0603  00AF               	movwf	??_main+1
-   508     0604  3087               	movlw	135
-   509     0605  00AE               	movwf	??_main
-   510     0606                     u517:
-   511     0606  0BAE               	decfsz	??_main,f
-   512     0607  2E06               	goto	u517
-   513     0608  0BAF               	decfsz	??_main+1,f
-   514     0609  2E06               	goto	u517
-   515     060A  0BB0               	decfsz	??_main+2,f
-   516     060B  2E06               	goto	u517
-   517     060C  2E0D               	nop2
-   518     060D                     l1034:
+   336                           ; 20 bytes @ 0x0
+   337     0020                     	ds	20
+   338                           
+   339                           	psect	maintext
+   340     0776                     __pmaintext:	
+   341 ;;
+   342 ;;Main: autosize = 0, tempsize = 3, incstack = 0, save=0
+   343 ;;
+   344 ;; *************** function _main *****************
+   345 ;; Defined at:
+   346 ;;		line 27 in file "main.c"
+   347 ;; Parameters:    Size  Location     Type
+   348 ;;		None
+   349 ;; Auto vars:     Size  Location     Type
+   350 ;;  buffer         20    0[BANK0 ] unsigned char [20]
+   351 ;; Return value:  Size  Location     Type
+   352 ;;                  1    wreg      void 
+   353 ;; Registers used:
+   354 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+   355 ;; Tracked objects:
+   356 ;;		On entry : B00/0
+   357 ;;		On exit  : 0/0
+   358 ;;		Unchanged: 0/0
+   359 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   360 ;;      Params:         0       0       0       0       0
+   361 ;;      Locals:         0      20       0       0       0
+   362 ;;      Temps:          3       0       0       0       0
+   363 ;;      Totals:         3      20       0       0       0
+   364 ;;Total ram usage:       23 bytes
+   365 ;; Hardware stack levels required when called: 2
+   366 ;; This function calls:
+   367 ;;		_Port_Init
+   368 ;;		_SPI_Master_Init
+   369 ;;		_SPI_Write_String
+   370 ;;		_Shift_String_Right_Add_Length
+   371 ;;		_strcpy
+   372 ;; This function is called by:
+   373 ;;		Startup code after reset
+   374 ;; This function uses a non-reentrant model
+   375 ;;
+   376                           
+   377     0776                     _main:	
+   378                           ;psect for function _main
+   379                           
+   380     0776                     l750:	
+   381                           ;incstack = 0
+   382                           ; Regs used in _main: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+   383                           
+   384                           
+   385                           ;main.c: 28:     Port_Init();
+   386     0776  120A  118A  26E9  120A  118A  	fcall	_Port_Init
+   387     077B                     l752:
+   388                           
+   389                           ;main.c: 29:     SPI_Master_Init();
+   390     077B  120A  118A  26C2  120A  118A  	fcall	_SPI_Master_Init
+   391     0780                     l754:
+   392                           
+   393                           ;main.c: 33:     if(RB0){
+   394     0780  1283               	bcf	3,5	;RP0=0, select bank0
+   395     0781  1303               	bcf	3,6	;RP1=0, select bank0
+   396     0782  1C06               	btfss	6,0	;volatile
+   397     0783  2F85               	goto	u121
+   398     0784  2F86               	goto	u120
+   399     0785                     u121:
+   400     0785  2FA1               	goto	l760
+   401     0786                     u120:
+   402     0786                     l756:
+   403                           
+   404                           ;main.c: 37:     strcpy(buffer,"BESTO");
+   405     0786  3009               	movlw	(low ((STR_1-__stringbase)| (0+32768)))& (0+255)
+   406     0787  00F0               	movwf	strcpy@src
+   407     0788  3020               	movlw	(low (main@buffer| 0))& (0+255)
+   408     0789  120A  118A  2702  120A  118A  	fcall	_strcpy
+   409                           
+   410                           ;main.c: 39:     Shift_String_Right_Add_Length(buffer);
+   411     078E  3020               	movlw	(low (main@buffer| 0))& (0+255)
+   412     078F  120A  118A  2744  120A  118A  	fcall	_Shift_String_Right_Add_Length
+   413     0794                     l758:
+   414                           
+   415                           ;main.c: 40:     _delay((unsigned long)((350)*(4000000/4000.0)));
+   416     0794  3002               	movlw	2
+   417     0795  00FC               	movwf	??_main+2
+   418     0796  30C7               	movlw	199
+   419     0797  00FB               	movwf	??_main+1
+   420     0798  3088               	movlw	136
+   421     0799  00FA               	movwf	??_main
+   422     079A                     u167:
+   423     079A  0BFA               	decfsz	??_main,f
+   424     079B  2F9A               	goto	u167
+   425     079C  0BFB               	decfsz	??_main+1,f
+   426     079D  2F9A               	goto	u167
+   427     079E  0BFC               	decfsz	??_main+2,f
+   428     079F  2F9A               	goto	u167
+   429     07A0  0000               	nop
+   430     07A1                     l760:
+   431                           
+   432                           ;main.c: 42:     if(RB1){
+   433     07A1  1283               	bcf	3,5	;RP0=0, select bank0
+   434     07A2  1303               	bcf	3,6	;RP1=0, select bank0
+   435     07A3  1C86               	btfss	6,1	;volatile
+   436     07A4  2FA6               	goto	u131
+   437     07A5  2FA7               	goto	u130
+   438     07A6                     u131:
+   439     07A6  2FC2               	goto	l766
+   440     07A7                     u130:
+   441     07A7                     l762:
+   442                           
+   443                           ;main.c: 46:     strcpy(buffer,"FRIENDO");
+   444     07A7  3001               	movlw	(low ((STR_2-__stringbase)| (0+32768)))& (0+255)
+   445     07A8  00F0               	movwf	strcpy@src
+   446     07A9  3020               	movlw	(low (main@buffer| 0))& (0+255)
+   447     07AA  120A  118A  2702  120A  118A  	fcall	_strcpy
+   448                           
+   449                           ;main.c: 48:     Shift_String_Right_Add_Length(buffer);
+   450     07AF  3020               	movlw	(low (main@buffer| 0))& (0+255)
+   451     07B0  120A  118A  2744  120A  118A  	fcall	_Shift_String_Right_Add_Length
+   452     07B5                     l764:
+   453                           
+   454                           ;main.c: 49:     _delay((unsigned long)((350)*(4000000/4000.0)));
+   455     07B5  3002               	movlw	2
+   456     07B6  00FC               	movwf	??_main+2
+   457     07B7  30C7               	movlw	199
+   458     07B8  00FB               	movwf	??_main+1
+   459     07B9  3088               	movlw	136
+   460     07BA  00FA               	movwf	??_main
+   461     07BB                     u177:
+   462     07BB  0BFA               	decfsz	??_main,f
+   463     07BC  2FBB               	goto	u177
+   464     07BD  0BFB               	decfsz	??_main+1,f
+   465     07BE  2FBB               	goto	u177
+   466     07BF  0BFC               	decfsz	??_main+2,f
+   467     07C0  2FBB               	goto	u177
+   468     07C1  0000               	nop
+   469     07C2                     l766:
+   470                           
+   471                           ;main.c: 51:     if(RB2){
+   472     07C2  1283               	bcf	3,5	;RP0=0, select bank0
+   473     07C3  1303               	bcf	3,6	;RP1=0, select bank0
+   474     07C4  1D06               	btfss	6,2	;volatile
+   475     07C5  2FC7               	goto	u141
+   476     07C6  2FC8               	goto	u140
+   477     07C7                     u141:
+   478     07C7  2FDD               	goto	l774
+   479     07C8                     u140:
+   480     07C8                     l768:
+   481                           
+   482                           ;main.c: 52:     PORTD=0x02;
+   483     07C8  3002               	movlw	2
+   484     07C9  0088               	movwf	8	;volatile
+   485     07CA                     l770:
+   486                           
+   487                           ;main.c: 53:     SPI_Write_String(buffer);
+   488     07CA  3020               	movlw	(low (main@buffer| 0))& (0+255)
+   489     07CB  120A  118A  271D  120A  118A  	fcall	_SPI_Write_String
+   490     07D0                     l772:
+   491                           
+   492                           ;main.c: 54:       _delay((unsigned long)((350)*(4000000/4000.0)));
+   493     07D0  3002               	movlw	2
+   494     07D1  00FC               	movwf	??_main+2
+   495     07D2  30C7               	movlw	199
+   496     07D3  00FB               	movwf	??_main+1
+   497     07D4  3088               	movlw	136
+   498     07D5  00FA               	movwf	??_main
+   499     07D6                     u187:
+   500     07D6  0BFA               	decfsz	??_main,f
+   501     07D7  2FD6               	goto	u187
+   502     07D8  0BFB               	decfsz	??_main+1,f
+   503     07D9  2FD6               	goto	u187
+   504     07DA  0BFC               	decfsz	??_main+2,f
+   505     07DB  2FD6               	goto	u187
+   506     07DC  0000               	nop
+   507     07DD                     l774:
+   508                           
+   509                           ;main.c: 56:     if(RB3){
+   510     07DD  1283               	bcf	3,5	;RP0=0, select bank0
+   511     07DE  1303               	bcf	3,6	;RP1=0, select bank0
+   512     07DF  1D86               	btfss	6,3	;volatile
+   513     07E0  2FE2               	goto	u151
+   514     07E1  2FE3               	goto	u150
+   515     07E2                     u151:
+   516     07E2  2F80               	goto	l754
+   517     07E3                     u150:
+   518     07E3                     l776:
    519                           
-   520                           ;main.c: 37:     if(RB1){
-   521     060D  1283               	bcf	3,5	;RP0=0, select bank0
-   522     060E  1303               	bcf	3,6	;RP1=0, select bank0
-   523     060F  1C86               	btfss	6,1	;volatile
-   524     0610  2E12               	goto	u491
-   525     0611  2E13               	goto	u490
-   526     0612                     u491:
-   527     0612  2E2D               	goto	l1042
-   528     0613                     u490:
-   529     0613                     l1036:
-   530                           
-   531                           ;main.c: 38:     PORTD=0x02;
-   532     0613  3002               	movlw	2
-   533     0614  0088               	movwf	8	;volatile
-   534     0615                     l1038:
-   535                           
-   536                           ;main.c: 39:     SPI_Write_String(buffer);
-   537     0615  0831               	movf	main@buffer,w
-   538     0616  00F1               	movwf	SPI_Write_String@Text
-   539     0617  0832               	movf	main@buffer+1,w
-   540     0618  00F2               	movwf	SPI_Write_String@Text+1
-   541     0619  120A  118A  2550  120A  118A  	fcall	_SPI_Write_String
-   542     061E                     l1040:
-   543                           
-   544                           ;main.c: 40:       _delay((unsigned long)((350)*(4000000/4000.0)));
-   545     061E  3002               	movlw	2
-   546     061F  1283               	bcf	3,5	;RP0=0, select bank0
-   547     0620  1303               	bcf	3,6	;RP1=0, select bank0
-   548     0621  00B0               	movwf	??_main+2
-   549     0622  30C7               	movlw	199
-   550     0623  00AF               	movwf	??_main+1
-   551     0624  3087               	movlw	135
-   552     0625  00AE               	movwf	??_main
-   553     0626                     u527:
-   554     0626  0BAE               	decfsz	??_main,f
-   555     0627  2E26               	goto	u527
-   556     0628  0BAF               	decfsz	??_main+1,f
-   557     0629  2E26               	goto	u527
-   558     062A  0BB0               	decfsz	??_main+2,f
-   559     062B  2E26               	goto	u527
-   560     062C  2E2D               	nop2
-   561     062D                     l1042:
-   562                           
-   563                           ;main.c: 42:     if(RB2){
-   564     062D  1283               	bcf	3,5	;RP0=0, select bank0
-   565     062E  1303               	bcf	3,6	;RP1=0, select bank0
-   566     062F  1D06               	btfss	6,2	;volatile
-   567     0630  2E32               	goto	u501
-   568     0631  2E33               	goto	u500
-   569     0632                     u501:
-   570     0632  2DF4               	goto	l1030
-   571     0633                     u500:
-   572     0633                     l1044:
-   573                           
-   574                           ;main.c: 43:     PORTD=0x01;
-   575     0633  3001               	movlw	1
-   576     0634  0088               	movwf	8	;volatile
-   577     0635                     l1046:
-   578                           
-   579                           ;main.c: 44:     SPI_Write_String(buffer);
-   580     0635  0831               	movf	main@buffer,w
-   581     0636  00F1               	movwf	SPI_Write_String@Text
-   582     0637  0832               	movf	main@buffer+1,w
-   583     0638  00F2               	movwf	SPI_Write_String@Text+1
-   584     0639  120A  118A  2550  120A  118A  	fcall	_SPI_Write_String
-   585     063E                     l1048:
-   586                           
-   587                           ;main.c: 45:       _delay((unsigned long)((350)*(4000000/4000.0)));
-   588     063E  3002               	movlw	2
-   589     063F  1283               	bcf	3,5	;RP0=0, select bank0
-   590     0640  1303               	bcf	3,6	;RP1=0, select bank0
-   591     0641  00B0               	movwf	??_main+2
-   592     0642  30C7               	movlw	199
-   593     0643  00AF               	movwf	??_main+1
-   594     0644  3087               	movlw	135
-   595     0645  00AE               	movwf	??_main
-   596     0646                     u537:
-   597     0646  0BAE               	decfsz	??_main,f
-   598     0647  2E46               	goto	u537
-   599     0648  0BAF               	decfsz	??_main+1,f
-   600     0649  2E46               	goto	u537
-   601     064A  0BB0               	decfsz	??_main+2,f
-   602     064B  2E46               	goto	u537
-   603     064C  2E4D               	nop2
-   604     064D  2DF4               	goto	l1030
-   605     064E  120A  118A  2800   	ljmp	start
-   606     0651                     __end_of_main:
-   607                           
-   608                           	psect	text1
-   609     0651                     __ptext1:	
-   610 ;; *************** function _malloc *****************
-   611 ;; Defined at:
-   612 ;;		line 16 in file "C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lite_malloc.c"
-   613 ;; Parameters:    Size  Location     Type
-   614 ;;  n               2    0[BANK0 ] unsigned int 
-   615 ;; Auto vars:     Size  Location     Type
-   616 ;;  sz              2    6[BANK0 ] PTR unsigned int 
-   617 ;;		 -> __heap_hi(0), NULL(0), 
-   618 ;;  new             2   12[BANK0 ] PTR unsigned char 
-   619 ;;		 -> __heap_hi(0), NULL(0), 
-   620 ;;  m               2    4[BANK0 ] unsigned int 
-   621 ;;  p               2   10[BANK0 ] PTR void 
-   622 ;;		 -> __heap_hi(0), NULL(0), 
-   623 ;;  size            2    8[BANK0 ] unsigned int 
-   624 ;; Return value:  Size  Location     Type
-   625 ;;                  2    0[BANK0 ] PTR void 
-   626 ;; Registers used:
-   627 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
-   628 ;; Tracked objects:
-   629 ;;		On entry : 0/0
-   630 ;;		On exit  : 0/0
-   631 ;;		Unchanged: 0/0
-   632 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   633 ;;      Params:         0       2       0       0       0
-   634 ;;      Locals:         0      10       0       0       0
-   635 ;;      Temps:          0       2       0       0       0
-   636 ;;      Totals:         0      14       0       0       0
-   637 ;;Total ram usage:       14 bytes
-   638 ;; Hardware stack levels used: 1
-   639 ;; Hardware stack levels required when called: 1
-   640 ;; This function calls:
-   641 ;;		___expand_heap
-   642 ;;		___simple_search_fl
-   643 ;; This function is called by:
-   644 ;;		_main
-   645 ;; This function uses a non-reentrant model
-   646 ;;
-   647                           
-   648     0651                     _malloc:	
-   649                           ;psect for function _malloc
-   650                           
-   651     0651                     l962:	
-   652                           ;incstack = 0
-   653                           ; Regs used in _malloc: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
-   654                           
-   655     0651  1283               	bcf	3,5	;RP0=0, select bank0
-   656     0652  1303               	bcf	3,6	;RP1=0, select bank0
-   657     0653  01A8               	clrf	malloc@size
-   658     0654  01A9               	clrf	malloc@size+1
-   659     0655                     l964:
-   660     0655  0820               	movf	malloc@n,w
-   661     0656  0421               	iorwf	malloc@n+1,w
-   662     0657  1D03               	btfss	3,2
-   663     0658  2E5A               	goto	u401
-   664     0659  2E5B               	goto	u400
-   665     065A                     u401:
-   666     065A  2E61               	goto	l631
-   667     065B                     u400:
-   668     065B                     l966:
-   669     065B  3001               	movlw	1
-   670     065C  07A0               	addwf	malloc@n,f
-   671     065D  1803               	skipnc
-   672     065E  0AA1               	incf	malloc@n+1,f
-   673     065F  3000               	movlw	0
-   674     0660  07A1               	addwf	malloc@n+1,f
-   675     0661                     l631:
-   676     0661  3000               	movlw	0
-   677     0662  0221               	subwf	malloc@n+1,w
-   678     0663  3002               	movlw	2
-   679     0664  1903               	skipnz
-   680     0665  0220               	subwf	malloc@n,w
-   681     0666  1803               	skipnc
-   682     0667  2E69               	goto	u411
-   683     0668  2E6A               	goto	u410
-   684     0669                     u411:
-   685     0669  2E6F               	goto	l970
-   686     066A                     u410:
-   687     066A                     l968:
-   688     066A  3002               	movlw	2
-   689     066B  00A0               	movwf	malloc@n
-   690     066C  3000               	movlw	0
-   691     066D  00A1               	movwf	malloc@n+1
-   692     066E  2E85               	goto	l978
-   693     066F                     l970:
-   694     066F  0821               	movf	malloc@n+1,w
-   695     0670  00A3               	movwf	??_malloc+1
-   696     0671  0820               	movf	malloc@n,w
-   697     0672  00A2               	movwf	??_malloc
-   698     0673  09A2               	comf	??_malloc,f
-   699     0674  09A3               	comf	??_malloc+1,f
-   700     0675  3000               	movlw	0
-   701     0676  0223               	subwf	??_malloc+1,w
-   702     0677  3002               	movlw	2
-   703     0678  1903               	skipnz
-   704     0679  0222               	subwf	??_malloc,w
-   705     067A  1803               	skipnc
-   706     067B  2E7D               	goto	u421
-   707     067C  2E7E               	goto	u420
-   708     067D                     u421:
-   709     067D  2E85               	goto	l978
-   710     067E                     u420:
-   711     067E                     l972:
-   712     067E  300C               	movlw	12
-   713     067F  00BD               	movwf	_errno
-   714     0680  3000               	movlw	0
-   715     0681  00BE               	movwf	_errno+1
-   716     0682                     l974:
-   717     0682  01A0               	clrf	?_malloc
-   718     0683  01A1               	clrf	?_malloc+1
-   719     0684  2F0A               	goto	l635
-   720     0685                     l978:
-   721     0685                     l980:
-   722     0685  0821               	movf	malloc@n+1,w
-   723     0686  00F1               	movwf	___simple_search_fl@n+1
-   724     0687  0820               	movf	malloc@n,w
-   725     0688  00F0               	movwf	___simple_search_fl@n
-   726     0689  120A  118A  270B  120A  118A  	fcall	___simple_search_fl
-   727     068E  1283               	bcf	3,5	;RP0=0, select bank0
-   728     068F  1303               	bcf	3,6	;RP1=0, select bank0
-   729     0690  00AA               	movwf	malloc@p
-   730     0691  3000               	movlw	0
-   731     0692  00AB               	movwf	malloc@p+1
-   732     0693                     l982:
-   733     0693  082A               	movf	malloc@p,w
-   734     0694  042B               	iorwf	malloc@p+1,w
-   735     0695  1D03               	btfss	3,2
-   736     0696  2E98               	goto	u431
-   737     0697  2E99               	goto	u430
-   738     0698                     u431:
-   739     0698  2F06               	goto	l1010
-   740     0699                     u430:
-   741     0699                     l984:
-   742     0699  083B               	movf	malloc@cur,w
-   743     069A  0239               	subwf	malloc@end,w
-   744     069B  00A2               	movwf	??_malloc
-   745     069C  083C               	movf	malloc@cur+1,w
-   746     069D  1C03               	skipc
-   747     069E  0A3C               	incf	malloc@cur+1,w
-   748     069F  023A               	subwf	malloc@end+1,w
-   749     06A0  00A3               	movwf	??_malloc+1
-   750     06A1  0821               	movf	malloc@n+1,w
-   751     06A2  0223               	subwf	??_malloc+1,w
-   752     06A3  1D03               	skipz
-   753     06A4  2EA7               	goto	u445
-   754     06A5  0820               	movf	malloc@n,w
-   755     06A6  0222               	subwf	??_malloc,w
-   756     06A7                     u445:
-   757     06A7  1803               	skipnc
-   758     06A8  2EAA               	goto	u441
-   759     06A9  2EAB               	goto	u440
-   760     06AA                     u441:
-   761     06AA  2EDC               	goto	l637
-   762     06AB                     u440:
-   763     06AB                     l986:
-   764     06AB  0820               	movf	malloc@n,w
-   765     06AC  3E02               	addlw	2
-   766     06AD  00A4               	movwf	malloc@m
-   767     06AE  0821               	movf	malloc@n+1,w
-   768     06AF  1803               	skipnc
-   769     06B0  3E01               	addlw	1
-   770     06B1  3E00               	addlw	0
-   771     06B2  00A5               	movwf	malloc@m+1
-   772     06B3                     l988:
-   773     06B3  3024               	movlw	(low (malloc@m| 0))& (0+255)
-   774     06B4  120A  118A  258C  120A  118A  	fcall	___expand_heap
-   775     06B9  0870               	movf	?___expand_heap,w
-   776     06BA  1283               	bcf	3,5	;RP0=0, select bank0
-   777     06BB  1303               	bcf	3,6	;RP1=0, select bank0
-   778     06BC  00AC               	movwf	malloc@new
-   779     06BD  0871               	movf	?___expand_heap+1,w
-   780     06BE  00AD               	movwf	malloc@new+1
-   781     06BF                     l990:
-   782     06BF  082C               	movf	malloc@new,w
-   783     06C0  042D               	iorwf	malloc@new+1,w
-   784     06C1  1D03               	btfss	3,2
-   785     06C2  2EC4               	goto	u451
-   786     06C3  2EC5               	goto	u450
-   787     06C4                     u451:
-   788     06C4  2EC6               	goto	l996
-   789     06C5                     u450:
-   790     06C5  2E82               	goto	l974
-   791     06C6                     l996:
-   792     06C6  083A               	movf	malloc@end+1,w
-   793     06C7  062D               	xorwf	malloc@new+1,w
-   794     06C8  1D03               	skipz
-   795     06C9  2ECC               	goto	u465
-   796     06CA  0839               	movf	malloc@end,w
-   797     06CB  062C               	xorwf	malloc@new,w
-   798     06CC                     u465:
-   799     06CC  1903               	skipnz
-   800     06CD  2ECF               	goto	u461
-   801     06CE  2ED0               	goto	u460
-   802     06CF                     u461:
-   803     06CF  2ED4               	goto	l639
-   804     06D0                     u460:
-   805     06D0                     l998:
-   806     06D0  082C               	movf	malloc@new,w
-   807     06D1  00BB               	movwf	malloc@cur
-   808     06D2  082D               	movf	malloc@new+1,w
-   809     06D3  00BC               	movwf	malloc@cur+1
-   810     06D4                     l639:
-   811     06D4  0824               	movf	malloc@m,w
-   812     06D5  072C               	addwf	malloc@new,w
-   813     06D6  00B9               	movwf	malloc@end
-   814     06D7  0825               	movf	malloc@m+1,w
-   815     06D8  1803               	skipnc
-   816     06D9  0A25               	incf	malloc@m+1,w
-   817     06DA  072D               	addwf	malloc@new+1,w
-   818     06DB  00BA               	movwf	malloc@end+1
-   819     06DC                     l637:
-   820     06DC  083B               	movf	malloc@cur,w
-   821     06DD  00AA               	movwf	malloc@p
-   822     06DE  083C               	movf	malloc@cur+1,w
-   823     06DF  00AB               	movwf	malloc@p+1
-   824     06E0                     l1000:
-   825     06E0  082A               	movf	malloc@p,w
-   826     06E1  00A6               	movwf	malloc@sz
-   827     06E2  082B               	movf	malloc@p+1,w
-   828     06E3  00A7               	movwf	malloc@sz+1
-   829     06E4                     l1002:
-   830     06E4  0826               	movf	malloc@sz,w
-   831     06E5  0084               	movwf	4
-   832     06E6  1783               	bsf	3,7
-   833     06E7  1C27               	btfss	malloc@sz+1,0
-   834     06E8  1383               	bcf	3,7
-   835     06E9  0820               	movf	malloc@n,w
-   836     06EA  0080               	movwf	0
-   837     06EB  0A84               	incf	4,f
-   838     06EC  0821               	movf	malloc@n+1,w
-   839     06ED  0080               	movwf	0
-   840     06EE                     l1004:
-   841     06EE  3002               	movlw	2
-   842     06EF  07A6               	addwf	malloc@sz,f
-   843     06F0  1803               	skipnc
-   844     06F1  0AA7               	incf	malloc@sz+1,f
-   845     06F2  3000               	movlw	0
-   846     06F3  07A7               	addwf	malloc@sz+1,f
-   847     06F4                     l1006:
-   848     06F4  0826               	movf	malloc@sz,w
-   849     06F5  00AA               	movwf	malloc@p
-   850     06F6  0827               	movf	malloc@sz+1,w
-   851     06F7  00AB               	movwf	malloc@p+1
-   852     06F8                     l1008:
-   853     06F8  0820               	movf	malloc@n,w
-   854     06F9  3E02               	addlw	2
-   855     06FA  00A2               	movwf	??_malloc
-   856     06FB  0821               	movf	malloc@n+1,w
-   857     06FC  1803               	skipnc
-   858     06FD  3E01               	addlw	1
-   859     06FE  3E00               	addlw	0
-   860     06FF  00A3               	movwf	??_malloc+1
-   861     0700  0822               	movf	??_malloc,w
-   862     0701  07BB               	addwf	malloc@cur,f
-   863     0702  1803               	skipnc
-   864     0703  0ABC               	incf	malloc@cur+1,f
-   865     0704  0823               	movf	??_malloc+1,w
-   866     0705  07BC               	addwf	malloc@cur+1,f
-   867     0706                     l1010:
-   868     0706  082A               	movf	malloc@p,w
-   869     0707  00A0               	movwf	?_malloc
-   870     0708  082B               	movf	malloc@p+1,w
-   871     0709  00A1               	movwf	?_malloc+1
-   872     070A                     l635:
-   873     070A  0008               	return
-   874     070B                     __end_of_malloc:
-   875                           
-   876                           	psect	text2
-   877     070B                     __ptext2:	
-   878 ;; *************** function ___simple_search_fl *****************
-   879 ;; Defined at:
-   880 ;;		line 19 in file "C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\lite_free.c"
-   881 ;; Parameters:    Size  Location     Type
-   882 ;;  n               2    0[COMMON] unsigned int 
-   883 ;; Auto vars:     Size  Location     Type
-   884 ;;  remaining_si    2    6[COMMON] unsigned int 
-   885 ;;  split           1    9[COMMON] PTR struct chunk
-   886 ;;		 -> NULL(0), 
-   887 ;;  next            1   11[COMMON] PTR struct chunk
-   888 ;;		 -> NULL(0), 
-   889 ;;  best            1   13[COMMON] PTR struct chunk
-   890 ;;		 -> NULL(0), 
-   891 ;;  c               1   12[COMMON] PTR struct chunk
-   892 ;;		 -> NULL(0), 
-   893 ;;  last            1   10[COMMON] PTR struct chunk
-   894 ;;		 -> NULL(0), 
-   895 ;;  best_last       1    8[COMMON] PTR struct chunk
-   896 ;;		 -> NULL(0), 
-   897 ;; Return value:  Size  Location     Type
-   898 ;;                  1    wreg      PTR void 
-   899 ;; Registers used:
-   900 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1
-   901 ;; Tracked objects:
-   902 ;;		On entry : 0/0
-   903 ;;		On exit  : 0/0
-   904 ;;		Unchanged: 0/0
-   905 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-   906 ;;      Params:         2       0       0       0       0
-   907 ;;      Locals:         8       0       0       0       0
-   908 ;;      Temps:          4       0       0       0       0
-   909 ;;      Totals:        14       0       0       0       0
-   910 ;;Total ram usage:       14 bytes
-   911 ;; Hardware stack levels used: 1
-   912 ;; This function calls:
-   913 ;;		Nothing
-   914 ;; This function is called by:
-   915 ;;		_malloc
-   916 ;; This function uses a non-reentrant model
-   917 ;;
-   918                           
-   919     070B                     ___simple_search_fl:	
-   920                           ;psect for function ___simple_search_fl
-   921                           
-   922     070B                     l870:	
-   923                           ;incstack = 0
-   924                           ; Regs used in ___simple_search_fl: [wreg-fsr0h+status,2+status,0+btemp+1]
-   925                           
-   926     070B  01FD               	clrf	___simple_search_fl@best
-   927     070C  01F8               	clrf	___simple_search_fl@best_last
-   928     070D  01FA               	clrf	___simple_search_fl@last
-   929     070E                     l872:
-   930     070E  1283               	bcf	3,5	;RP0=0, select bank0
-   931     070F  1303               	bcf	3,6	;RP1=0, select bank0
-   932     0710  083F               	movf	___freelist,w
-   933     0711  1D03               	btfss	3,2
-   934     0712  2F14               	goto	u261
-   935     0713  2F15               	goto	u260
-   936     0714                     u261:
-   937     0714  2F17               	goto	l878
-   938     0715                     u260:
-   939     0715                     l874:
-   940     0715  3000               	movlw	0
-   941     0716  2FEC               	goto	l664
-   942     0717                     l878:
-   943     0717  083F               	movf	___freelist,w
-   944     0718  00FC               	movwf	___simple_search_fl@c
-   945     0719  2F80               	goto	l904
-   946     071A                     l880:
-   947     071A  087C               	movf	___simple_search_fl@c,w
-   948     071B  0084               	movwf	4
-   949     071C  1383               	bcf	3,7	;select IRP bank0
-   950     071D  0800               	movf	0,w
-   951     071E  00F2               	movwf	??___simple_search_fl
-   952     071F  0A84               	incf	4,f
-   953     0720  0800               	movf	0,w
-   954     0721  00F3               	movwf	??___simple_search_fl+1
-   955     0722  0871               	movf	___simple_search_fl@n+1,w
-   956     0723  0673               	xorwf	??___simple_search_fl+1,w
-   957     0724  1D03               	skipz
-   958     0725  2F28               	goto	u275
-   959     0726  0870               	movf	___simple_search_fl@n,w
-   960     0727  0672               	xorwf	??___simple_search_fl,w
-   961     0728                     u275:
-   962     0728  1D03               	skipz
-   963     0729  2F2B               	goto	u271
-   964     072A  2F2C               	goto	u270
-   965     072B                     u271:
-   966     072B  2F46               	goto	l892
-   967     072C                     u270:
-   968     072C                     l882:
-   969     072C  087A               	movf	___simple_search_fl@last,w
-   970     072D  1903               	btfsc	3,2
-   971     072E  2F30               	goto	u281
-   972     072F  2F31               	goto	u280
-   973     0730                     u281:
-   974     0730  2F3C               	goto	l886
-   975     0731                     u280:
-   976     0731                     l884:
-   977     0731  087C               	movf	___simple_search_fl@c,w
-   978     0732  3E02               	addlw	2
-   979     0733  0084               	movwf	4
-   980     0734  0800               	movf	0,w
-   981     0735  00FF               	movwf	btemp+1
-   982     0736  087A               	movf	___simple_search_fl@last,w
-   983     0737  3E02               	addlw	2
-   984     0738  0084               	movwf	4
-   985     0739  087F               	movf	btemp+1,w
-   986     073A  0080               	movwf	0
-   987     073B  2F43               	goto	l888
-   988     073C                     l886:
-   989     073C  087C               	movf	___simple_search_fl@c,w
-   990     073D  3E02               	addlw	2
-   991     073E  0084               	movwf	4
-   992     073F  0800               	movf	0,w
-   993     0740  1283               	bcf	3,5	;RP0=0, select bank0
-   994     0741  1303               	bcf	3,6	;RP1=0, select bank0
-   995     0742  00BF               	movwf	___freelist
-   996     0743                     l888:
-   997     0743  087C               	movf	___simple_search_fl@c,w
-   998     0744  3E02               	addlw	2
-   999     0745  2FEC               	goto	l664
-  1000     0746                     l892:
-  1001     0746  087C               	movf	___simple_search_fl@c,w
-  1002     0747  0084               	movwf	4
-  1003     0748  0800               	movf	0,w
-  1004     0749  00F2               	movwf	??___simple_search_fl
-  1005     074A  0A84               	incf	4,f
-  1006     074B  0800               	movf	0,w
-  1007     074C  00F3               	movwf	??___simple_search_fl+1
-  1008     074D  0873               	movf	??___simple_search_fl+1,w
-  1009     074E  0271               	subwf	___simple_search_fl@n+1,w
-  1010     074F  1D03               	skipz
-  1011     0750  2F53               	goto	u295
-  1012     0751  0872               	movf	??___simple_search_fl,w
-  1013     0752  0270               	subwf	___simple_search_fl@n,w
-  1014     0753                     u295:
-  1015     0753  1803               	skipnc
-  1016     0754  2F56               	goto	u291
-  1017     0755  2F57               	goto	u290
-  1018     0756                     u291:
-  1019     0756  2F79               	goto	l672
-  1020     0757                     u290:
-  1021     0757                     l894:
-  1022     0757  087D               	movf	___simple_search_fl@best,w
-  1023     0758  1903               	btfsc	3,2
-  1024     0759  2F5B               	goto	u301
-  1025     075A  2F5C               	goto	u300
-  1026     075B                     u301:
-  1027     075B  2F75               	goto	l900
-  1028     075C                     u300:
-  1029     075C                     l896:
-  1030     075C  087D               	movf	___simple_search_fl@best,w
-  1031     075D  0084               	movwf	4
-  1032     075E  0800               	movf	0,w
-  1033     075F  00F2               	movwf	??___simple_search_fl
-  1034     0760  0A84               	incf	4,f
-  1035     0761  0800               	movf	0,w
-  1036     0762  00F3               	movwf	??___simple_search_fl+1
-  1037     0763  087C               	movf	___simple_search_fl@c,w
-  1038     0764  0084               	movwf	4
-  1039     0765  0800               	movf	0,w
-  1040     0766  00F4               	movwf	??___simple_search_fl+2
-  1041     0767  0A84               	incf	4,f
-  1042     0768  0800               	movf	0,w
-  1043     0769  00F5               	movwf	??___simple_search_fl+3
-  1044     076A  0873               	movf	??___simple_search_fl+1,w
-  1045     076B  0275               	subwf	??___simple_search_fl+3,w
-  1046     076C  1D03               	skipz
-  1047     076D  2F70               	goto	u315
-  1048     076E  0872               	movf	??___simple_search_fl,w
-  1049     076F  0274               	subwf	??___simple_search_fl+2,w
-  1050     0770                     u315:
-  1051     0770  1C03               	skipc
-  1052     0771  2F73               	goto	u311
-  1053     0772  2F74               	goto	u310
-  1054     0773                     u311:
-  1055     0773  2F75               	goto	l900
-  1056     0774                     u310:
-  1057     0774  2F79               	goto	l672
-  1058     0775                     l900:
-  1059     0775  087C               	movf	___simple_search_fl@c,w
-  1060     0776  00FD               	movwf	___simple_search_fl@best
-  1061     0777  087A               	movf	___simple_search_fl@last,w
-  1062     0778  00F8               	movwf	___simple_search_fl@best_last
-  1063     0779                     l672:
-  1064     0779  087C               	movf	___simple_search_fl@c,w
-  1065     077A  00FA               	movwf	___simple_search_fl@last
-  1066     077B                     l902:
-  1067     077B  087C               	movf	___simple_search_fl@c,w
-  1068     077C  3E02               	addlw	2
-  1069     077D  0084               	movwf	4
-  1070     077E  0800               	movf	0,w
-  1071     077F  00FC               	movwf	___simple_search_fl@c
-  1072     0780                     l904:
-  1073     0780  087C               	movf	___simple_search_fl@c,w
-  1074     0781  1D03               	btfss	3,2
-  1075     0782  2F84               	goto	u321
-  1076     0783  2F85               	goto	u320
-  1077     0784                     u321:
-  1078     0784  2F1A               	goto	l880
-  1079     0785                     u320:
-  1080     0785                     l906:
-  1081     0785  087D               	movf	___simple_search_fl@best,w
-  1082     0786  1903               	btfsc	3,2
-  1083     0787  2F89               	goto	u331
-  1084     0788  2F8A               	goto	u330
-  1085     0789                     u331:
-  1086     0789  2F15               	goto	l874
-  1087     078A                     u330:
-  1088     078A                     l908:
-  1089     078A  087D               	movf	___simple_search_fl@best,w
-  1090     078B  3E02               	addlw	2
-  1091     078C  0084               	movwf	4
-  1092     078D  1383               	bcf	3,7	;select IRP bank0
-  1093     078E  0800               	movf	0,w
-  1094     078F  00FB               	movwf	___simple_search_fl@next
-  1095     0790  087D               	movf	___simple_search_fl@best,w
-  1096     0791  0084               	movwf	4
-  1097     0792  0800               	movf	0,w
-  1098     0793  00F2               	movwf	??___simple_search_fl
-  1099     0794  0A84               	incf	4,f
-  1100     0795  0800               	movf	0,w
-  1101     0796  00F3               	movwf	??___simple_search_fl+1
-  1102     0797  0870               	movf	___simple_search_fl@n,w
-  1103     0798  0272               	subwf	??___simple_search_fl,w
-  1104     0799  00F4               	movwf	??___simple_search_fl+2
-  1105     079A  0871               	movf	___simple_search_fl@n+1,w
-  1106     079B  1C03               	skipc
-  1107     079C  0A71               	incf	___simple_search_fl@n+1,w
-  1108     079D  0273               	subwf	??___simple_search_fl+1,w
-  1109     079E  00F5               	movwf	??___simple_search_fl+3
-  1110     079F  3000               	movlw	0
-  1111     07A0  0275               	subwf	??___simple_search_fl+3,w
-  1112     07A1  3005               	movlw	5
-  1113     07A2  1903               	skipnz
-  1114     07A3  0274               	subwf	??___simple_search_fl+2,w
-  1115     07A4  1C03               	skipc
-  1116     07A5  2FA7               	goto	u341
-  1117     07A6  2FA8               	goto	u340
-  1118     07A7                     u341:
-  1119     07A7  2FDA               	goto	l920
-  1120     07A8                     u340:
-  1121     07A8                     l910:
-  1122     07A8  087D               	movf	___simple_search_fl@best,w
-  1123     07A9  0084               	movwf	4
-  1124     07AA  0800               	movf	0,w
-  1125     07AB  00F2               	movwf	??___simple_search_fl
-  1126     07AC  0A84               	incf	4,f
-  1127     07AD  0800               	movf	0,w
-  1128     07AE  00F3               	movwf	??___simple_search_fl+1
-  1129     07AF  0870               	movf	___simple_search_fl@n,w
-  1130     07B0  0272               	subwf	??___simple_search_fl,w
-  1131     07B1  00F4               	movwf	??___simple_search_fl+2
-  1132     07B2  0871               	movf	___simple_search_fl@n+1,w
-  1133     07B3  1C03               	skipc
-  1134     07B4  0A71               	incf	___simple_search_fl@n+1,w
-  1135     07B5  0273               	subwf	??___simple_search_fl+1,w
-  1136     07B6  00F5               	movwf	??___simple_search_fl+3
-  1137     07B7  0874               	movf	??___simple_search_fl+2,w
-  1138     07B8  3EFE               	addlw	254
-  1139     07B9  00F6               	movwf	___simple_search_fl@remaining_size
-  1140     07BA  0875               	movf	??___simple_search_fl+3,w
-  1141     07BB  1803               	skipnc
-  1142     07BC  3E01               	addlw	1
-  1143     07BD  3EFF               	addlw	255
-  1144     07BE  00F7               	movwf	___simple_search_fl@remaining_size+1
-  1145     07BF                     l912:
-  1146     07BF  087D               	movf	___simple_search_fl@best,w
-  1147     07C0  0084               	movwf	4
-  1148     07C1  0870               	movf	___simple_search_fl@n,w
-  1149     07C2  0080               	movwf	0
-  1150     07C3  0A84               	incf	4,f
-  1151     07C4  0871               	movf	___simple_search_fl@n+1,w
-  1152     07C5  0080               	movwf	0
-  1153     07C6                     l914:
-  1154     07C6  087D               	movf	___simple_search_fl@best,w
-  1155     07C7  0084               	movwf	4
-  1156     07C8  0800               	movf	0,w
-  1157     07C9  077D               	addwf	___simple_search_fl@best,w
-  1158     07CA  3E02               	addlw	2
-  1159     07CB  00F9               	movwf	___simple_search_fl@split
-  1160     07CC  0879               	movf	___simple_search_fl@split,w
-  1161     07CD  0084               	movwf	4
-  1162     07CE  0876               	movf	___simple_search_fl@remaining_size,w
-  1163     07CF  0080               	movwf	0
-  1164     07D0  0A84               	incf	4,f
-  1165     07D1  0877               	movf	___simple_search_fl@remaining_size+1,w
-  1166     07D2  0080               	movwf	0
-  1167     07D3                     l916:
-  1168     07D3  0879               	movf	___simple_search_fl@split,w
-  1169     07D4  3E02               	addlw	2
-  1170     07D5  0084               	movwf	4
-  1171     07D6  087B               	movf	___simple_search_fl@next,w
-  1172     07D7  0080               	movwf	0
-  1173     07D8                     l918:
-  1174     07D8  0879               	movf	___simple_search_fl@split,w
-  1175     07D9  00FB               	movwf	___simple_search_fl@next
-  1176     07DA                     l920:
-  1177     07DA  1283               	bcf	3,5	;RP0=0, select bank0
-  1178     07DB  1303               	bcf	3,6	;RP1=0, select bank0
-  1179     07DC  083F               	movf	___freelist,w
-  1180     07DD  067D               	xorwf	___simple_search_fl@best,w
-  1181     07DE  1D03               	skipz
-  1182     07DF  2FE1               	goto	u351
-  1183     07E0  2FE2               	goto	u350
-  1184     07E1                     u351:
-  1185     07E1  2FE5               	goto	l924
-  1186     07E2                     u350:
-  1187     07E2                     l922:
-  1188     07E2  087B               	movf	___simple_search_fl@next,w
-  1189     07E3  00BF               	movwf	___freelist
-  1190     07E4  2FEA               	goto	l926
-  1191     07E5                     l924:
-  1192     07E5  0878               	movf	___simple_search_fl@best_last,w
-  1193     07E6  3E02               	addlw	2
-  1194     07E7  0084               	movwf	4
-  1195     07E8  087B               	movf	___simple_search_fl@next,w
-  1196     07E9  0080               	movwf	0
-  1197     07EA                     l926:
-  1198     07EA  087D               	movf	___simple_search_fl@best,w
-  1199     07EB  3E02               	addlw	2
-  1200     07EC                     l664:
-  1201     07EC  0008               	return
-  1202     07ED                     __end_of___simple_search_fl:
-  1203                           
-  1204                           	psect	text3
-  1205     058C                     __ptext3:	
-  1206 ;; *************** function ___expand_heap *****************
-  1207 ;; Defined at:
-  1208 ;;		line 14 in file "C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\expand_heap.c"
-  1209 ;; Parameters:    Size  Location     Type
-  1210 ;;  pn              1    wreg     PTR unsigned int 
-  1211 ;;		 -> malloc@m(2), 
-  1212 ;; Auto vars:     Size  Location     Type
-  1213 ;;  pn              1    0[COMMON] PTR unsigned int 
-  1214 ;;		 -> malloc@m(2), 
-  1215 ;;  new_brkp        2    3[COMMON] PTR unsigned char 
-  1216 ;;		 -> __heap_hi(0), NULL(0), 
-  1217 ;;  n               2    1[COMMON] unsigned int 
-  1218 ;; Return value:  Size  Location     Type
-  1219 ;;                  2  622[None  ] PTR void 
-  1220 ;; Registers used:
-  1221 ;;		wreg, fsr0l, fsr0h, status,2, status,0
-  1222 ;; Tracked objects:
-  1223 ;;		On entry : 0/0
-  1224 ;;		On exit  : 0/0
-  1225 ;;		Unchanged: 0/0
-  1226 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-  1227 ;;      Params:         0       0       0       0       0
-  1228 ;;      Locals:         5       0       0       0       0
-  1229 ;;      Temps:          0       0       0       0       0
-  1230 ;;      Totals:         5       0       0       0       0
-  1231 ;;Total ram usage:        5 bytes
-  1232 ;; Hardware stack levels used: 1
-  1233 ;; This function calls:
-  1234 ;;		Nothing
-  1235 ;; This function is called by:
-  1236 ;;		_malloc
-  1237 ;; This function uses a non-reentrant model
-  1238 ;;
-  1239                           
-  1240     058C                     ___expand_heap:	
-  1241                           ;psect for function ___expand_heap
-  1242                           
-  1243                           
-  1244                           ;incstack = 0
-  1245                           ; Regs used in ___expand_heap: [wreg-fsr0h+status,2+status,0]
-  1246                           ;___expand_heap@pn stored from wreg
-  1247     058C  00F0               	movwf	___expand_heap@pn
-  1248     058D                     l934:
-  1249     058D  0870               	movf	___expand_heap@pn,w
-  1250     058E  0084               	movwf	4
-  1251     058F  1383               	bcf	3,7	;select IRP bank0
-  1252     0590  0800               	movf	0,w
-  1253     0591  00F1               	movwf	___expand_heap@n
-  1254     0592  0A84               	incf	4,f
-  1255     0593  0800               	movf	0,w
-  1256     0594  00F2               	movwf	___expand_heap@n+1
-  1257     0595                     l936:
-  1258     0595  1283               	bcf	3,5	;RP0=0, select bank0
-  1259     0596  1303               	bcf	3,6	;RP1=0, select bank0
-  1260     0597  0837               	movf	_brkp,w
-  1261     0598  0438               	iorwf	_brkp+1,w
-  1262     0599  1D03               	btfss	3,2
-  1263     059A  2D9C               	goto	u361
-  1264     059B  2D9D               	goto	u360
-  1265     059C                     u361:
-  1266     059C  2DA1               	goto	l653
-  1267     059D                     u360:
-  1268     059D                     l938:
-  1269     059D  3070               	movlw	low ___heap_hi
-  1270     059E  00B7               	movwf	_brkp
-  1271     059F  3001               	movlw	high ___heap_hi
-  1272     05A0  00B8               	movwf	_brkp+1
-  1273     05A1                     l653:
-  1274     05A1  3000               	movlw	0
-  1275     05A2  0272               	subwf	___expand_heap@n+1,w
-  1276     05A3  3004               	movlw	4
-  1277     05A4  1903               	skipnz
-  1278     05A5  0271               	subwf	___expand_heap@n,w
-  1279     05A6  1803               	skipnc
-  1280     05A7  2DA9               	goto	u371
-  1281     05A8  2DAA               	goto	u370
-  1282     05A9                     u371:
-  1283     05A9  2DAE               	goto	l942
-  1284     05AA                     u370:
-  1285     05AA                     l940:
-  1286     05AA  3004               	movlw	4
-  1287     05AB  00F1               	movwf	___expand_heap@n
-  1288     05AC  3000               	movlw	0
-  1289     05AD  00F2               	movwf	___expand_heap@n+1
-  1290     05AE                     l942:
-  1291     05AE  0871               	movf	___expand_heap@n,w
-  1292     05AF  0237               	subwf	_brkp,w
-  1293     05B0  00F3               	movwf	___expand_heap@new_brkp
-  1294     05B1  0872               	movf	___expand_heap@n+1,w
-  1295     05B2  1C03               	skipc
-  1296     05B3  0A72               	incf	___expand_heap@n+1,w
-  1297     05B4  0238               	subwf	_brkp+1,w
-  1298     05B5  00F4               	movwf	___expand_heap@new_brkp+1
-  1299     05B6                     l944:
-  1300     05B6  3001               	movlw	high ___heap_lo
-  1301     05B7  0274               	subwf	___expand_heap@new_brkp+1,w
-  1302     05B8  3010               	movlw	low ___heap_lo
-  1303     05B9  1903               	skipnz
-  1304     05BA  0273               	subwf	___expand_heap@new_brkp,w
-  1305     05BB  1C03               	skipc
-  1306     05BC  2DBE               	goto	u381
-  1307     05BD  2DBF               	goto	u380
-  1308     05BE                     u381:
-  1309     05BE  2DC9               	goto	l948
-  1310     05BF                     u380:
-  1311     05BF                     l946:
-  1312     05BF  0838               	movf	_brkp+1,w
-  1313     05C0  0274               	subwf	___expand_heap@new_brkp+1,w
-  1314     05C1  1D03               	skipz
-  1315     05C2  2DC5               	goto	u395
-  1316     05C3  0837               	movf	_brkp,w
-  1317     05C4  0273               	subwf	___expand_heap@new_brkp,w
-  1318     05C5                     u395:
-  1319     05C5  1C03               	skipc
-  1320     05C6  2DC8               	goto	u391
-  1321     05C7  2DC9               	goto	u390
-  1322     05C8                     u391:
-  1323     05C8  2DD0               	goto	l954
-  1324     05C9                     u390:
-  1325     05C9                     l948:
-  1326     05C9  300C               	movlw	12
-  1327     05CA  00BD               	movwf	_errno
-  1328     05CB  3000               	movlw	0
-  1329     05CC  00BE               	movwf	_errno+1
-  1330     05CD                     l950:
-  1331     05CD  01F0               	clrf	?___expand_heap
-  1332     05CE  01F1               	clrf	?___expand_heap+1
-  1333     05CF  2DD8               	goto	l658
-  1334     05D0                     l954:
-  1335     05D0  0873               	movf	___expand_heap@new_brkp,w
-  1336     05D1  00B7               	movwf	_brkp
-  1337     05D2  0874               	movf	___expand_heap@new_brkp+1,w
-  1338     05D3  00B8               	movwf	_brkp+1
-  1339     05D4  0837               	movf	_brkp,w
-  1340     05D5  00F0               	movwf	?___expand_heap
-  1341     05D6  0838               	movf	_brkp+1,w
-  1342     05D7  00F1               	movwf	?___expand_heap+1
-  1343     05D8                     l658:
-  1344     05D8  0008               	return
-  1345     05D9                     __end_of___expand_heap:
-  1346                           
-  1347                           	psect	text4
-  1348     0550                     __ptext4:	
-  1349 ;; *************** function _SPI_Write_String *****************
-  1350 ;; Defined at:
-  1351 ;;		line 83 in file "main.c"
-  1352 ;; Parameters:    Size  Location     Type
-  1353 ;;  Text            2    1[COMMON] PTR unsigned char 
-  1354 ;;		 -> __heap_hi(0), NULL(0), STR_1(10), 
-  1355 ;; Auto vars:     Size  Location     Type
-  1356 ;;  i               1    5[COMMON] unsigned char 
-  1357 ;; Return value:  Size  Location     Type
-  1358 ;;                  1    wreg      void 
-  1359 ;; Registers used:
-  1360 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
-  1361 ;; Tracked objects:
-  1362 ;;		On entry : 0/0
-  1363 ;;		On exit  : 0/0
-  1364 ;;		Unchanged: 0/0
-  1365 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-  1366 ;;      Params:         2       0       0       0       0
-  1367 ;;      Locals:         1       0       0       0       0
-  1368 ;;      Temps:          2       0       0       0       0
-  1369 ;;      Totals:         5       0       0       0       0
-  1370 ;;Total ram usage:        5 bytes
-  1371 ;; Hardware stack levels used: 1
-  1372 ;; Hardware stack levels required when called: 1
-  1373 ;; This function calls:
-  1374 ;;		_Write_data
-  1375 ;; This function is called by:
-  1376 ;;		_main
-  1377 ;; This function uses a non-reentrant model
-  1378 ;;
-  1379                           
-  1380     0550                     _SPI_Write_String:	
-  1381                           ;psect for function _SPI_Write_String
-  1382                           
-  1383     0550                     l1014:	
-  1384                           ;incstack = 0
-  1385                           ; Regs used in _SPI_Write_String: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
-  1386                           
-  1387                           
-  1388                           ;main.c: 84:     uint8_t i;;main.c: 85:     for(i=0;Text[i]!='\0';i++){
-  1389     0550  01F5               	clrf	SPI_Write_String@i
-  1390     0551  2D74               	goto	l1022
-  1391     0552                     l1016:
-  1392                           
-  1393                           ;main.c: 86:     Write_data(Text[i]);
-  1394     0552  0875               	movf	SPI_Write_String@i,w
-  1395     0553  00F3               	movwf	??_SPI_Write_String
-  1396     0554  01F4               	clrf	??_SPI_Write_String+1
-  1397     0555  0873               	movf	??_SPI_Write_String,w
-  1398     0556  0771               	addwf	SPI_Write_String@Text,w
-  1399     0557  0084               	movwf	4
-  1400     0558  0874               	movf	??_SPI_Write_String+1,w
-  1401     0559  1803               	skipnc
-  1402     055A  0A74               	incf	??_SPI_Write_String+1,w
-  1403     055B  0772               	addwf	SPI_Write_String@Text+1,w
-  1404     055C  00FF               	movwf	btemp+1
-  1405     055D  120A  118A  2003  120A  118A  	fcall	stringtab
-  1406     0562  120A  118A  2521  120A  118A  	fcall	_Write_data
-  1407     0567                     l1018:
-  1408                           
-  1409                           ;main.c: 87:      _delay((unsigned long)((100)*(4000000/4000.0)));
-  1410     0567  3082               	movlw	130
-  1411     0568  00F4               	movwf	??_SPI_Write_String+1
-  1412     0569  30DD               	movlw	221
-  1413     056A  00F3               	movwf	??_SPI_Write_String
-  1414     056B                     u547:
-  1415     056B  0BF3               	decfsz	??_SPI_Write_String,f
-  1416     056C  2D6B               	goto	u547
-  1417     056D  0BF4               	decfsz	??_SPI_Write_String+1,f
-  1418     056E  2D6B               	goto	u547
-  1419     056F  2D70               	nop2
-  1420     0570                     l1020:
-  1421                           
-  1422                           ;main.c: 88:     }
-  1423     0570  3001               	movlw	1
-  1424     0571  00FF               	movwf	btemp+1
-  1425     0572  087F               	movf	btemp+1,w
-  1426     0573  07F5               	addwf	SPI_Write_String@i,f
-  1427     0574                     l1022:
-  1428     0574  0875               	movf	SPI_Write_String@i,w
-  1429     0575  00F3               	movwf	??_SPI_Write_String
-  1430     0576  01F4               	clrf	??_SPI_Write_String+1
-  1431     0577  0873               	movf	??_SPI_Write_String,w
-  1432     0578  0771               	addwf	SPI_Write_String@Text,w
-  1433     0579  0084               	movwf	4
-  1434     057A  0874               	movf	??_SPI_Write_String+1,w
-  1435     057B  1803               	skipnc
-  1436     057C  0A74               	incf	??_SPI_Write_String+1,w
-  1437     057D  0772               	addwf	SPI_Write_String@Text+1,w
-  1438     057E  1283               	bcf	3,5	;RP0=0, select bank0
-  1439     057F  1303               	bcf	3,6	;RP1=0, select bank0
-  1440     0580  00FF               	movwf	btemp+1
-  1441     0581  120A  118A  2003  120A  118A  	fcall	stringtab
-  1442     0586  3A00               	xorlw	0
-  1443     0587  1D03               	skipz
-  1444     0588  2D8A               	goto	u471
-  1445     0589  2D8B               	goto	u470
-  1446     058A                     u471:
-  1447     058A  2D52               	goto	l1016
-  1448     058B                     u470:
-  1449     058B                     l74:
-  1450     058B  0008               	return
-  1451     058C                     __end_of_SPI_Write_String:
-  1452                           
-  1453                           	psect	text5
-  1454     0521                     __ptext5:	
-  1455 ;; *************** function _Write_data *****************
-  1456 ;; Defined at:
-  1457 ;;		line 79 in file "main.c"
-  1458 ;; Parameters:    Size  Location     Type
-  1459 ;;  data            1    wreg     unsigned char 
-  1460 ;; Auto vars:     Size  Location     Type
-  1461 ;;  data            1    0[COMMON] unsigned char 
-  1462 ;; Return value:  Size  Location     Type
-  1463 ;;                  1    wreg      void 
-  1464 ;; Registers used:
-  1465 ;;		wreg
-  1466 ;; Tracked objects:
-  1467 ;;		On entry : 0/0
-  1468 ;;		On exit  : 0/0
-  1469 ;;		Unchanged: 0/0
-  1470 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-  1471 ;;      Params:         0       0       0       0       0
-  1472 ;;      Locals:         1       0       0       0       0
-  1473 ;;      Temps:          0       0       0       0       0
-  1474 ;;      Totals:         1       0       0       0       0
-  1475 ;;Total ram usage:        1 bytes
-  1476 ;; Hardware stack levels used: 1
-  1477 ;; This function calls:
-  1478 ;;		Nothing
-  1479 ;; This function is called by:
-  1480 ;;		_SPI_Write_String
-  1481 ;; This function uses a non-reentrant model
-  1482 ;;
-  1483                           
-  1484     0521                     _Write_data:	
-  1485                           ;psect for function _Write_data
-  1486                           
-  1487                           
-  1488                           ;incstack = 0
-  1489                           ; Regs used in _Write_data: [wreg]
-  1490                           ;Write_data@data stored from wreg
-  1491     0521  00F0               	movwf	Write_data@data
-  1492     0522                     l868:
-  1493                           
-  1494                           ;main.c: 80: SSPBUF=data;
-  1495     0522  0870               	movf	Write_data@data,w
-  1496     0523  1283               	bcf	3,5	;RP0=0, select bank0
-  1497     0524  1303               	bcf	3,6	;RP1=0, select bank0
-  1498     0525  0093               	movwf	19	;volatile
-  1499     0526                     l68:
-  1500     0526  0008               	return
-  1501     0527                     __end_of_Write_data:
-  1502                           
-  1503                           	psect	text6
-  1504     0527                     __ptext6:	
-  1505 ;; *************** function _SPI_Master_Init *****************
-  1506 ;; Defined at:
-  1507 ;;		line 62 in file "main.c"
-  1508 ;; Parameters:    Size  Location     Type
-  1509 ;;		None
-  1510 ;; Auto vars:     Size  Location     Type
-  1511 ;;		None
-  1512 ;; Return value:  Size  Location     Type
-  1513 ;;                  1    wreg      void 
-  1514 ;; Registers used:
-  1515 ;;		None
-  1516 ;; Tracked objects:
-  1517 ;;		On entry : 0/0
-  1518 ;;		On exit  : 0/0
-  1519 ;;		Unchanged: 0/0
-  1520 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-  1521 ;;      Params:         0       0       0       0       0
-  1522 ;;      Locals:         0       0       0       0       0
-  1523 ;;      Temps:          0       0       0       0       0
-  1524 ;;      Totals:         0       0       0       0       0
-  1525 ;;Total ram usage:        0 bytes
-  1526 ;; Hardware stack levels used: 1
-  1527 ;; This function calls:
-  1528 ;;		Nothing
-  1529 ;; This function is called by:
-  1530 ;;		_main
-  1531 ;; This function uses a non-reentrant model
-  1532 ;;
-  1533                           
-  1534     0527                     _SPI_Master_Init:	
-  1535                           ;psect for function _SPI_Master_Init
-  1536                           
-  1537     0527                     l960:	
-  1538                           ;incstack = 0
-  1539                           ; Regs used in _SPI_Master_Init: []
-  1540                           
-  1541                           
-  1542                           ;main.c: 64: SSPM3=0;
-  1543     0527  1283               	bcf	3,5	;RP0=0, select bank0
-  1544     0528  1303               	bcf	3,6	;RP1=0, select bank0
-  1545     0529  1194               	bcf	20,3	;volatile
-  1546                           
-  1547                           ;main.c: 65: SSPM2=0;
-  1548     052A  1114               	bcf	20,2	;volatile
-  1549                           
-  1550                           ;main.c: 66: SSPM1=0;
-  1551     052B  1094               	bcf	20,1	;volatile
-  1552                           
-  1553                           ;main.c: 67: SSPM0=0;
-  1554     052C  1014               	bcf	20,0	;volatile
-  1555                           
-  1556                           ;main.c: 69: SSPEN=1;
-  1557     052D  1694               	bsf	20,5	;volatile
-  1558                           
-  1559                           ;main.c: 70: CKP=0;
-  1560     052E  1214               	bcf	20,4	;volatile
-  1561                           
-  1562                           ;main.c: 71: CKE=0;
-  1563     052F  1683               	bsf	3,5	;RP0=1, select bank1
-  1564     0530  1303               	bcf	3,6	;RP1=0, select bank1
-  1565     0531  1314               	bcf	20,6	;volatile
-  1566                           
-  1567                           ;main.c: 72: SMP=0;
-  1568     0532  1394               	bcf	20,7	;volatile
-  1569                           
-  1570                           ;main.c: 74: TRISC5=0;
-  1571     0533  1287               	bcf	7,5	;volatile
-  1572                           
-  1573                           ;main.c: 75: TRISC4=1;
-  1574     0534  1607               	bsf	7,4	;volatile
-  1575                           
-  1576                           ;main.c: 76: TRISC3=0;
-  1577     0535  1187               	bcf	7,3	;volatile
-  1578     0536                     l65:
-  1579     0536  0008               	return
-  1580     0537                     __end_of_SPI_Master_Init:
-  1581                           
-  1582                           	psect	text7
-  1583     0537                     __ptext7:	
-  1584 ;; *************** function _Port_Init *****************
-  1585 ;; Defined at:
-  1586 ;;		line 55 in file "main.c"
-  1587 ;; Parameters:    Size  Location     Type
-  1588 ;;		None
-  1589 ;; Auto vars:     Size  Location     Type
-  1590 ;;		None
-  1591 ;; Return value:  Size  Location     Type
-  1592 ;;                  1    wreg      void 
-  1593 ;; Registers used:
-  1594 ;;		wreg, status,2, status,0, btemp+1
-  1595 ;; Tracked objects:
-  1596 ;;		On entry : 0/0
-  1597 ;;		On exit  : 0/0
-  1598 ;;		Unchanged: 0/0
-  1599 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
-  1600 ;;      Params:         0       0       0       0       0
-  1601 ;;      Locals:         0       0       0       0       0
-  1602 ;;      Temps:          0       0       0       0       0
-  1603 ;;      Totals:         0       0       0       0       0
-  1604 ;;Total ram usage:        0 bytes
-  1605 ;; Hardware stack levels used: 1
-  1606 ;; This function calls:
-  1607 ;;		Nothing
-  1608 ;; This function is called by:
-  1609 ;;		_main
-  1610 ;; This function uses a non-reentrant model
-  1611 ;;
-  1612                           
-  1613     0537                     _Port_Init:	
-  1614                           ;psect for function _Port_Init
-  1615                           
-  1616     0537                     l958:	
-  1617                           ;incstack = 0
-  1618                           ; Regs used in _Port_Init: [wreg+status,2+status,0+btemp+1]
-  1619                           
-  1620                           
-  1621                           ;main.c: 56:    TRISB|=0x07;
-  1622     0537  3007               	movlw	7
-  1623     0538  00FF               	movwf	btemp+1
-  1624     0539  087F               	movf	btemp+1,w
-  1625     053A  1683               	bsf	3,5	;RP0=1, select bank1
-  1626     053B  1303               	bcf	3,6	;RP1=0, select bank1
-  1627     053C  0486               	iorwf	6,f	;volatile
-  1628                           
-  1629                           ;main.c: 57:    PORTB&=~0x07;
-  1630     053D  30F8               	movlw	248
-  1631     053E  00FF               	movwf	btemp+1
-  1632     053F  087F               	movf	btemp+1,w
-  1633     0540  1283               	bcf	3,5	;RP0=0, select bank0
-  1634     0541  1303               	bcf	3,6	;RP1=0, select bank0
-  1635     0542  0586               	andwf	6,f	;volatile
-  1636                           
-  1637                           ;main.c: 58:    TRISD&=~0x03;
-  1638     0543  30FC               	movlw	252
-  1639     0544  00FF               	movwf	btemp+1
-  1640     0545  087F               	movf	btemp+1,w
-  1641     0546  1683               	bsf	3,5	;RP0=1, select bank1
-  1642     0547  1303               	bcf	3,6	;RP1=0, select bank1
-  1643     0548  0588               	andwf	8,f	;volatile
-  1644                           
-  1645                           ;main.c: 59:    PORTD|=0x03;
-  1646     0549  3003               	movlw	3
-  1647     054A  00FF               	movwf	btemp+1
-  1648     054B  087F               	movf	btemp+1,w
-  1649     054C  1283               	bcf	3,5	;RP0=0, select bank0
-  1650     054D  1303               	bcf	3,6	;RP1=0, select bank0
-  1651     054E  0488               	iorwf	8,f	;volatile
-  1652     054F                     l62:
-  1653     054F  0008               	return
-  1654     0550                     __end_of_Port_Init:
-  1655     007E                     btemp	set	126	;btemp
-  1656     007E                     wtemp0	set	126
-  1657                           
-  1658                           	psect	config
-  1659                           
-  1660                           ;Config register CONFIG @ 0x2007
-  1661                           ;	Oscillator Selection bits
-  1662                           ;	FOSC = XT, XT oscillator
-  1663                           ;	Watchdog Timer Enable bit
-  1664                           ;	WDTE = OFF, WDT disabled
-  1665                           ;	Power-up Timer Enable bit
-  1666                           ;	PWRTE = ON, PWRT enabled
-  1667                           ;	Brown-out Reset Enable bit
-  1668                           ;	BOREN = ON, BOR enabled
-  1669                           ;	Low-Voltage (Single-Supply) In-Circuit Serial Programming Enable bit
-  1670                           ;	LVP = OFF, RB3 is digital I/O, HV on MCLR must be used for programming
-  1671                           ;	Data EEPROM Memory Code Protection bit
-  1672                           ;	CPD = OFF, Data EEPROM code protection off
-  1673                           ;	Flash Program Memory Write Enable bits
-  1674                           ;	WRT = OFF, Write protection off; all program memory may be written to by EECON control
-  1675                           ;	In-Circuit Debugger Mode bit
-  1676                           ;	DEBUG = 0x1, unprogrammed default
-  1677                           ;	Flash Program Memory Code Protection bit
-  1678                           ;	CP = OFF, Code protection off
-  1679     2007                     	org	8199
-  1680     2007  3F71               	dw	16241
+   520                           ;main.c: 57:     PORTD=0x01;
+   521     07E3  3001               	movlw	1
+   522     07E4  0088               	movwf	8	;volatile
+   523     07E5                     l778:
+   524                           
+   525                           ;main.c: 58:     SPI_Write_String(buffer);
+   526     07E5  3020               	movlw	(low (main@buffer| 0))& (0+255)
+   527     07E6  120A  118A  271D  120A  118A  	fcall	_SPI_Write_String
+   528     07EB                     l780:
+   529                           
+   530                           ;main.c: 59:       _delay((unsigned long)((350)*(4000000/4000.0)));
+   531     07EB  3002               	movlw	2
+   532     07EC  00FC               	movwf	??_main+2
+   533     07ED  30C7               	movlw	199
+   534     07EE  00FB               	movwf	??_main+1
+   535     07EF  3088               	movlw	136
+   536     07F0  00FA               	movwf	??_main
+   537     07F1                     u197:
+   538     07F1  0BFA               	decfsz	??_main,f
+   539     07F2  2FF1               	goto	u197
+   540     07F3  0BFB               	decfsz	??_main+1,f
+   541     07F4  2FF1               	goto	u197
+   542     07F5  0BFC               	decfsz	??_main+2,f
+   543     07F6  2FF1               	goto	u197
+   544     07F7  0000               	nop
+   545     07F8  2F80               	goto	l754
+   546     07F9  120A  118A  2800   	ljmp	start
+   547     07FC                     __end_of_main:
+   548                           
+   549                           	psect	text1
+   550     0702                     __ptext1:	
+   551 ;; *************** function _strcpy *****************
+   552 ;; Defined at:
+   553 ;;		line 3 in file "C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strcpy.c"
+   554 ;; Parameters:    Size  Location     Type
+   555 ;;  dest            1    wreg     PTR unsigned char 
+   556 ;;		 -> main@buffer(20), 
+   557 ;;  src             1    0[COMMON] PTR const unsigned char 
+   558 ;;		 -> STR_2(8), STR_1(6), 
+   559 ;; Auto vars:     Size  Location     Type
+   560 ;;  dest            1    2[COMMON] PTR unsigned char 
+   561 ;;		 -> main@buffer(20), 
+   562 ;;  d               1    1[COMMON] PTR unsigned char 
+   563 ;;		 -> main@buffer(20), 
+   564 ;; Return value:  Size  Location     Type
+   565 ;;                  1    wreg      PTR unsigned char 
+   566 ;; Registers used:
+   567 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath
+   568 ;; Tracked objects:
+   569 ;;		On entry : 0/0
+   570 ;;		On exit  : 0/0
+   571 ;;		Unchanged: 0/0
+   572 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   573 ;;      Params:         1       0       0       0       0
+   574 ;;      Locals:         2       0       0       0       0
+   575 ;;      Temps:          0       0       0       0       0
+   576 ;;      Totals:         3       0       0       0       0
+   577 ;;Total ram usage:        3 bytes
+   578 ;; Hardware stack levels used: 2
+   579 ;; This function calls:
+   580 ;;		Nothing
+   581 ;; This function is called by:
+   582 ;;		_main
+   583 ;; This function uses a non-reentrant model
+   584 ;;
+   585                           
+   586     0702                     _strcpy:	
+   587                           ;psect for function _strcpy
+   588                           
+   589                           
+   590                           ;incstack = 0
+   591                           ; Regs used in _strcpy: [wreg-fsr0h+status,2+status,0+btemp+1+pclath]
+   592                           ;strcpy@dest stored from wreg
+   593     0702  00F2               	movwf	strcpy@dest
+   594     0703                     l730:
+   595     0703  0872               	movf	strcpy@dest,w
+   596     0704  00F1               	movwf	strcpy@d
+   597     0705                     l732:
+   598     0705  3001               	movlw	1
+   599     0706  07F0               	addwf	strcpy@src,f
+   600     0707  30FF               	movlw	-1
+   601     0708  0770               	addwf	strcpy@src,w
+   602     0709  0084               	movwf	4
+   603     070A  120A  118A  2003  120A  118A  	fcall	stringdir
+   604     070F  00FF               	movwf	btemp+1
+   605     0710  0871               	movf	strcpy@d,w
+   606     0711  0084               	movwf	4
+   607     0712  3001               	movlw	1
+   608     0713  07F1               	addwf	strcpy@d,f
+   609     0714  087F               	movf	btemp+1,w
+   610     0715  1383               	bcf	3,7	;select IRP bank0
+   611     0716  0080               	movwf	0
+   612     0717  0800               	movf	0,w
+   613     0718  1D03               	btfss	3,2
+   614     0719  2F1B               	goto	u101
+   615     071A  2F1C               	goto	u100
+   616     071B                     u101:
+   617     071B  2F05               	goto	l732
+   618     071C                     u100:
+   619     071C                     l634:
+   620     071C  0008               	return
+   621     071D                     __end_of_strcpy:
+   622                           
+   623                           	psect	text2
+   624     0744                     __ptext2:	
+   625 ;; *************** function _Shift_String_Right_Add_Length *****************
+   626 ;; Defined at:
+   627 ;;		line 105 in file "main.c"
+   628 ;; Parameters:    Size  Location     Type
+   629 ;;  str             1    wreg     PTR unsigned char 
+   630 ;;		 -> main@buffer(20), 
+   631 ;; Auto vars:     Size  Location     Type
+   632 ;;  str             1    9[COMMON] PTR unsigned char 
+   633 ;;		 -> main@buffer(20), 
+   634 ;;  i               2    7[COMMON] int 
+   635 ;;  i               4    0        long 
+   636 ;;  len             1    6[COMMON] unsigned char 
+   637 ;; Return value:  Size  Location     Type
+   638 ;;                  1    wreg      void 
+   639 ;; Registers used:
+   640 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+   641 ;; Tracked objects:
+   642 ;;		On entry : 0/0
+   643 ;;		On exit  : 0/0
+   644 ;;		Unchanged: 0/0
+   645 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   646 ;;      Params:         0       0       0       0       0
+   647 ;;      Locals:         4       0       0       0       0
+   648 ;;      Temps:          2       0       0       0       0
+   649 ;;      Totals:         6       0       0       0       0
+   650 ;;Total ram usage:        6 bytes
+   651 ;; Hardware stack levels used: 1
+   652 ;; Hardware stack levels required when called: 1
+   653 ;; This function calls:
+   654 ;;		_strlen
+   655 ;; This function is called by:
+   656 ;;		_main
+   657 ;; This function uses a non-reentrant model
+   658 ;;
+   659                           
+   660     0744                     _Shift_String_Right_Add_Length:	
+   661                           ;psect for function _Shift_String_Right_Add_Length
+   662                           
+   663                           
+   664                           ;incstack = 0
+   665                           ; Regs used in _Shift_String_Right_Add_Length: [wreg-fsr0h+status,2+status,0+btemp+1+pcl
+      +                          ath+cstack]
+   666                           ;Shift_String_Right_Add_Length@str stored from wreg
+   667     0744  00F9               	movwf	Shift_String_Right_Add_Length@str
+   668     0745                     l734:
+   669                           
+   670                           ;main.c: 106:     int32_t i;;main.c: 107:     char len = strlen(str);
+   671     0745  0879               	movf	Shift_String_Right_Add_Length@str,w
+   672     0746  120A  118A  26D2  120A  118A  	fcall	_strlen
+   673     074B  0870               	movf	?_strlen,w
+   674     074C  00F6               	movwf	Shift_String_Right_Add_Length@len
+   675     074D                     l736:
+   676                           
+   677                           ;main.c: 109:     for (int i = len; i >= 0; --i) {
+   678     074D  0876               	movf	Shift_String_Right_Add_Length@len,w
+   679     074E  00F4               	movwf	??_Shift_String_Right_Add_Length
+   680     074F  01F5               	clrf	??_Shift_String_Right_Add_Length+1
+   681     0750  0874               	movf	??_Shift_String_Right_Add_Length,w
+   682     0751  00F7               	movwf	Shift_String_Right_Add_Length@i_97
+   683     0752  0875               	movf	??_Shift_String_Right_Add_Length+1,w
+   684     0753  00F8               	movwf	Shift_String_Right_Add_Length@i_97+1
+   685     0754                     l738:
+   686     0754  1FF8               	btfss	Shift_String_Right_Add_Length@i_97+1,7
+   687     0755  2F57               	goto	u111
+   688     0756  2F58               	goto	u110
+   689     0757                     u111:
+   690     0757  2F59               	goto	l742
+   691     0758                     u110:
+   692     0758  2F6F               	goto	l748
+   693     0759                     l742:
+   694                           
+   695                           ;main.c: 110:         str[i + 1] = str[i];
+   696     0759  0877               	movf	Shift_String_Right_Add_Length@i_97,w
+   697     075A  0779               	addwf	Shift_String_Right_Add_Length@str,w
+   698     075B  00F4               	movwf	??_Shift_String_Right_Add_Length
+   699     075C  0874               	movf	??_Shift_String_Right_Add_Length,w
+   700     075D  0084               	movwf	4
+   701     075E  1383               	bcf	3,7	;select IRP bank0
+   702     075F  0800               	movf	0,w
+   703     0760  00FF               	movwf	btemp+1
+   704     0761  0877               	movf	Shift_String_Right_Add_Length@i_97,w
+   705     0762  0779               	addwf	Shift_String_Right_Add_Length@str,w
+   706     0763  00F5               	movwf	??_Shift_String_Right_Add_Length+1
+   707     0764  0A75               	incf	??_Shift_String_Right_Add_Length+1,w
+   708     0765  0084               	movwf	4
+   709     0766  087F               	movf	btemp+1,w
+   710     0767  0080               	movwf	0
+   711     0768                     l744:
+   712                           
+   713                           ;main.c: 111:     }
+   714     0768  30FF               	movlw	255
+   715     0769  07F7               	addwf	Shift_String_Right_Add_Length@i_97,f
+   716     076A  1803               	skipnc
+   717     076B  0AF8               	incf	Shift_String_Right_Add_Length@i_97+1,f
+   718     076C  30FF               	movlw	255
+   719     076D  07F8               	addwf	Shift_String_Right_Add_Length@i_97+1,f
+   720     076E  2F54               	goto	l738
+   721     076F                     l748:
+   722                           
+   723                           ;main.c: 112: str[0]=len+0x30;
+   724     076F  0879               	movf	Shift_String_Right_Add_Length@str,w
+   725     0770  0084               	movwf	4
+   726     0771  0876               	movf	Shift_String_Right_Add_Length@len,w
+   727     0772  3E30               	addlw	48
+   728     0773  1383               	bcf	3,7	;select IRP bank0
+   729     0774  0080               	movwf	0
+   730     0775                     l86:
+   731     0775  0008               	return
+   732     0776                     __end_of_Shift_String_Right_Add_Length:
+   733                           
+   734                           	psect	text3
+   735     06D2                     __ptext3:	
+   736 ;; *************** function _strlen *****************
+   737 ;; Defined at:
+   738 ;;		line 5 in file "C:\Program Files\Microchip\xc8\v2.46\pic\sources\c99\common\strlen.c"
+   739 ;; Parameters:    Size  Location     Type
+   740 ;;  s               1    wreg     PTR const unsigned char 
+   741 ;;		 -> main@buffer(20), 
+   742 ;; Auto vars:     Size  Location     Type
+   743 ;;  s               1    3[COMMON] PTR const unsigned char 
+   744 ;;		 -> main@buffer(20), 
+   745 ;;  a               1    2[COMMON] PTR const unsigned char 
+   746 ;;		 -> main@buffer(20), 
+   747 ;; Return value:  Size  Location     Type
+   748 ;;                  2    0[COMMON] unsigned int 
+   749 ;; Registers used:
+   750 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1
+   751 ;; Tracked objects:
+   752 ;;		On entry : 0/0
+   753 ;;		On exit  : 0/0
+   754 ;;		Unchanged: 0/0
+   755 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   756 ;;      Params:         2       0       0       0       0
+   757 ;;      Locals:         2       0       0       0       0
+   758 ;;      Temps:          0       0       0       0       0
+   759 ;;      Totals:         4       0       0       0       0
+   760 ;;Total ram usage:        4 bytes
+   761 ;; Hardware stack levels used: 1
+   762 ;; This function calls:
+   763 ;;		Nothing
+   764 ;; This function is called by:
+   765 ;;		_Shift_String_Right_Add_Length
+   766 ;; This function uses a non-reentrant model
+   767 ;;
+   768                           
+   769     06D2                     _strlen:	
+   770                           ;psect for function _strlen
+   771                           
+   772                           
+   773                           ;incstack = 0
+   774                           ; Regs used in _strlen: [wreg-fsr0h+status,2+status,0+btemp+1]
+   775                           ;strlen@s stored from wreg
+   776     06D2  00F3               	movwf	strlen@s
+   777     06D3                     l720:
+   778     06D3  0873               	movf	strlen@s,w
+   779     06D4  00F2               	movwf	strlen@a
+   780     06D5  2EDA               	goto	l724
+   781     06D6                     l722:
+   782     06D6  3001               	movlw	1
+   783     06D7  00FF               	movwf	btemp+1
+   784     06D8  087F               	movf	btemp+1,w
+   785     06D9  07F3               	addwf	strlen@s,f
+   786     06DA                     l724:
+   787     06DA  0873               	movf	strlen@s,w
+   788     06DB  0084               	movwf	4
+   789     06DC  1383               	bcf	3,7	;select IRP bank0
+   790     06DD  0800               	movf	0,w
+   791     06DE  1D03               	btfss	3,2
+   792     06DF  2EE1               	goto	u91
+   793     06E0  2EE2               	goto	u90
+   794     06E1                     u91:
+   795     06E1  2ED6               	goto	l722
+   796     06E2                     u90:
+   797     06E2                     l726:
+   798     06E2  0872               	movf	strlen@a,w
+   799     06E3  0273               	subwf	strlen@s,w
+   800     06E4  00F0               	movwf	?_strlen
+   801     06E5  01F1               	clrf	?_strlen+1
+   802     06E6  1BF0               	btfsc	?_strlen,7
+   803     06E7  03F1               	decf	?_strlen+1,f
+   804     06E8                     l640:
+   805     06E8  0008               	return
+   806     06E9                     __end_of_strlen:
+   807                           
+   808                           	psect	text4
+   809     071D                     __ptext4:	
+   810 ;; *************** function _SPI_Write_String *****************
+   811 ;; Defined at:
+   812 ;;		line 97 in file "main.c"
+   813 ;; Parameters:    Size  Location     Type
+   814 ;;  Text            1    wreg     PTR unsigned char 
+   815 ;;		 -> main@buffer(20), 
+   816 ;; Auto vars:     Size  Location     Type
+   817 ;;  Text            1    4[COMMON] PTR unsigned char 
+   818 ;;		 -> main@buffer(20), 
+   819 ;;  i               1    3[COMMON] unsigned char 
+   820 ;; Return value:  Size  Location     Type
+   821 ;;                  1    wreg      void 
+   822 ;; Registers used:
+   823 ;;		wreg, fsr0l, fsr0h, status,2, status,0, btemp+1, pclath, cstack
+   824 ;; Tracked objects:
+   825 ;;		On entry : 0/0
+   826 ;;		On exit  : 0/0
+   827 ;;		Unchanged: 0/0
+   828 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   829 ;;      Params:         0       0       0       0       0
+   830 ;;      Locals:         2       0       0       0       0
+   831 ;;      Temps:          2       0       0       0       0
+   832 ;;      Totals:         4       0       0       0       0
+   833 ;;Total ram usage:        4 bytes
+   834 ;; Hardware stack levels used: 1
+   835 ;; Hardware stack levels required when called: 1
+   836 ;; This function calls:
+   837 ;;		_Write_data
+   838 ;; This function is called by:
+   839 ;;		_main
+   840 ;; This function uses a non-reentrant model
+   841 ;;
+   842                           
+   843     071D                     _SPI_Write_String:	
+   844                           ;psect for function _SPI_Write_String
+   845                           
+   846                           
+   847                           ;incstack = 0
+   848                           ; Regs used in _SPI_Write_String: [wreg-fsr0h+status,2+status,0+btemp+1+pclath+cstack]
+   849                           ;SPI_Write_String@Text stored from wreg
+   850     071D  00F4               	movwf	SPI_Write_String@Text
+   851     071E                     l678:
+   852                           
+   853                           ;main.c: 98:     uint8_t i;;main.c: 99:     for(i=0;Text[i]!='\0';i++){
+   854     071E  01F3               	clrf	SPI_Write_String@i
+   855     071F  2F38               	goto	l686
+   856     0720                     l680:
+   857                           
+   858                           ;main.c: 100:     Write_data(Text[i]);
+   859     0720  0873               	movf	SPI_Write_String@i,w
+   860     0721  0774               	addwf	SPI_Write_String@Text,w
+   861     0722  00F1               	movwf	??_SPI_Write_String
+   862     0723  0871               	movf	??_SPI_Write_String,w
+   863     0724  0084               	movwf	4
+   864     0725  0800               	movf	0,w
+   865     0726  120A  118A  26BC  120A  118A  	fcall	_Write_data
+   866     072B                     l682:
+   867                           
+   868                           ;main.c: 101:      _delay((unsigned long)((100)*(4000000/4000.0)));
+   869     072B  3082               	movlw	130
+   870     072C  00F2               	movwf	??_SPI_Write_String+1
+   871     072D  30DD               	movlw	221
+   872     072E  00F1               	movwf	??_SPI_Write_String
+   873     072F                     u207:
+   874     072F  0BF1               	decfsz	??_SPI_Write_String,f
+   875     0730  2F2F               	goto	u207
+   876     0731  0BF2               	decfsz	??_SPI_Write_String+1,f
+   877     0732  2F2F               	goto	u207
+   878     0733  2F34               	nop2
+   879     0734                     l684:
+   880                           
+   881                           ;main.c: 102:     }
+   882     0734  3001               	movlw	1
+   883     0735  00FF               	movwf	btemp+1
+   884     0736  087F               	movf	btemp+1,w
+   885     0737  07F3               	addwf	SPI_Write_String@i,f
+   886     0738                     l686:
+   887     0738  0873               	movf	SPI_Write_String@i,w
+   888     0739  0774               	addwf	SPI_Write_String@Text,w
+   889     073A  00F1               	movwf	??_SPI_Write_String
+   890     073B  0871               	movf	??_SPI_Write_String,w
+   891     073C  0084               	movwf	4
+   892     073D  1383               	bcf	3,7	;select IRP bank0
+   893     073E  0800               	movf	0,w
+   894     073F  1D03               	btfss	3,2
+   895     0740  2F42               	goto	u41
+   896     0741  2F43               	goto	u40
+   897     0742                     u41:
+   898     0742  2F20               	goto	l680
+   899     0743                     u40:
+   900     0743                     l81:
+   901     0743  0008               	return
+   902     0744                     __end_of_SPI_Write_String:
+   903                           
+   904                           	psect	text5
+   905     06BC                     __ptext5:	
+   906 ;; *************** function _Write_data *****************
+   907 ;; Defined at:
+   908 ;;		line 93 in file "main.c"
+   909 ;; Parameters:    Size  Location     Type
+   910 ;;  data            1    wreg     unsigned char 
+   911 ;; Auto vars:     Size  Location     Type
+   912 ;;  data            1    0[COMMON] unsigned char 
+   913 ;; Return value:  Size  Location     Type
+   914 ;;                  1    wreg      void 
+   915 ;; Registers used:
+   916 ;;		wreg
+   917 ;; Tracked objects:
+   918 ;;		On entry : 0/0
+   919 ;;		On exit  : 0/0
+   920 ;;		Unchanged: 0/0
+   921 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   922 ;;      Params:         0       0       0       0       0
+   923 ;;      Locals:         1       0       0       0       0
+   924 ;;      Temps:          0       0       0       0       0
+   925 ;;      Totals:         1       0       0       0       0
+   926 ;;Total ram usage:        1 bytes
+   927 ;; Hardware stack levels used: 1
+   928 ;; This function calls:
+   929 ;;		Nothing
+   930 ;; This function is called by:
+   931 ;;		_SPI_Write_String
+   932 ;; This function uses a non-reentrant model
+   933 ;;
+   934                           
+   935     06BC                     _Write_data:	
+   936                           ;psect for function _Write_data
+   937                           
+   938                           
+   939                           ;incstack = 0
+   940                           ; Regs used in _Write_data: [wreg]
+   941                           ;Write_data@data stored from wreg
+   942     06BC  00F0               	movwf	Write_data@data
+   943     06BD                     l642:
+   944                           
+   945                           ;main.c: 94: SSPBUF=data;
+   946     06BD  0870               	movf	Write_data@data,w
+   947     06BE  1283               	bcf	3,5	;RP0=0, select bank0
+   948     06BF  1303               	bcf	3,6	;RP1=0, select bank0
+   949     06C0  0093               	movwf	19	;volatile
+   950     06C1                     l75:
+   951     06C1  0008               	return
+   952     06C2                     __end_of_Write_data:
+   953                           
+   954                           	psect	text6
+   955     06C2                     __ptext6:	
+   956 ;; *************** function _SPI_Master_Init *****************
+   957 ;; Defined at:
+   958 ;;		line 76 in file "main.c"
+   959 ;; Parameters:    Size  Location     Type
+   960 ;;		None
+   961 ;; Auto vars:     Size  Location     Type
+   962 ;;		None
+   963 ;; Return value:  Size  Location     Type
+   964 ;;                  1    wreg      void 
+   965 ;; Registers used:
+   966 ;;		None
+   967 ;; Tracked objects:
+   968 ;;		On entry : 0/0
+   969 ;;		On exit  : 0/0
+   970 ;;		Unchanged: 0/0
+   971 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+   972 ;;      Params:         0       0       0       0       0
+   973 ;;      Locals:         0       0       0       0       0
+   974 ;;      Temps:          0       0       0       0       0
+   975 ;;      Totals:         0       0       0       0       0
+   976 ;;Total ram usage:        0 bytes
+   977 ;; Hardware stack levels used: 1
+   978 ;; This function calls:
+   979 ;;		Nothing
+   980 ;; This function is called by:
+   981 ;;		_main
+   982 ;; This function uses a non-reentrant model
+   983 ;;
+   984                           
+   985     06C2                     _SPI_Master_Init:	
+   986                           ;psect for function _SPI_Master_Init
+   987                           
+   988     06C2                     l656:	
+   989                           ;incstack = 0
+   990                           ; Regs used in _SPI_Master_Init: []
+   991                           
+   992                           
+   993                           ;main.c: 78: SSPM3=0;
+   994     06C2  1283               	bcf	3,5	;RP0=0, select bank0
+   995     06C3  1303               	bcf	3,6	;RP1=0, select bank0
+   996     06C4  1194               	bcf	20,3	;volatile
+   997                           
+   998                           ;main.c: 79: SSPM2=0;
+   999     06C5  1114               	bcf	20,2	;volatile
+  1000                           
+  1001                           ;main.c: 80: SSPM1=0;
+  1002     06C6  1094               	bcf	20,1	;volatile
+  1003                           
+  1004                           ;main.c: 81: SSPM0=0;
+  1005     06C7  1014               	bcf	20,0	;volatile
+  1006                           
+  1007                           ;main.c: 83: SSPEN=1;
+  1008     06C8  1694               	bsf	20,5	;volatile
+  1009                           
+  1010                           ;main.c: 84: CKP=0;
+  1011     06C9  1214               	bcf	20,4	;volatile
+  1012                           
+  1013                           ;main.c: 85: CKE=0;
+  1014     06CA  1683               	bsf	3,5	;RP0=1, select bank1
+  1015     06CB  1303               	bcf	3,6	;RP1=0, select bank1
+  1016     06CC  1314               	bcf	20,6	;volatile
+  1017                           
+  1018                           ;main.c: 86: SMP=0;
+  1019     06CD  1394               	bcf	20,7	;volatile
+  1020                           
+  1021                           ;main.c: 88: TRISC5=0;
+  1022     06CE  1287               	bcf	7,5	;volatile
+  1023                           
+  1024                           ;main.c: 89: TRISC4=1;
+  1025     06CF  1607               	bsf	7,4	;volatile
+  1026                           
+  1027                           ;main.c: 90: TRISC3=0;
+  1028     06D0  1187               	bcf	7,3	;volatile
+  1029     06D1                     l72:
+  1030     06D1  0008               	return
+  1031     06D2                     __end_of_SPI_Master_Init:
+  1032                           
+  1033                           	psect	text7
+  1034     06E9                     __ptext7:	
+  1035 ;; *************** function _Port_Init *****************
+  1036 ;; Defined at:
+  1037 ;;		line 69 in file "main.c"
+  1038 ;; Parameters:    Size  Location     Type
+  1039 ;;		None
+  1040 ;; Auto vars:     Size  Location     Type
+  1041 ;;		None
+  1042 ;; Return value:  Size  Location     Type
+  1043 ;;                  1    wreg      void 
+  1044 ;; Registers used:
+  1045 ;;		wreg, status,2, status,0, btemp+1
+  1046 ;; Tracked objects:
+  1047 ;;		On entry : 0/0
+  1048 ;;		On exit  : 0/0
+  1049 ;;		Unchanged: 0/0
+  1050 ;; Data sizes:     COMMON   BANK0   BANK1   BANK3   BANK2
+  1051 ;;      Params:         0       0       0       0       0
+  1052 ;;      Locals:         0       0       0       0       0
+  1053 ;;      Temps:          0       0       0       0       0
+  1054 ;;      Totals:         0       0       0       0       0
+  1055 ;;Total ram usage:        0 bytes
+  1056 ;; Hardware stack levels used: 1
+  1057 ;; This function calls:
+  1058 ;;		Nothing
+  1059 ;; This function is called by:
+  1060 ;;		_main
+  1061 ;; This function uses a non-reentrant model
+  1062 ;;
+  1063                           
+  1064     06E9                     _Port_Init:	
+  1065                           ;psect for function _Port_Init
+  1066                           
+  1067     06E9                     l654:	
+  1068                           ;incstack = 0
+  1069                           ; Regs used in _Port_Init: [wreg+status,2+status,0+btemp+1]
+  1070                           
+  1071                           
+  1072                           ;main.c: 70:    TRISB|=0x0F;
+  1073     06E9  300F               	movlw	15
+  1074     06EA  00FF               	movwf	btemp+1
+  1075     06EB  087F               	movf	btemp+1,w
+  1076     06EC  1683               	bsf	3,5	;RP0=1, select bank1
+  1077     06ED  1303               	bcf	3,6	;RP1=0, select bank1
+  1078     06EE  0486               	iorwf	6,f	;volatile
+  1079                           
+  1080                           ;main.c: 71:    PORTB&=~0x0F;
+  1081     06EF  30F0               	movlw	240
+  1082     06F0  00FF               	movwf	btemp+1
+  1083     06F1  087F               	movf	btemp+1,w
+  1084     06F2  1283               	bcf	3,5	;RP0=0, select bank0
+  1085     06F3  1303               	bcf	3,6	;RP1=0, select bank0
+  1086     06F4  0586               	andwf	6,f	;volatile
+  1087                           
+  1088                           ;main.c: 72:    TRISD&=~0x03;
+  1089     06F5  30FC               	movlw	252
+  1090     06F6  00FF               	movwf	btemp+1
+  1091     06F7  087F               	movf	btemp+1,w
+  1092     06F8  1683               	bsf	3,5	;RP0=1, select bank1
+  1093     06F9  1303               	bcf	3,6	;RP1=0, select bank1
+  1094     06FA  0588               	andwf	8,f	;volatile
+  1095                           
+  1096                           ;main.c: 73:    PORTD|=0x03;
+  1097     06FB  3003               	movlw	3
+  1098     06FC  00FF               	movwf	btemp+1
+  1099     06FD  087F               	movf	btemp+1,w
+  1100     06FE  1283               	bcf	3,5	;RP0=0, select bank0
+  1101     06FF  1303               	bcf	3,6	;RP1=0, select bank0
+  1102     0700  0488               	iorwf	8,f	;volatile
+  1103     0701                     l69:
+  1104     0701  0008               	return
+  1105     0702                     __end_of_Port_Init:
+  1106     007E                     btemp	set	126	;btemp
+  1107     007E                     wtemp0	set	126
+  1108                           
+  1109                           	psect	config
+  1110                           
+  1111                           ;Config register CONFIG @ 0x2007
+  1112                           ;	Oscillator Selection bits
+  1113                           ;	FOSC = XT, XT oscillator
+  1114                           ;	Watchdog Timer Enable bit
+  1115                           ;	WDTE = OFF, WDT disabled
+  1116                           ;	Power-up Timer Enable bit
+  1117                           ;	PWRTE = ON, PWRT enabled
+  1118                           ;	Brown-out Reset Enable bit
+  1119                           ;	BOREN = ON, BOR enabled
+  1120                           ;	Low-Voltage (Single-Supply) In-Circuit Serial Programming Enable bit
+  1121                           ;	LVP = OFF, RB3 is digital I/O, HV on MCLR must be used for programming
+  1122                           ;	Data EEPROM Memory Code Protection bit
+  1123                           ;	CPD = OFF, Data EEPROM code protection off
+  1124                           ;	Flash Program Memory Write Enable bits
+  1125                           ;	WRT = OFF, Write protection off; all program memory may be written to by EECON control
+  1126                           ;	In-Circuit Debugger Mode bit
+  1127                           ;	DEBUG = 0x1, unprogrammed default
+  1128                           ;	Flash Program Memory Code Protection bit
+  1129                           ;	CP = OFF, Code protection off
+  1130     2007                     	org	8199
+  1131     2007  3F71               	dw	16241
 
 Data Sizes:
-    Strings     10
+    Strings     14
     Constant    0
     Data        0
-    BSS         13
+    BSS         0
     Persistent  0
     Stack       0
 
 Auto Spaces:
     Space          Size  Autos    Used
-    COMMON           14     14      14
-    BANK0            80     19      32
+    COMMON           14     13      13
+    BANK0            80     20      20
     BANK1            80      0       0
     BANK3            96      0       0
     BANK2            96      0       0
 
 Pointer List with Targets:
 
-    brkp	PTR unsigned char  size(2) Largest target is 0
-		 -> __heap_hi(UNKNOWN), NULL(NULL[0]), 
+    Shift_String_Right_Add_Length@str	PTR unsigned char  size(1) Largest target is 20
+		 -> main@buffer(BANK0[20]), 
 
-    __expand_heap@new_brkp	PTR unsigned char  size(2) Largest target is 0
-		 -> __heap_hi(UNKNOWN), NULL(NULL[0]), 
+    sp__strcpy	PTR unsigned char  size(1) Largest target is 20
+		 -> main@buffer(BANK0[20]), 
 
-    __expand_heap@pn	PTR unsigned int  size(1) Largest target is 2
-		 -> malloc@m(BANK0[2]), 
+    SPI_Write_String@Text	PTR unsigned char  size(1) Largest target is 20
+		 -> main@buffer(BANK0[20]), 
 
-    free@c$.$.$next	PTR struct chunk size(1) Largest target is 0
+    strcpy@d	PTR unsigned char  size(1) Largest target is 20
+		 -> main@buffer(BANK0[20]), 
 
-    free@c$.$next	PTR struct chunk size(1) Largest target is 0
+    strcpy@dest	PTR unsigned char  size(1) Largest target is 20
+		 -> main@buffer(BANK0[20]), 
 
-    __freelist	PTR struct chunk size(1) Largest target is 0
-		 -> NULL(NULL[0]), 
+    strcpy@src	PTR const unsigned char  size(1) Largest target is 8
+		 -> STR_1(CODE[6]), STR_2(CODE[8]), 
 
-    __freelist$.$next	PTR struct chunk size(1) Largest target is 0
+    strlen@a	PTR const unsigned char  size(1) Largest target is 20
+		 -> main@buffer(BANK0[20]), 
 
-    main@buffer	PTR unsigned char  size(2) Largest target is 10
-		 -> __heap_hi(UNKNOWN), STR_1(CODE[10]), NULL(NULL[0]), 
-
-    malloc@cur	PTR unsigned char  size(2) Largest target is 0
-		 -> __heap_hi(UNKNOWN), NULL(NULL[0]), 
-
-    malloc@end	PTR unsigned char  size(2) Largest target is 0
-		 -> __heap_hi(UNKNOWN), NULL(NULL[0]), 
-
-    malloc@new	PTR unsigned char  size(2) Largest target is 0
-		 -> __heap_hi(UNKNOWN), NULL(NULL[0]), 
-
-    malloc@p	PTR void  size(2) Largest target is 0
-		 -> __heap_hi(UNKNOWN), NULL(NULL[0]), 
-
-    malloc@sz	PTR unsigned int  size(2) Largest target is 0
-		 -> __heap_hi(UNKNOWN), NULL(NULL[0]), 
-
-    S552$next	PTR struct chunk size(1) Largest target is 0
-
-    ?___simple_search_fl$.$next	PTR struct chunk size(1) Largest target is 0
-
-    __simple_search_fl@best	PTR struct chunk size(1) Largest target is 0
-		 -> NULL(NULL[0]), 
-
-    __simple_search_fl@best$.$next	PTR struct chunk size(1) Largest target is 0
-
-    __simple_search_fl@best_last	PTR struct chunk size(1) Largest target is 0
-		 -> NULL(NULL[0]), 
-
-    __simple_search_fl@best_last$.$.$next	PTR struct chunk size(1) Largest target is 0
-
-    __simple_search_fl@best_last$.$next	PTR struct chunk size(1) Largest target is 0
-
-    __simple_search_fl@c	PTR struct chunk size(1) Largest target is 0
-		 -> NULL(NULL[0]), 
-
-    __simple_search_fl@c$.$next	PTR struct chunk size(1) Largest target is 0
-
-    __simple_search_fl@last	PTR struct chunk size(1) Largest target is 0
-		 -> NULL(NULL[0]), 
-
-    __simple_search_fl@last$.$.$next	PTR struct chunk size(1) Largest target is 0
-
-    __simple_search_fl@last$.$next	PTR struct chunk size(1) Largest target is 0
-
-    __simple_search_fl@next	PTR struct chunk size(1) Largest target is 0
-		 -> NULL(NULL[0]), 
-
-    __simple_search_fl@next$.$next	PTR struct chunk size(1) Largest target is 0
-
-    __simple_search_fl@split	PTR struct chunk size(1) Largest target is 0
-		 -> NULL(NULL[0]), 
-
-    __simple_search_fl@split$.$.$next	PTR struct chunk size(1) Largest target is 0
-
-    __simple_search_fl@split$.$next	PTR struct chunk size(1) Largest target is 0
-
-    sp____expand_heap	PTR void  size(2) Largest target is 0
-		 -> __heap_hi(UNKNOWN), NULL(NULL[0]), 
-
-    sp____simple_search_fl	PTR void  size(1) Largest target is 0
-		 -> NULL(NULL[0]), 
-
-    sp____simple_search_fl$.$next	PTR struct chunk size(1) Largest target is 0
-
-    sp__malloc	PTR void  size(2) Largest target is 0
-		 -> __heap_hi(UNKNOWN), NULL(NULL[0]), 
-
-    SPI_Write_String@Text	PTR unsigned char  size(2) Largest target is 10
-		 -> __heap_hi(UNKNOWN), STR_1(CODE[10]), NULL(NULL[0]), 
+    strlen@s	PTR const unsigned char  size(1) Largest target is 20
+		 -> main@buffer(BANK0[20]), 
 
 
 Critical Paths under _main in COMMON
 
-    _malloc->___simple_search_fl
+    _main->_Shift_String_Right_Add_Length
+    _Shift_String_Right_Add_Length->_strlen
     _SPI_Write_String->_Write_data
 
 Critical Paths under _main in BANK0
 
-    _main->_malloc
+    None.
 
 Critical Paths under _main in BANK1
 
@@ -1829,29 +1215,30 @@ Call Graph Tables:
  ---------------------------------------------------------------------------------
  (Depth) Function   	        Calls       Base Space   Used Autos Params    Refs
  ---------------------------------------------------------------------------------
- (0) _main                                                 5     5      0    2008
-                                             14 BANK0      5     5      0
+ (0) _main                                                23    23      0     980
+                                             10 COMMON     3     3      0
+                                              0 BANK0     20    20      0
                           _Port_Init
                     _SPI_Master_Init
                    _SPI_Write_String
-                             _malloc
+      _Shift_String_Right_Add_Length
+                             _strcpy
  ---------------------------------------------------------------------------------
- (1) _malloc                                              14    12      2    1672
-                                              0 BANK0     14    12      2
-                      ___expand_heap
-                 ___simple_search_fl
+ (2) _strcpy                                               3     2      1     291
+                                              0 COMMON     3     2      1
  ---------------------------------------------------------------------------------
- (2) ___simple_search_fl                                  14    12      2     915
-                                              0 COMMON    14    12      2
+ (1) _Shift_String_Right_Add_Length                       10    10      0     412
+                                              4 COMMON     6     6      0
+                             _strlen
  ---------------------------------------------------------------------------------
- (2) ___expand_heap                                        5     5      0     171
-                                              0 COMMON     5     5      0
+ (2) _strlen                                               4     2      2     123
+                                              0 COMMON     4     2      2
  ---------------------------------------------------------------------------------
- (1) _SPI_Write_String                                     5     3      2     290
-                                              1 COMMON     5     3      2
+ (1) _SPI_Write_String                                     4     4      0     135
+                                              1 COMMON     4     4      0
                          _Write_data
  ---------------------------------------------------------------------------------
- (2) _Write_data                                           1     1      0      22
+ (2) _Write_data                                           1     1      0      15
                                               0 COMMON     1     1      0
  ---------------------------------------------------------------------------------
  (1) _SPI_Master_Init                                      0     0      0       0
@@ -1868,9 +1255,9 @@ Call Graph Tables:
    _SPI_Master_Init
    _SPI_Write_String
      _Write_data
-   _malloc
-     ___expand_heap
-     ___simple_search_fl
+   _Shift_String_Right_Add_Length
+     _strlen
+   _strcpy
 
  Address spaces:
 Name               Size   Autos  Total    Cost      Usage
@@ -1878,17 +1265,17 @@ BITCOMMON            E      0       0       0        0.0%
 EEDATA             100      0       0       0        0.0%
 NULL                 0      0       0       0        0.0%
 CODE                 0      0       0       0        0.0%
-COMMON               E      E       E       1      100.0%
+COMMON               E      D       D       1       92.9%
 BITSFR0              0      0       0       1        0.0%
 SFR0                 0      0       0       1        0.0%
 BITSFR1              0      0       0       2        0.0%
 SFR1                 0      0       0       2        0.0%
 STACK                0      0       0       2        0.0%
-ABS                  0      0      2E       3        0.0%
+ABS                  0      0       0       3        0.0%
 BITBANK0            50      0       0       4        0.0%
 BITSFR3              0      0       0       4        0.0%
 SFR3                 0      0       0       4        0.0%
-BANK0               50     13      20       5       40.0%
+BANK0               50     14      14       5       25.0%
 BITSFR2              0      0       0       5        0.0%
 SFR2                 0      0       0       5        0.0%
 BITBANK1            50      0       0       6        0.0%
@@ -1897,141 +1284,90 @@ BITBANK3            60      0       0       8        0.0%
 BANK3               60      0       0       9        0.0%
 BITBANK2            60      0       0      10        0.0%
 BANK2               60      0       0      11        0.0%
-DATA                 0      0      2E      12        0.0%
+DATA                 0      0       0      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.46 build 20240104201356 
-Symbol Table                                                                                   Sat May 25 22:06:30 2024
+Symbol Table                                                                                   Sun May 26 01:24:04 2024
 
-                  _SPI_Master_Init 0527                                  pc 0002  
-                               l62 054F                                 l65 0536  
-                               l74 058B                                 l68 0526  
-                               fsr 0004                                l631 0661  
-                              l635 070A                                l900 0775  
-                              l653 05A1                                l637 06DC  
-                              l910 07A8                                l902 077B  
-                              l639 06D4                                l912 07BF  
-                              l920 07DA                                l672 0779  
-                              l904 0780                                l664 07EC  
-                              l658 05D8                                l922 07E2  
-                              l914 07C6                                l906 0785  
-                              l940 05AA                                l924 07E5  
-                              l916 07D3                                l908 078A  
-                              l950 05CD                                l942 05AE  
-                              l934 058D                                l926 07EA  
-                              l918 07D8                                l870 070B  
-                              _CKE 04A6                                l960 0527  
-                              l944 05B6                                l936 0595  
-                              l880 071A                                l872 070E  
-                              l954 05D0                                l946 05BF  
-                              l938 059D                                l882 072C  
-                              l874 0715                                l970 066F  
-                              l962 0651                                l868 0522  
-                              l948 05C9                                l884 0731  
-                              l892 0746                                l980 0685  
-                              l972 067E                                l964 0655  
-                              l958 0537                                l894 0757  
-                              l886 073C                                l878 0717  
-                              l990 06BF                                l982 0693  
-                              l974 0682                                l966 065B  
-                              l896 075C                                l888 0743  
-                              l984 0699                                l968 066A  
-                              l986 06AB                                l978 0685  
-                              _CKP 00A4                                l996 06C6  
-                              l988 06B3                                l998 06D0  
-                              _RB0 0030                                _RB1 0031  
-                              _RB2 0032                                u300 075C  
-                              u301 075B                                u310 0774  
-                              u311 0773                                u320 0785  
-                              u400 065B                                u321 0784  
-                              u401 065A                                u330 078A  
-                              u410 066A                                u331 0789  
-                              u315 0770                                u411 0669  
-                              u340 07A8                                u260 0715  
-                              u420 067E                                u500 0633  
-                              u341 07A7                                u261 0714  
-                              u421 067D                                u501 0632  
-                              u350 07E2                                u270 072C  
-                              u430 0699                                u351 07E1  
-                              u271 072B                                u431 0698  
-                              u360 059D                                u280 0731  
-                              u440 06AB                                u361 059C  
-                              u281 0730                                u441 06AA  
-                              u370 05AA                                u290 0757  
-                              u450 06C5                                u371 05A9  
-                              u291 0756                                u275 0728  
-                              u451 06C4                                u380 05BF  
-                              u460 06D0                                u381 05BE  
-                              u461 06CF                                u445 06A7  
-                              u517 0606                                u470 058B  
-                              u390 05C9                                u471 058A  
-                              u391 05C8                                u295 0753  
-                              u527 0626                                u480 05FA  
-                              u465 06CC                                u537 0646  
-                              u481 05F9                                u490 0613  
-                              u547 056B                                u395 05C5  
-                              u491 0612                                _SMP 04A7  
-                              fsr0 0004                                indf 0000  
-                ?_SPI_Write_String 0071                               l1000 06E0  
-                             l1002 06E4                               l1010 0706  
-                             l1020 0570                               l1004 06EE  
-                             l1022 0574                               l1014 0550  
-                             l1006 06F4                               l1030 05F4  
-                             l1016 0552                               l1008 06F8  
-                             l1040 061E                               l1032 05FA  
-                             l1024 05D9                               l1018 0567  
-                             l1042 062D                               l1034 060D  
-                             l1026 05DE                               l1044 0633  
-                             l1036 0613                               l1028 05E3  
-                             l1046 0635                               l1038 0615  
-                             l1048 063E                               STR_1 0013  
-               ??_SPI_Write_String 0073                               _brkp 0037  
-                             _main 05D9                               btemp 007E  
-                             start 0000                              ?_main 0070  
-                            _PORTB 0006                              _PORTD 0008  
-                            _SSPM0 00A0                              _SSPM1 00A1  
-                            _SSPM2 00A2                              _SSPM3 00A3  
-                            _TRISB 0086                              _TRISD 0088  
-                            _SSPEN 00A5                              _errno 003D  
-                            pclath 000A                   ___expand_heap@pn 0070  
-                            status 0003                              wtemp0 007E  
-          __end_of_SPI_Master_Init 0537                    __initialization 07ED  
-                     __end_of_main 0651                      ___expand_heap 058C  
-                           ??_main 002E                             _TRISC3 043B  
-                           _TRISC4 043C                             _TRISC5 043D  
-                           _SSPBUF 0013                     ?___expand_heap 0070  
-          ___simple_search_fl@best 007D            ___simple_search_fl@last 007A  
-          ___simple_search_fl@next 007B                             _malloc 0651  
-          __end_of__initialization 07FC                   ?_SPI_Master_Init 0070  
-                       ___freelist 003F                     __pcstackCOMMON 0070  
-                       _Write_data 0521         __end_of___simple_search_fl 07ED  
-                       __pbssBANK0 0033                    ??___expand_heap 0070  
-                __end_of_Port_Init 0550                         __pmaintext 05D9  
-                          ?_malloc 0020                         __stringtab 0003  
-                   Write_data@data 0070               ___simple_search_fl@c 007C  
-             ___simple_search_fl@n 0070                        ?_Write_data 0070  
-         ___simple_search_fl@split 0079                            __ptext1 0651  
-                          __ptext2 070B                            __ptext3 058C  
-                          __ptext4 0550                            __ptext5 0521  
-                          __ptext6 0527                            __ptext7 0537  
-             end_of_initialization 07FC                            malloc@m 0024  
-                          malloc@n 0020                            malloc@p 002A  
-           ___expand_heap@new_brkp 0073                  SPI_Write_String@i 0075  
-                       main@buffer 0031                   _SPI_Write_String 0550  
-                   __end_of_malloc 070B                    ___expand_heap@n 0071  
-              start_initialization 07ED                         malloc@lock 0033  
-                       malloc@size 0028                 ___simple_search_fl 070B  
-     ___simple_search_fl@best_last 0078                          _Port_Init 0537  
-                         ??_malloc 0022                ?___simple_search_fl 0070  
-                        ___heap_hi 0170                          ___heap_lo 0110  
-                        ___latbits 0002                      __pcstackBANK0 0020  
-             ??___simple_search_fl 0072              __end_of___expand_heap 05D9  
-                       ?_Port_Init 0070                       ??_Write_data 0070  
-                        __pstrings 0003                 __end_of_Write_data 0527  
-                      __stringbase 0012               SPI_Write_String@Text 0071  
-                ??_SPI_Master_Init 0070           __end_of_SPI_Write_String 058C  
-                        malloc@end 0039                          malloc@cur 003B  
-                        malloc@new 002C                        ??_Port_Init 0070  
-               __end_of__stringtab 0013                           malloc@sz 0026  
-___simple_search_fl@remaining_size 0076                          stringcode 000D  
-                         stringdir 000D                           stringtab 0003  
+                      _SPI_Master_Init 06C2                                      pc 0002  
+                                   l72 06D1                                     l81 0743  
+                                   l75 06C1                                     l69 0701  
+                                   l86 0775                                     u40 0743  
+                                   u41 0742                                     u90 06E2  
+                                   u91 06E1                                     fsr 0004  
+                                  l640 06E8                                    l720 06D3  
+                                  l642 06BD                                    l722 06D6  
+                                  l634 071C                                    l730 0703  
+                                  l724 06DA                                    l732 0705  
+                                  l654 06E9                                    l726 06E2  
+                                  l742 0759                                    l734 0745  
+                                  l750 0776                                    l656 06C2  
+                                  l680 0720                                    l744 0768  
+                                  l736 074D                                    l760 07A1  
+                                  l752 077B                                    l682 072B  
+                                  l738 0754                                    l770 07CA  
+                                  l762 07A7                                    l754 0780  
+                                  l684 0734                                    l748 076F  
+                                  l780 07EB                                    l772 07D0  
+                                  l764 07B5                                    l756 0786  
+                                  l686 0738                                    l678 071E  
+                                  l774 07DD                                    l766 07C2  
+                                  l758 0794                                    _CKE 04A6  
+                                  l776 07E3                                    l768 07C8  
+                                  l778 07E5                                    _CKP 00A4  
+                                  _RB0 0030                                    _RB1 0031  
+                                  _RB2 0032                                    _RB3 0033  
+                                  u100 071C                                    u101 071B  
+                                  u110 0758                                    u111 0757  
+                                  u120 0786                                    u121 0785  
+                                  u130 07A7                                    u131 07A6  
+                                  u140 07C8                                    u141 07C7  
+                                  u150 07E3                                    u207 072F  
+                                  u151 07E2                                    u167 079A  
+                                  u177 07BB                                    u187 07D6  
+                                  u197 07F1                                    _SMP 04A7  
+                                  fsr0 0004                                    indf 0000  
+                    ?_SPI_Write_String 0070                                   STR_1 0011  
+                                 STR_2 0009                     ??_SPI_Write_String 0071  
+                                 _main 0776                                   btemp 007E  
+                                 start 0000                                  ?_main 0070  
+                                _PORTB 0006                                  _PORTD 0008  
+                                _SSPM0 00A0                                  _SSPM1 00A1  
+                                _SSPM2 00A2                                  _SSPM3 00A3  
+                                _TRISB 0086                                  _TRISD 0088  
+                                _SSPEN 00A5                                  pclath 000A  
+                                status 0003                                  wtemp0 007E  
+              __end_of_SPI_Master_Init 06D2                        __initialization 07FC  
+                         __end_of_main 07FC                                 ??_main 007A  
+                               _TRISC3 043B                                 _TRISC4 043C  
+                               _TRISC5 043D                                 _SSPBUF 0013  
+                               _strcpy 0702                                 _strlen 06D2  
+      ??_Shift_String_Right_Add_Length 0074                __end_of__initialization 07FC  
+                     ?_SPI_Master_Init 0070                         __pcstackCOMMON 0070  
+                           _Write_data 06BC                      __end_of_Port_Init 0702  
+                           __pmaintext 0776                                ?_strcpy 0070  
+                              ?_strlen 0070                             __stringtab 0003  
+__end_of_Shift_String_Right_Add_Length 0776          _Shift_String_Right_Add_Length 0744  
+     Shift_String_Right_Add_Length@len 0076       Shift_String_Right_Add_Length@str 0079  
+                       Write_data@data 0070                            ?_Write_data 0070  
+                              __ptext1 0702                                __ptext2 0744  
+                              __ptext3 06D2                                __ptext4 071D  
+                              __ptext5 06BC                                __ptext6 06C2  
+                              __ptext7 06E9                   end_of_initialization 07FC  
+                    SPI_Write_String@i 0073                                strcpy@d 0071  
+                              strlen@a 0072                                strlen@s 0073  
+                           main@buffer 0020         ?_Shift_String_Right_Add_Length 0070  
+                     _SPI_Write_String 071D                         __end_of_strcpy 071D  
+                       __end_of_strlen 06E9                    start_initialization 07FC  
+                            _Port_Init 06E9                               ??_strcpy 0071  
+                             ??_strlen 0072                              ___latbits 0002  
+                        __pcstackBANK0 0020                             ?_Port_Init 0070  
+                         ??_Write_data 0070                              __pstrings 0003  
+                   __end_of_Write_data 06C2                            __stringbase 0008  
+                 SPI_Write_String@Text 0074                      ??_SPI_Master_Init 0070  
+             __end_of_SPI_Write_String 0744      Shift_String_Right_Add_Length@i_97 0077  
+                          ??_Port_Init 0070                     __end_of__stringtab 0009  
+                           strcpy@dest 0072                              strcpy@src 0070  
+                            stringcode 0003                               stringdir 0003  
+                             stringtab 0003  
