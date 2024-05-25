@@ -23,7 +23,7 @@ void SPI_Read_String(uint8_t *Output, uint16_t length);
 uint8_t SPI_Read(void);
 //--------port_initialization----------
 // initializes portB and configures I/O pins
-// RB0-3 are output pins (LEDs)
+// RC0 are intput pins (LCD clear button)
 void port_init(void){
 TRISC&=~0x01;	// RC0 as input
 PORTC=0;		// initial state is low
