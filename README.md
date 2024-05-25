@@ -327,6 +327,33 @@ reception are enabled)
     -  RA5/SS line input (slave select attached to ground since when the SS pin is low, transmission and
 reception are enabled)
 
+### Lab_10.2_SPI_LCD_strings
+
+#### Purpose 
+- Create a serial communication interface between 2 microcontrollers using SPI Protocol.
+- Use this protocol to transmit a string serially and display it on an Alphanumeric LCD 16×2 after recieving it on the slave device
+#### Components   
+- LCD
+- 3 push buttons 
+- 2 PIC M.Cs Master and a Slave
+#### Configuration
+-  Master
+    -  SCK/RC3 output (clock)
+    -  SDI/RC4 input (data)
+    -  SDO/RC5 output (data)
+    -  RB0 input (Button-String Define)
+    -  RB2 input (Button-Send)
+-  Slave
+    -  SCK/RC3 input(clock)
+    -  SDI/RC4 input (data)
+    -  SDO/RC5 output (data)
+    -  RA5/SS line input (slave select attached to ground since when the SS pin is low, transmission and reception are enabled)
+    -  RC0 input (Button-Clear LCD)
+    -  LCD 
+       -  RB0-3 LCD Data pins
+       -  RB5 LCD_RS
+       -  RB4 LCD_EN 
+
 ### Lab_11.0_ADC_LED_Dimmer
 
 #### Purpose 
@@ -431,3 +458,14 @@ reception are enabled)
 #### Configuration
 - PORTB as the ADC digital output 
 - PORTA as input for buttons
+
+### Lab_13.0_LCD_4-Bit_Interface
+
+#### Purpose 
+-  Interface the LCD 16×2 module with a microcontroller and write text to it starting at a specific position and move it back and forth to screen edges.
+#### Components   
+- LCD
+#### Configuration
+-  RB0-3 LCD Data pins
+-  RB5 LCD_RS
+-  RB4 LCD_EN 
