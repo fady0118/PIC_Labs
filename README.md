@@ -354,6 +354,36 @@ reception are enabled)
        -  RB5 LCD_RS
        -  RB4 LCD_EN 
 
+### Lab_10.3_SPI_ Independent_Slave
+
+#### Purpose 
+- Create a serial communication interface between 3 microcontrollers (A master and two slaves) using SPI Protocol.
+- Use this protocol to transmit a string serially and display it on an Alphanumeric LCD 16×2 after recieving it on the slave device
+#### Components   
+- 2 LCDs
+- 5 push buttons 
+- 3 PIC M.Cs Master and two Slaves
+#### Configuration
+-  Master
+    -  SCK/RC3 output (clock)
+    -  SDI/RC4 input (data)
+    -  SDO/RC5 output (data)
+    -  RD0/SS1 output (slave1 select)
+    -  RD1/SS2 output (slave2 select)
+    -  RB0 input (Button-String Define)
+    -  RB1 input (Button-Send1)
+    -  RB2 input (Button-Send2)
+-  Slave
+    -  SCK/RC3 input(clock)
+    -  SDI/RC4 input (data)
+    -  SDO/RC5 output (data)
+    -  RA5/SS line input (slave select attached to ground since when the SS pin is low, transmission and reception are enabled)
+    -  RC0 input (Button-Clear LCD)
+    -  LCD 
+       -  RB0-3 LCD Data pins
+       -  RB5 LCD_RS
+       -  RB4 LCD_EN 
+
 ### Lab_11.0_ADC_LED_Dimmer
 
 #### Purpose 
