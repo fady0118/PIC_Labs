@@ -1929,6 +1929,10 @@ void LCD_Write_String(char*);
 
 
 
+char string[20];
+uint8_t LCD_FLAG=0;
+uint8_t i=0;
+
 void UART_RX_Init(void);
 uint8_t UART_Read(void);
 void UART_Read_String(uint8_t *Output, uint16_t length);
@@ -1937,10 +1941,16 @@ void main(void) {
     UART_RX_Init();
     LCD_Init();
     LCD_Clear();
-
+    LCD_Set_Cursor(1,1);
     while(1){
        if(RC0){
        LCD_Clear();
+       LCD_Set_Cursor(1,1);
+       }
+       if(LCD_FLAG==1){
+       LCD_Set_Cursor(1,1);
+       LCD_Write_String(string);
+       LCD_FLAG=0;
        }
     }
     return;
@@ -1966,25 +1976,14 @@ void UART_RX_Init(void){
   CREN = 1;
 }
 
-uint8_t UART_Read(){
-  while(!RCIF);
-  return RCREG;
-}
-
-void UART_Read_String(uint8_t *Output, uint16_t length){
-  uint16_t i;
-  for(int i=0;i<length;i++)
-    Output[i] = UART_Read();
-}
-
-
 void __attribute__((picinterrupt(("")))) ISR (void){
-    char x[25];
-  if (RCIF == 1)
-  {
-    UART_Read_String(x,7);
-    LCD_Set_Cursor(1,1);
-    LCD_Write_String(x);
+  if (RCIF == 1){
+    string[i]=RCREG;
+    i++;
+    if(string[i-1]=='\0'){
+        LCD_FLAG=1;
+        i=0;
+    }
     RCIF = 0;
   }
 }

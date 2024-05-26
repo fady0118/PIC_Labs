@@ -12,6 +12,10 @@
 #include "Config.h"
 #include "LCD.h"
 #define Baud 9600
+#define LCD_CLEAR RC0
+char string[20];
+uint8_t LCD_FLAG=0;
+uint8_t i=0;
 //----------prototype-------------
 void UART_RX_Init(void);
 uint8_t UART_Read(void);
@@ -21,11 +25,17 @@ void main(void) {
     UART_RX_Init(); // Initialize The UART in Slave Mode @ 9600bps
     LCD_Init();
     LCD_Clear();
-    
+    LCD_Set_Cursor(1,1);
     while(1){
-       if(RC0){
+       if(LCD_CLEAR){
        LCD_Clear();
-       } 
+       LCD_Set_Cursor(1,1);
+       }
+       if(LCD_FLAG==1){
+       LCD_Set_Cursor(1,1);
+       LCD_Write_String(string);
+       LCD_FLAG=0;
+       }
     }
     return;
 }
@@ -49,26 +59,15 @@ void UART_RX_Init(void){
 
   CREN = 1; // Enable Data Continous Reception
 }
- 
-uint8_t UART_Read(){
-  while(!RCIF); // Wait Untill a Data Frame is Received
-  return RCREG;
-}
- 
-void UART_Read_String(uint8_t *Output, uint16_t length){
-  uint16_t i;
-  for(int i=0;i<length;i++)
-    Output[i] = UART_Read();
-}
- 
-// You Can Also Use The ISR If You Want To !
+
 void __interrupt() ISR (void){
-    char x[25];
-  if (RCIF == 1)
-  {
-    UART_Read_String(x,7);     // Read The RCREG Buffer Register...
-    LCD_Set_Cursor(1,1);
-    LCD_Write_String(x);
-    RCIF = 0;               // Clear The Flag
+  if (RCIF == 1){
+    string[i]=RCREG;
+    i++;
+    if(string[i-1]=='\0'){
+        LCD_FLAG=1;
+        i=0;
+    }
+    RCIF = 0;   // Clear The Flag
   }
 }

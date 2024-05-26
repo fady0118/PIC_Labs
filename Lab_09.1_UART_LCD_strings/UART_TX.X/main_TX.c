@@ -12,6 +12,10 @@
 #include <xc.h>
 #include "LCD.h"
 #define Baud 9600
+//Macros
+#define DEFINE1 RB0
+#define DEFINE2 RB1
+#define SEND RB2
 //----------prototype-------------
 void UART_TX_Init(void);
 void UART_Write(uint8_t);
@@ -30,14 +34,17 @@ void main(void) {
     char string[25];
     while(1){
     
-    if (RB0) // Increment The Data Value
+    if (DEFINE1) // Increment The Data Value
     {
-     strcpy(string,"WELCOME");
-      
-      __delay_ms(250);
+    strcpy(string,"HELLO");
+    __delay_ms(250);
     }
-    
-    if (RB2) // Send The Current Data Value Via UART
+    if (DEFINE2) // Increment The Data Value
+    {
+    strcpy(string,"FRIEND");
+    __delay_ms(250);
+    }
+    if (SEND) // Send The Current Data Value Via UART
     {
       UART_Write_String(string);
       __delay_ms(250);
@@ -69,6 +76,8 @@ void UART_Write(uint8_t data)
 }
 void UART_Write_String(char *text){
   uint16_t i;
-  for(i=0;text[i]!='\0';i++)
+  for(i=0;text[i]!='\0';i++){
     UART_Write(text[i]);
+  }
+  UART_Write('\0');
 }

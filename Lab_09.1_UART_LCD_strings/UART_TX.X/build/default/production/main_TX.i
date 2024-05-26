@@ -2008,6 +2008,10 @@ void LCD_Write_String(char*);
 
 
 
+
+
+
+
 void UART_TX_Init(void);
 void UART_Write(uint8_t);
 void UART_Write_String(char *);
@@ -2027,11 +2031,14 @@ void main(void) {
 
     if (RB0)
     {
-     strcpy(string,"WELCOME");
-
-      _delay((unsigned long)((250)*(4000000/4000.0)));
+    strcpy(string,"HELLO");
+    _delay((unsigned long)((250)*(4000000/4000.0)));
     }
-
+    if (RB1)
+    {
+    strcpy(string,"FRIEND");
+    _delay((unsigned long)((250)*(4000000/4000.0)));
+    }
     if (RB2)
     {
       UART_Write_String(string);
@@ -2064,6 +2071,8 @@ void UART_Write(uint8_t data)
 }
 void UART_Write_String(char *text){
   uint16_t i;
-  for(i=0;text[i]!='\0';i++)
+  for(i=0;text[i]!='\0';i++){
     UART_Write(text[i]);
+  }
+  UART_Write('\0');
 }

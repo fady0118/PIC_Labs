@@ -6,8 +6,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h: 216: extern volatile unsigned char PORTB __attribute__((address(0x006)));
 [v _PORTB `Vuc ~T0 @X0 0 e@6 ]
 [p mainexit ]
-"16 main_TX.c
-[; ;main_TX.c: 16: void UART_TX_Init(void);
+"20 main_TX.c
+[; ;main_TX.c: 20: void UART_TX_Init(void);
 [v _UART_TX_Init `(v ~T0 @X0 0 ef ]
 "2678 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h: 2678: extern volatile __bit RB0 __attribute__((address(0x30)));
@@ -19,11 +19,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 "20 C:\Program Files\Microchip\xc8\v2.46\pic\include\builtins.h
 [v __delay `JF331 ~T0 @X0 0 e ]
 [p i __delay ]
-"2684 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h
+"2681 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h
+[; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h: 2681: extern volatile __bit RB1 __attribute__((address(0x31)));
+[v _RB1 `Vb ~T0 @X0 0 e@49 ]
+"2684
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h: 2684: extern volatile __bit RB2 __attribute__((address(0x32)));
 [v _RB2 `Vb ~T0 @X0 0 e@50 ]
-"18 main_TX.c
-[; ;main_TX.c: 18: void UART_Write_String(char *);
+"22 main_TX.c
+[; ;main_TX.c: 22: void UART_Write_String(char *);
 [v _UART_Write_String `(v ~T0 @X0 0 ef1`*uc ]
 "2420 C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h: 2420: extern volatile __bit BRGH __attribute__((address(0x4C2)));
@@ -248,171 +251,195 @@ Version 4.0 HI-TECH Software Intermediate Code
 "2363
 [; ;C:/Program Files/Microchip/MPLABX/v6.20/packs/Microchip/PIC16Fxxx_DFP/1.6.156/xc8\pic\include\proc\pic16f877a.h: 2363: __asm("EECON2 equ 018Dh");
 [; <" EECON2 equ 018Dh ;# ">
-"22 main_TX.c
-[; ;main_TX.c: 22: void Port_Init(void){
+"26 main_TX.c
+[; ;main_TX.c: 26: void Port_Init(void){
 [v _Port_Init `(v ~T0 @X0 1 ef ]
 {
 [e :U _Port_Init ]
 [f ]
-"23
-[; ;main_TX.c: 23:    TRISB|=0x07;
+"27
+[; ;main_TX.c: 27:    TRISB|=0x07;
 [e =| _TRISB -> -> 7 `i `Vuc ]
-"24
-[; ;main_TX.c: 24:    PORTB&=~0x07;
+"28
+[; ;main_TX.c: 28:    PORTB&=~0x07;
 [e =& _PORTB -> ~ -> 7 `i `Vuc ]
-"25
-[; ;main_TX.c: 25: }
+"29
+[; ;main_TX.c: 29: }
 [e :UE 100 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"27
-[; ;main_TX.c: 27: void main(void) {
+"31
+[; ;main_TX.c: 31: void main(void) {
 [v _main `(v ~T0 @X0 1 ef ]
 {
 [e :U _main ]
 [f ]
-"28
-[; ;main_TX.c: 28:     Port_Init();
+"32
+[; ;main_TX.c: 32:     Port_Init();
 [e ( _Port_Init ..  ]
-"29
-[; ;main_TX.c: 29:     UART_TX_Init();
+"33
+[; ;main_TX.c: 33:     UART_TX_Init();
 [e ( _UART_TX_Init ..  ]
-"30
-[; ;main_TX.c: 30:     char string[25];
+"34
+[; ;main_TX.c: 34:     char string[25];
 [v _string `uc ~T0 @X0 -> 25 `i a ]
-"31
-[; ;main_TX.c: 31:     while(1){
+"35
+[; ;main_TX.c: 35:     while(1){
 [e :U 103 ]
 {
-"33
-[; ;main_TX.c: 33:     if (RB0)
-[e $ ! _RB0 105  ]
-"34
-[; ;main_TX.c: 34:     {
-{
-"35
-[; ;main_TX.c: 35:      strcpy(string,"WELCOME");
-[e ( _strcpy (2 , &U _string :s 1C ]
 "37
-[; ;main_TX.c: 37:       _delay((unsigned long)((250)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main_TX.c: 37:     if (RB0)
+[e $ ! _RB0 105  ]
 "38
-[; ;main_TX.c: 38:     }
+[; ;main_TX.c: 38:     {
+{
+"39
+[; ;main_TX.c: 39:     strcpy(string,"HELLO");
+[e ( _strcpy (2 , &U _string :s 1C ]
+"40
+[; ;main_TX.c: 40:     _delay((unsigned long)((250)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"41
+[; ;main_TX.c: 41:     }
 }
 [e :U 105 ]
-"40
-[; ;main_TX.c: 40:     if (RB2)
-[e $ ! _RB2 106  ]
-"41
-[; ;main_TX.c: 41:     {
-{
 "42
-[; ;main_TX.c: 42:       UART_Write_String(string);
-[e ( _UART_Write_String (1 &U _string ]
+[; ;main_TX.c: 42:     if (RB1)
+[e $ ! _RB1 106  ]
 "43
-[; ;main_TX.c: 43:       _delay((unsigned long)((250)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main_TX.c: 43:     {
+{
 "44
-[; ;main_TX.c: 44:     }
-}
-[e :U 106 ]
+[; ;main_TX.c: 44:     strcpy(string,"FRIEND");
+[e ( _strcpy (2 , &U _string :s 2C ]
+"45
+[; ;main_TX.c: 45:     _delay((unsigned long)((250)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "46
 [; ;main_TX.c: 46:     }
+}
+[e :U 106 ]
+"47
+[; ;main_TX.c: 47:     if (RB2)
+[e $ ! _RB2 107  ]
+"48
+[; ;main_TX.c: 48:     {
+{
+"49
+[; ;main_TX.c: 49:       UART_Write_String(string);
+[e ( _UART_Write_String (1 &U _string ]
+"50
+[; ;main_TX.c: 50:       _delay((unsigned long)((250)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 250 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"51
+[; ;main_TX.c: 51:     }
+}
+[e :U 107 ]
+"53
+[; ;main_TX.c: 53:     }
 }
 [e :U 102 ]
 [e $U 103  ]
 [e :U 104 ]
-"47
-[; ;main_TX.c: 47:     return;
+"54
+[; ;main_TX.c: 54:     return;
 [e $UE 101  ]
-"48
-[; ;main_TX.c: 48: }
+"55
+[; ;main_TX.c: 55: }
 [e :UE 101 ]
 }
-"50
-[; ;main_TX.c: 50: void UART_TX_Init(void){
+"57
+[; ;main_TX.c: 57: void UART_TX_Init(void){
 [v _UART_TX_Init `(v ~T0 @X0 1 ef ]
 {
 [e :U _UART_TX_Init ]
 [f ]
-"52
-[; ;main_TX.c: 52:     BRGH = 1;
+"59
+[; ;main_TX.c: 59:     BRGH = 1;
 [e = _BRGH -> -> 1 `i `b ]
-"53
-[; ;main_TX.c: 53:     SPBRG = 25;
-[e = _SPBRG -> -> 25 `i `uc ]
-"56
-[; ;main_TX.c: 56:     SYNC = 0;
-[e = _SYNC -> -> 0 `i `b ]
-"57
-[; ;main_TX.c: 57:     SPEN = 1;
-[e = _SPEN -> -> 1 `i `b ]
 "60
-[; ;main_TX.c: 60:     TRISC6 = 1;
-[e = _TRISC6 -> -> 1 `i `b ]
-"61
-[; ;main_TX.c: 61:     TRISC7 = 1;
-[e = _TRISC7 -> -> 1 `i `b ]
-"62
-[; ;main_TX.c: 62:     TXEN = 1;
-[e = _TXEN -> -> 1 `i `b ]
+[; ;main_TX.c: 60:     SPBRG = 25;
+[e = _SPBRG -> -> 25 `i `uc ]
 "63
-[; ;main_TX.c: 63: }
-[e :UE 107 ]
-}
-"65
-[; ;main_TX.c: 65: void UART_Write(uint8_t data)
-[v _UART_Write `(v ~T0 @X0 1 ef1`uc ]
-"66
-[; ;main_TX.c: 66: {
-{
-[e :U _UART_Write ]
-"65
-[; ;main_TX.c: 65: void UART_Write(uint8_t data)
-[v _data `uc ~T0 @X0 1 r1 ]
-"66
-[; ;main_TX.c: 66: {
-[f ]
+[; ;main_TX.c: 63:     SYNC = 0;
+[e = _SYNC -> -> 0 `i `b ]
+"64
+[; ;main_TX.c: 64:     SPEN = 1;
+[e = _SPEN -> -> 1 `i `b ]
 "67
-[; ;main_TX.c: 67:   while(!TRMT);
-[e $U 109  ]
-[e :U 110 ]
-[e :U 109 ]
-[e $ ! _TRMT 110  ]
-[e :U 111 ]
+[; ;main_TX.c: 67:     TRISC6 = 1;
+[e = _TRISC6 -> -> 1 `i `b ]
 "68
-[; ;main_TX.c: 68:   TXREG = data;
-[e = _TXREG _data ]
+[; ;main_TX.c: 68:     TRISC7 = 1;
+[e = _TRISC7 -> -> 1 `i `b ]
 "69
-[; ;main_TX.c: 69: }
+[; ;main_TX.c: 69:     TXEN = 1;
+[e = _TXEN -> -> 1 `i `b ]
+"70
+[; ;main_TX.c: 70: }
 [e :UE 108 ]
 }
-"70
-[; ;main_TX.c: 70: void UART_Write_String(char *text){
+"72
+[; ;main_TX.c: 72: void UART_Write(uint8_t data)
+[v _UART_Write `(v ~T0 @X0 1 ef1`uc ]
+"73
+[; ;main_TX.c: 73: {
+{
+[e :U _UART_Write ]
+"72
+[; ;main_TX.c: 72: void UART_Write(uint8_t data)
+[v _data `uc ~T0 @X0 1 r1 ]
+"73
+[; ;main_TX.c: 73: {
+[f ]
+"74
+[; ;main_TX.c: 74:   while(!TRMT);
+[e $U 110  ]
+[e :U 111 ]
+[e :U 110 ]
+[e $ ! _TRMT 111  ]
+[e :U 112 ]
+"75
+[; ;main_TX.c: 75:   TXREG = data;
+[e = _TXREG _data ]
+"76
+[; ;main_TX.c: 76: }
+[e :UE 109 ]
+}
+"77
+[; ;main_TX.c: 77: void UART_Write_String(char *text){
 [v _UART_Write_String `(v ~T0 @X0 1 ef1`*uc ]
 {
 [e :U _UART_Write_String ]
 [v _text `*uc ~T0 @X0 1 r1 ]
 [f ]
-"71
-[; ;main_TX.c: 71:   uint16_t i;
+"78
+[; ;main_TX.c: 78:   uint16_t i;
 [v _i `us ~T0 @X0 1 a ]
-"72
-[; ;main_TX.c: 72:   for(i=0;text[i]!='\0';i++)
+"79
+[; ;main_TX.c: 79:   for(i=0;text[i]!='\0';i++){
 {
 [e = _i -> -> 0 `i `us ]
-[e $U 116  ]
-[e :U 113 ]
-"73
-[; ;main_TX.c: 73:     UART_Write(text[i]);
-[e ( _UART_Write (1 -> *U + _text * -> _i `ux -> -> # *U _text `ui `ux `uc ]
-[e ++ _i -> -> 1 `i `us ]
-[e :U 116 ]
-[e $ != -> *U + _text * -> _i `ux -> -> # *U _text `ui `ux `ui -> 0 `ui 113  ]
+[e $U 117  ]
 [e :U 114 ]
+{
+"80
+[; ;main_TX.c: 80:     UART_Write(text[i]);
+[e ( _UART_Write (1 -> *U + _text * -> _i `ux -> -> # *U _text `ui `ux `uc ]
+"81
+[; ;main_TX.c: 81:   }
 }
-"74
-[; ;main_TX.c: 74: }
-[e :UE 112 ]
+[e ++ _i -> -> 1 `i `us ]
+[e :U 117 ]
+[e $ != -> *U + _text * -> _i `ux -> -> # *U _text `ui `ux `ui -> 0 `ui 114  ]
+[e :U 115 ]
 }
-[a 1C 87 69 76 67 79 77 69 0 ]
+"82
+[; ;main_TX.c: 82:   UART_Write('\0');
+[e ( _UART_Write (1 -> -> 0 `ui `uc ]
+"83
+[; ;main_TX.c: 83: }
+[e :UE 113 ]
+}
+[a 1C 72 69 76 76 79 0 ]
+[a 2C 70 82 73 69 78 68 0 ]
