@@ -209,10 +209,10 @@ Simulated in Proteus 8 Professional
 - Create a serial communication interface between 2 microcontrollers using UART Protocol and use it to send string messages and display it using an 16*2 LCD
 #### Components   
 - LCD
-- 3 Buttons
+- 4 Buttons
 #### Configuration
 -  Transmitter
-    -  RB0 & RB2 as input for buttons
+    -  RB0 , RB1 & RB2 as input for buttons
     -  RC6 as UART transmitter
 -  Reciever
     -  RB0-5 as output LCD
