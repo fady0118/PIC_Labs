@@ -450,10 +450,10 @@ Version 4.0 HI-TECH Software Intermediate Code
 [v _len `uc ~T0 @X0 1 a ]
 [e = _len -> ( _strlen (1 -> _str `*Cuc `uc ]
 "102
-[; ;main.c: 102:     for (int i = len; i >= 0; --i) {
+[; ;main.c: 102:     for (int i = len-1; i >= 0; i--) {
 {
 [v _i `i ~T0 @X0 1 a ]
-[e = _i -> _len `i ]
+[e = _i - -> _len `i -> 1 `i ]
 [e $ >= _i -> 0 `i 117  ]
 [e $U 118  ]
 [e :U 117 ]
@@ -464,7 +464,7 @@ Version 4.0 HI-TECH Software Intermediate Code
 "104
 [; ;main.c: 104:     }
 }
-[e =- _i -> 1 `i ]
+[e -- _i -> 1 `i ]
 [e $ >= _i -> 0 `i 117  ]
 [e :U 118 ]
 }

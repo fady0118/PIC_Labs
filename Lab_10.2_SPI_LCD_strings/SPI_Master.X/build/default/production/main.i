@@ -2234,7 +2234,7 @@ void Shift_String_Right_Add_Length(char* str){
     int32_t i;
     char len = strlen(str);
 
-    for (int i = len; i >= 0; --i) {
+    for (int i = len-1; i >= 0; i--) {
         str[i + 1] = str[i];
     }
 str[0]=len+0x30;

@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.46 build 20240104201356 
-                                                                                               Sun May 26 02:40:54 2024
+                                                                                               Tue May 28 15:38:19 2024
 
 Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1 
      1                           	processor	16F877A
@@ -596,13 +596,13 @@ Microchip MPLAB XC8 C Compiler v2.46 (Free license) build 20240104201356 Og1
    581     078A  00F6               	movwf	Shift_String_Right_Add_Length@len
    582     078B                     l708:
    583                           
-   584                           ;main.c: 102:     for (int i = len; i >= 0; --i) {
+   584                           ;main.c: 102:     for (int i = len-1; i >= 0; i--) {
    585     078B  0876               	movf	Shift_String_Right_Add_Length@len,w
-   586     078C  00F4               	movwf	??_Shift_String_Right_Add_Length
-   587     078D  01F5               	clrf	??_Shift_String_Right_Add_Length+1
-   588     078E  0874               	movf	??_Shift_String_Right_Add_Length,w
-   589     078F  00F7               	movwf	Shift_String_Right_Add_Length@i_89
-   590     0790  0875               	movf	??_Shift_String_Right_Add_Length+1,w
+   586     078C  3EFF               	addlw	255
+   587     078D  00F7               	movwf	Shift_String_Right_Add_Length@i_89
+   588     078E  30FF               	movlw	255
+   589     078F  1803               	skipnc
+   590     0790  3000               	movlw	0
    591     0791  00F8               	movwf	Shift_String_Right_Add_Length@i_89+1
    592     0792                     l710:
    593     0792  1FF8               	btfss	Shift_String_Right_Add_Length@i_89+1,7
@@ -1179,7 +1179,7 @@ DATA                 0      0       0      12        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.46 build 20240104201356 
-Symbol Table                                                                                   Sun May 26 02:40:54 2024
+Symbol Table                                                                                   Tue May 28 15:38:19 2024
 
                                     pc 0002                        _SPI_Master_init 0719  
                                    l60 0728                                     l47 0718  
