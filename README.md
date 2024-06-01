@@ -500,3 +500,20 @@ reception are enabled)
 -  RB0-3 LCD Data pins
 -  RB5 LCD_RS
 -  RB4 LCD_EN 
+
+### Lab_14.0_I2C_Communication
+
+#### Purpose 
+- Create a serial communication interface between 2 microcontrollers using I2C Protocol.
+#### Components   
+- 9 LEDs
+#### Configuration
+-  Master
+    -  RC5 as output LED
+    -  SCL/RC3 input (serial clock line)
+    -  SDI/RC4 input (seial data line)
+    -  SDO/RC5 output (data)
+-  Slave
+    -  RD0-7 as output LEDs
+    -  SCL/RC3 input (serial clock line)
+    -  SDI/RC4 input (seial data line)
