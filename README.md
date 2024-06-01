@@ -512,8 +512,25 @@ reception are enabled)
     -  RC5 as output LED
     -  SCL/RC3 input (serial clock line)
     -  SDI/RC4 input (seial data line)
-    -  SDO/RC5 output (data)
 -  Slave
-    -  RD0-7 as output LEDs
+    -  PORTD as output LEDs
+    -  SCL/RC3 input (serial clock line)
+    -  SDI/RC4 input (seial data line)
+
+### Lab_14.1_I2C_Communication2
+
+#### Purpose 
+- Create a serial communication interface between 3 microcontrollers (a master & 2 slaves) using I2C Protocol.
+#### Components   
+- 16 LEDs
+- 10 buttons
+#### Configuration
+-  Master
+    -  RB0-1 as input buttons
+    -  PORTD as output LEDs
+    -  SCL/RC3 input (serial clock line)
+    -  SDI/RC4 input (seial data line)
+-  Slaves
+    -  PORTD as input buttons
     -  SCL/RC3 input (serial clock line)
     -  SDI/RC4 input (seial data line)
