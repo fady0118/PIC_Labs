@@ -2006,6 +2006,6 @@ unsigned char I2C_Read(void){
     RCEN=1;
     I2C_Wait();
     Data = SSPBUF;
-    I2C_NACK();
+
     return Data;
 }

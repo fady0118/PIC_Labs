@@ -532,9 +532,6 @@ Version 4.0 HI-TECH Software Intermediate Code
 "100
 [; ;main.c: 100:     Data = SSPBUF;
 [e = _Data _SSPBUF ]
-"101
-[; ;main.c: 101:     I2C_NACK();
-[e ( _I2C_NACK ..  ]
 "102
 [; ;main.c: 102:     return Data;
 [e ) _Data ]

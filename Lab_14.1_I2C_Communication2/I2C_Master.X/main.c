@@ -98,6 +98,6 @@ unsigned char I2C_Read(void){
     RCEN=1;     // Enables Receive mode for I2C
     I2C_Wait();
     Data = SSPBUF;
-    I2C_NACK();
+    //I2C_NACK();
     return Data;
 }

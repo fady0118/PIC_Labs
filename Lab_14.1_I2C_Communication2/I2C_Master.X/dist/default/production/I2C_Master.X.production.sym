@@ -8,7 +8,7 @@ _PEN 48A 0 ABS 0
 _SEN 488 0 ABS 0
 __Hintentry 0 0 CODE 0
 __Lintentry 0 0 CODE 0
-_I2C_Read 7A1 0 CODE 0
+_I2C_Read 7A6 0 CODE 0
 _RCEN 48B 0 ABS 0
 _RSEN 489 0 ABS 0
 _main 7B9 0 CODE 0
@@ -30,11 +30,11 @@ __Hconfig 2008 0 CONFIG 4
 __Lconfig 0 0 CONFIG 4
 __Hram 0 0 ABS 0
 __Lram 0 0 ABS 0
-_I2C_Wait 774 0 CODE 0
+_I2C_Wait 779 0 CODE 0
 ___int_stack_hi 0 0 STACK 2
 __Hfunctab 0 0 ENTRY 0
 __Lfunctab 0 0 ENTRY 0
-_I2C_Stop 754 0 CODE 0
+_I2C_Stop 763 0 CODE 0
 __Hcommon 0 0 ABS 0
 __Lcommon 0 0 ABS 0
 __Heeprom_data 0 0 EEDATA 3
@@ -55,12 +55,12 @@ __Hsfr3 0 0 ABS 0
 __Lsfr3 0 0 ABS 0
 ___heap_hi 0 0 ABS 0
 ___stackhi 0 0 ABS 0
-_I2C_Write 781 0 CODE 0
+_I2C_Write 786 0 CODE 0
 __Hcode 0 0 ABS 0
 __Lcode 0 0 ABS 0
 __Hheap 0 0 HEAP 7
 __Lheap 0 0 HEAP 7
-__end_of_I2C_Master_Init 774 0 CODE 0
+__end_of_I2C_Master_Init 779 0 CODE 0
 __Hinit 0 0 CODE 0
 __Linit 0 0 CODE 0
 __end_of_main 7F6 0 CODE 0
@@ -74,9 +74,9 @@ ___stacklo 0 0 ABS 0
 _SSPCON2 91 0 ABS 0
 __Hstrings 0 0 ABS 0
 __Lstrings 0 0 ABS 0
-_I2C_Start 74B 0 CODE 0
-_port_init 791 0 CODE 0
-__end_of_I2C_Write 791 0 CODE 0
+_I2C_Start 75A 0 CODE 0
+_port_init 796 0 CODE 0
+__end_of_I2C_Write 796 0 CODE 0
 __Hbank0 0 0 ABS 0
 __Lbank0 0 0 ABS 0
 __Hbank1 0 0 ABS 0
@@ -90,25 +90,24 @@ _ACKSTAT 48E 0 ABS 0
 __Hpowerup 0 0 CODE 0
 _SSPSTAT 94 0 ABS 0
 __Lpowerup 0 0 CODE 0
-__ptext1 791 0 CODE 0
-__ptext2 781 0 CODE 0
-__ptext3 754 0 CODE 0
+__ptext1 796 0 CODE 0
+__ptext2 786 0 CODE 0
+__ptext3 763 0 CODE 0
 ___stack_hi 0 0 STACK 2
-__ptext4 74B 0 CODE 0
-__ptext5 7A1 0 CODE 0
-__ptext6 75D 0 CODE 0
-__ptext7 774 0 CODE 0
-__ptext8 767 0 CODE 0
+__ptext4 75A 0 CODE 0
+__ptext5 7A6 0 CODE 0
+__ptext6 779 0 CODE 0
+__ptext7 76C 0 CODE 0
 __Hclrtext 0 0 ABS 0
 __Lclrtext 0 0 ABS 0
 __HdataCOMMON 0 0 ABS 0
 __LdataCOMMON 0 0 ABS 0
 __pdataCOMMON 73 0 COMMON 1
 __end_of__initialization 7FC 0 CODE 0
-__end_of_I2C_Stop 75D 0 CODE 0
+__end_of_I2C_Stop 76C 0 CODE 0
 __H__absolute__ 0 0 ABS 0
 __L__absolute__ 0 0 ABS 0
-__end_of_I2C_Wait 781 0 CODE 0
+__end_of_I2C_Wait 786 0 CODE 0
 __Hstack 0 0 STACK 2
 __Lstack 0 0 STACK 2
 __end_of_I2C_Read 7B9 0 CODE 0
@@ -126,57 +125,54 @@ _Address 73 0 COMMON 1
 __Hspace_4 400F 0 ABS 0
 __Lspace_4 0 0 ABS 0
 ___stack_lo 0 0 STACK 2
-__end_of_port_init 7A1 0 CODE 0
+__end_of_port_init 7A6 0 CODE 0
 __Hend_init 3 0 CODE 0
 __Lend_init 0 0 CODE 0
-_I2C_NACK 75D 0 CODE 0
 __Hreset_vec 0 0 CODE 0
 __Lreset_vec 0 0 CODE 0
 intlevel0 0 0 ENTRY 0
 intlevel1 0 0 ENTRY 0
 intlevel2 0 0 ENTRY 0
-__end_of_I2C_NACK 767 0 CODE 0
 intlevel3 0 0 ENTRY 0
 intlevel4 0 0 ENTRY 0
 intlevel5 0 0 ENTRY 0
 __HcstackCOMMON 0 0 ABS 0
 __LcstackCOMMON 0 0 ABS 0
 __pcstackCOMMON 70 0 COMMON 1
-__end_of_I2C_Start 754 0 CODE 0
+__end_of_I2C_Start 763 0 CODE 0
 start_initialization 7F6 0 CODE 0
 ___int_stack_lo 0 0 STACK 2
-_I2C_Master_Init 767 0 CODE 0
+_I2C_Master_Init 76C 0 CODE 0
 __Hmaintext 0 0 ABS 0
 __Lmaintext 0 0 ABS 0
 __pmaintext 7B9 0 CODE 0
 __HidataCOMMON 0 0 ABS 0
 __LidataCOMMON 0 0 ABS 0
-__pidataCOMMON 74A 0 CODE 0
+__pidataCOMMON 759 0 CODE 0
 __initialization 7F6 0 CODE 0
 %segments
 reset_vec 0 5 CODE 0 0
 cinit FEC FFF CODE FEC 0
 cstackCOMMON 70 73 COMMON 70 1
 maintext F72 FEB CODE F72 0
-text5 F42 F71 CODE F42 0
-text1 F22 F41 CODE F22 0
-text2 F02 F21 CODE F02 0
-text7 EE8 F01 CODE EE8 0
-text8 ECE EE7 CODE ECE 0
-text6 EBA ECD CODE EBA 0
-text3 EA8 EB9 CODE EA8 0
-text4 E96 EA7 CODE E96 0
-idataCOMMON E94 E95 CODE E94 0
+text5 F4C F71 CODE F4C 0
+text1 F2C F4B CODE F2C 0
+text2 F0C F2B CODE F0C 0
+text6 EF2 F0B CODE EF2 0
+text7 ED8 EF1 CODE ED8 0
+text3 EC6 ED7 CODE EC6 0
+text4 EB4 EC5 CODE EB4 0
+idataCOMMON EB2 EB3 CODE EB2 0
 %locals
 dist/default/production\I2C_Master.X.production.o
-C:\Users\fady0\AppData\Local\Temp\xcAs840.\driver_tmp_1.s
-409 7F6 0 CODE 0
-412 7F6 0 CODE 0
-426 7F6 0 CODE 0
-427 7FB 0 CODE 0
+C:\Users\fady0\AppData\Local\Temp\xcAsiok.\driver_tmp_1.s
+407 7F6 0 CODE 0
+410 7F6 0 CODE 0
+424 7F6 0 CODE 0
+425 7FB 0 CODE 0
+431 7FC 0 CODE 0
 433 7FC 0 CODE 0
-435 7FC 0 CODE 0
-436 7FD 0 CODE 0
+434 7FD 0 CODE 0
 main.c
 38 7B9 0 CODE 0
 39 7B9 0 CODE 0
@@ -188,45 +184,39 @@ main.c
 46 7DC 0 CODE 0
 47 7E4 0 CODE 0
 48 7E9 0 CODE 0
-30 791 0 CODE 0
-31 791 0 CODE 0
-32 797 0 CODE 0
-33 79A 0 CODE 0
-34 79D 0 CODE 0
-35 7A0 0 CODE 0
-89 781 0 CODE 0
-90 782 0 CODE 0
-91 787 0 CODE 0
-92 78B 0 CODE 0
-93 790 0 CODE 0
-94 790 0 CODE 0
-67 754 0 CODE 0
-69 754 0 CODE 0
-70 759 0 CODE 0
-71 75C 0 CODE 0
-62 74B 0 CODE 0
-64 74B 0 CODE 0
-65 750 0 CODE 0
-66 753 0 CODE 0
-95 7A1 0 CODE 0
-97 7A1 0 CODE 0
-98 7A6 0 CODE 0
-99 7A9 0 CODE 0
-100 7AE 0 CODE 0
-101 7B2 0 CODE 0
+30 796 0 CODE 0
+31 796 0 CODE 0
+32 79C 0 CODE 0
+33 79F 0 CODE 0
+34 7A2 0 CODE 0
+35 7A5 0 CODE 0
+89 786 0 CODE 0
+90 787 0 CODE 0
+91 78C 0 CODE 0
+92 790 0 CODE 0
+93 795 0 CODE 0
+94 795 0 CODE 0
+67 763 0 CODE 0
+69 763 0 CODE 0
+70 768 0 CODE 0
+71 76B 0 CODE 0
+62 75A 0 CODE 0
+64 75A 0 CODE 0
+65 75F 0 CODE 0
+66 762 0 CODE 0
+95 7A6 0 CODE 0
+97 7A6 0 CODE 0
+98 7AB 0 CODE 0
+99 7AE 0 CODE 0
+100 7B3 0 CODE 0
 102 7B7 0 CODE 0
 103 7B8 0 CODE 0
-83 75D 0 CODE 0
-85 75D 0 CODE 0
-86 762 0 CODE 0
-87 765 0 CODE 0
-88 766 0 CODE 0
-59 774 0 CODE 0
-60 774 0 CODE 0
-61 780 0 CODE 0
-53 767 0 CODE 0
-54 767 0 CODE 0
-55 76D 0 CODE 0
-56 76F 0 CODE 0
-57 772 0 CODE 0
-58 773 0 CODE 0
+59 779 0 CODE 0
+60 779 0 CODE 0
+61 785 0 CODE 0
+53 76C 0 CODE 0
+54 76C 0 CODE 0
+55 772 0 CODE 0
+56 774 0 CODE 0
+57 777 0 CODE 0
+58 778 0 CODE 0

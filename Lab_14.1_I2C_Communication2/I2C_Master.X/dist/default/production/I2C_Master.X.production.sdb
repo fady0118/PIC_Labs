@@ -23,8 +23,6 @@
 [v _I2C_Start I2C_Start `(v  1 e 1 0 ]
 "67
 [v _I2C_Stop I2C_Stop `(v  1 e 1 0 ]
-"83
-[v _I2C_NACK I2C_NACK `(v  1 e 1 0 ]
 "89
 [v _I2C_Write I2C_Write `(uc  1 e 1 0 ]
 "95
@@ -105,11 +103,6 @@
 "96
 [v I2C_Read@Data Data `uc  1 a 1 0 ]
 "103
-} 0
-"83
-[v _I2C_NACK I2C_NACK `(v  1 e 1 0 ]
-{
-"88
 } 0
 "59
 [v _I2C_Wait I2C_Wait `(v  1 e 1 0 ]
