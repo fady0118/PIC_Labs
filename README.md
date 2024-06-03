@@ -570,3 +570,27 @@ reception are enabled)
     -  SCL input (serial clock line)
     -  SDI input (seial data line)
     -  E0,E1,E2 connected to GND
+
+
+### Lab_14.4_I2C_LCD
+
+#### Purpose 
+- Create a serial communication interface with the I2C LCD IO Expander module (PCF8574) and initialize LCD, write to the LCD and shift The display 
+#### Components   
+- LCD
+- I2C LCD IO Expander module (PCF8574)
+#### Configuration
+-  Master 
+    -  SCL/RC3 input (serial clock line)
+    -  SDI/RC4 input (seial data line)
+-  I2C LCD IO Expander module (PCF8574)
+    -  SCL input (serial clock line)
+    -  SDI input (seial data line)
+    -  A0,A1,A2 connected to GND
+    -  P0 -> RS
+    -  P1 -> R/W
+    -  P2 -> EN
+    -  P4 -> D4
+    -  P5 -> D5
+    -  P6 -> D6
+    -  P7 -> D7
