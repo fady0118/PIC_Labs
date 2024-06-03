@@ -539,6 +539,25 @@ reception are enabled)
 
 #### Purpose 
 - Create a serial communication interface with the I2C Serial EEPROM 24C64 Memory using I2C Protocol.
+- Write data byte then read it
+#### Components   
+- 8 LEDs
+- I2C EEPROM 24C64
+#### Configuration
+-  Master
+    -  PORTD as output LEDs
+    -  SCL/RC3 input (serial clock line)
+    -  SDI/RC4 input (seial data line)
+-  Slave (I2C EEPROM 24C64)
+    -  SCL input (serial clock line)
+    -  SDI input (seial data line)
+    -  E0,E1,E2 connected to GND
+
+### Lab_14.2_I2C_EEPROM_Page
+
+#### Purpose 
+- Create a serial communication interface with the I2C Serial EEPROM 24C64 Memory using I2C Protocol.
+- Write data page then read it sequentially
 #### Components   
 - 8 LEDs
 - I2C EEPROM 24C64
