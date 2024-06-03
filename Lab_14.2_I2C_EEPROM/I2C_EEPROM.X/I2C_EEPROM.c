@@ -58,10 +58,10 @@ unsigned char EEPROM_Current_Address_Read(void){
 unsigned char EEPROM_Byte_Read(unsigned int add){
     unsigned char Data;
     I2C_Master_Start();
-    // Wait Until EEPROM Is IDLE
+    
+    // Dummy write
     while(I2C_Master_Write(EEPROM_Address_W)){
     I2C_Master_Repeated_Start();}
-    
     I2C_Master_Write(add>>8);
     I2C_Master_Write((unsigned char)add);
     I2C_Master_Repeated_Start();
