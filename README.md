@@ -553,7 +553,7 @@ reception are enabled)
     -  SDI input (seial data line)
     -  E0,E1,E2 connected to GND
 
-### Lab_14.2_I2C_EEPROM_Page
+### Lab_14.3_I2C_EEPROM_Page
 
 #### Purpose 
 - Create a serial communication interface with the I2C Serial EEPROM 24C64 Memory using I2C Protocol.
