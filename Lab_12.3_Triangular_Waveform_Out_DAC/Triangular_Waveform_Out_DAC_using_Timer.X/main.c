@@ -32,7 +32,7 @@ TMR1IE=1;       // Enable Interrupts
 TMR1IF = 0;     // Clear The Interrupt Flag Bit
 PEIE = 1;       // Peripherals Interrupts Enable Bit
 GIE = 1;        // Global Interrupts Enable Bit
-TMR1=65388;     // pre-loading value 390 us to overflow
+TMR1=65400;     // pre-loading value 390 us to overflow
 }
 
 void main(void) {
@@ -57,15 +57,17 @@ void main(void) {
 void __interrupt() ISR(void){
     if(TMR1IF){
         TMR1IF=0;   // clear flag
-
-        if(State==0){
-            DAC_OUT=data++; // New sample
-        }
-        else {
-            DAC_OUT=data--; // New sample   
-        }
+		switch(State){
+			case 0:
+				DAC_OUT=data++; // New sample
+				break;
+			default:
+				DAC_OUT=data--; // New sample   
+				break;
+		}
+		
         if(data==255 || data==0){State^=1;}
-        TMR1=65388; 
+        TMR1=65400; 
 
     }
 }

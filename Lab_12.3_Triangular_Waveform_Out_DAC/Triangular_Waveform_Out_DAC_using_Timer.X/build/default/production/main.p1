@@ -283,8 +283,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 34: GIE = 1;
 [e = _GIE -> -> 1 `i `b ]
 "35
-[; ;main.c: 35: TMR1=65388;
-[e = _TMR1 -> -> 65388 `l `us ]
+[; ;main.c: 35: TMR1=65400;
+[e = _TMR1 -> -> 65400 `l `us ]
 "36
 [; ;main.c: 36: }
 [e :UE 99 ]
@@ -336,43 +336,51 @@ Version 4.0 HI-TECH Software Intermediate Code
 "59
 [; ;main.c: 59:         TMR1IF=0;
 [e = _TMR1IF -> -> 0 `i `b ]
-"61
-[; ;main.c: 61:         if(State==0){
-[e $ ! == -> _State `i -> 0 `i 106  ]
+"60
+[; ;main.c: 60:   switch(State){
+[e $U 107  ]
 {
+"61
+[; ;main.c: 61:    case 0:
+[e :U 108 ]
 "62
-[; ;main.c: 62:             PORTB=data++;
+[; ;main.c: 62:     PORTB=data++;
 [e = _PORTB ++ _data -> -> 1 `i `uc ]
 "63
-[; ;main.c: 63:         }
-}
-[e $U 107  ]
+[; ;main.c: 63:     break;
+[e $U 106  ]
 "64
-[; ;main.c: 64:         else {
-[e :U 106 ]
-{
+[; ;main.c: 64:    default:
+[e :U 109 ]
 "65
-[; ;main.c: 65:             PORTB=data--;
+[; ;main.c: 65:     PORTB=data--;
 [e = _PORTB -- _data -> -> 1 `i `uc ]
 "66
-[; ;main.c: 66:         }
-}
-[e :U 107 ]
+[; ;main.c: 66:     break;
+[e $U 106  ]
 "67
-[; ;main.c: 67:         if(data==255 || data==0){State^=1;}
-[e $ ! || == -> _data `i -> 255 `i == -> _data `i -> 0 `i 108  ]
+[; ;main.c: 67:   }
+}
+[e $U 106  ]
+[e :U 107 ]
+[e [\ -> _State `i , $ -> 0 `i 108
+ 109 ]
+[e :U 106 ]
+"69
+[; ;main.c: 69:         if(data==255 || data==0){State^=1;}
+[e $ ! || == -> _data `i -> 255 `i == -> _data `i -> 0 `i 110  ]
 {
 [e =^ _State -> 1 `i ]
 }
-[e :U 108 ]
-"68
-[; ;main.c: 68:         TMR1=65388;
-[e = _TMR1 -> -> 65388 `l `us ]
+[e :U 110 ]
 "70
-[; ;main.c: 70:     }
+[; ;main.c: 70:         TMR1=65400;
+[e = _TMR1 -> -> 65400 `l `us ]
+"72
+[; ;main.c: 72:     }
 }
 [e :U 105 ]
-"71
-[; ;main.c: 71: }
+"73
+[; ;main.c: 73: }
 [e :UE 104 ]
 }

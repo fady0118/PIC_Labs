@@ -1933,7 +1933,7 @@ TMR1IE=1;
 TMR1IF = 0;
 PEIE = 1;
 GIE = 1;
-TMR1=65388;
+TMR1=65400;
 }
 
 void main(void) {
@@ -1949,15 +1949,17 @@ void main(void) {
 void __attribute__((picinterrupt(("")))) ISR(void){
     if(TMR1IF){
         TMR1IF=0;
+  switch(State){
+   case 0:
+    PORTB=data++;
+    break;
+   default:
+    PORTB=data--;
+    break;
+  }
 
-        if(State==0){
-            PORTB=data++;
-        }
-        else {
-            PORTB=data--;
-        }
         if(data==255 || data==0){State^=1;}
-        TMR1=65388;
+        TMR1=65400;
 
     }
 }
